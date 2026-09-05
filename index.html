@@ -896,6 +896,8 @@
                         <button class="v-tab-btn active" onclick="switchVideoTab('v-ubd')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--primary-color); font-weight: 600; cursor: pointer; border-bottom: 3px solid var(--primary-color); margin-bottom: -2px;">Phân tích UbD</button>
                         <button class="v-tab-btn" onclick="switchVideoTab('v-note')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Chú giải</button>
                         <button class="v-tab-btn" onclick="switchVideoTab('v-sub')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Transcript (Song ngữ)</button>
+                        <button class="v-tab-btn" onclick="switchVideoTab('v-takeaway')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Nội dung trọng tâm</button>
+                        <button class="v-tab-btn" onclick="switchVideoTab('v-quiz')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Bài tập đánh giá</button>
                     </div>
 
                     <!-- UBD TAB -->
@@ -941,6 +943,101 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- TAKEAWAY TAB -->
+                    <div id="v-takeaway" class="v-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <div style="background: #fdf4ff; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.6; border: 1px solid #f5d0fe; color: #4a044e;">
+                            <h3 style="margin-top: 0; color: #701a75; font-size: 1.2rem;"><i class="fas fa-check-circle" style="margin-right: 8px;"></i> Nội dung cần nắm vững sau Video 1</h3>
+                            <p>Để hoàn thành tốt Video 1, bạn <strong>bắt buộc</strong> phải hiểu rõ và phân biệt được 4 nhóm khái niệm cốt lõi sau đây. (Không cần nhớ cú pháp code, chỉ cần nắm vững tư duy kiến trúc).</p>
+                            
+                            <ul style="padding-left: 1.5rem; margin-bottom: 0;">
+                                <li style="margin-bottom: 1rem;">
+                                    <strong>1. Luồng giao tiếp Client - Server:</strong><br>
+                                    Khi bạn gõ địa chỉ website, <strong>Trình duyệt (Client)</strong> sẽ gửi một <code>Request</code> (Yêu cầu) lên <strong>Máy chủ (Server)</strong>. Sau đó, Máy chủ sẽ đóng gói các tệp tin (HTML, CSS, JS) và trả về thông qua một <code>Response</code> (Phản hồi).
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong>2. Front-end vs Back-end:</strong><br>
+                                    - <strong>Front-end:</strong> Phần "bề nổi" hiển thị trên trình duyệt mà người dùng tương tác trực tiếp. Do HTML, CSS, JS đảm nhận.<br>
+                                    - <strong>Back-end:</strong> Phần "tảng băng chìm" chạy ngầm trên Server (như Database, xử lý thanh toán, lưu trữ tài khoản). Cần các ngôn ngữ như Node.js, Python, PHP.
+                                </li>
+                                <li style="margin-bottom: 1rem;">
+                                    <strong>3. Web Tĩnh (Static) vs Web Động (Dynamic):</strong><br>
+                                    - <strong>Web tĩnh:</strong> File HTML đã được làm sẵn 100% nằm chờ trên Server, ai truy cập cũng xem cùng một nội dung giống hệt nhau.<br>
+                                    - <strong>Web động:</strong> File HTML không có sẵn nguyên bản. Khi có người truy cập, Server mới lôi dữ liệu từ Database ra "lắp ráp" thành file HTML rồi gửi về. Nội dung thay đổi liên tục tùy người dùng (VD: Facebook, Udemy, Shopee).
+                                </li>
+                                <li>
+                                    <strong>4. Vai trò của bộ ba (Loại suy Ngữ pháp):</strong><br>
+                                    - <strong>HTML (Danh từ):</strong> Chịu trách nhiệm bộ khung, nội dung (Văn bản, hình ảnh).<br>
+                                    - <strong>CSS (Tính từ):</strong> Chịu trách nhiệm trang điểm, màu sắc, bố cục.<br>
+                                    - <strong>JavaScript (Động từ):</strong> Chịu trách nhiệm tạo tương tác, hiệu ứng, tính toán logic.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- QUIZ TAB -->
+                    <div id="v-quiz" class="v-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.6; border: 1px solid var(--border-color); color: #334155;">
+                            <h3 style="margin-top: 0; color: var(--primary-color); font-size: 1.2rem; border-bottom: 2px dashed #e2e8f0; padding-bottom: 0.8rem;"><i class="fas fa-tasks" style="margin-right: 8px;"></i> Bài Tập Đánh Giá (Quiz)</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Hãy tự trả lời các câu hỏi sau để kiểm tra xem bạn đã thực sự hiểu bài hay chưa. (Click vào nút "Xem đáp án" để kiểm tra).</p>
+
+                            <div style="margin-bottom: 1.5rem; background: #f8fafc; padding: 1rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Câu 1: Khi bạn nhập một URL (ví dụ: facebook.com) vào trình duyệt và nhấn Enter, hành động đầu tiên xảy ra là gì?</div>
+                                <div style="margin-bottom: 0.8rem; padding-left: 1rem;">
+                                    A. Trình duyệt lập tức tải HTML có sẵn trên máy và hiển thị.<br>
+                                    B. Trình duyệt gửi một Yêu cầu (Request) thông qua Internet đến Máy chủ (Server) của Facebook.<br>
+                                    C. Database của Facebook tự động sinh ra giao diện người dùng mà không cần chờ yêu cầu.<br>
+                                    D. Cả 3 ý trên đều đúng.
+                                </div>
+                                <details style="background: #e0f2fe; padding: 0.8rem; border-radius: 4px; cursor: pointer;">
+                                    <summary style="font-weight: 600; color: #0284c7; outline: none;">👉 Xem đáp án</summary>
+                                    <div style="margin-top: 0.5rem; color: #0369a1;"><strong>Đáp án B.</strong> Trình duyệt đóng vai trò là Client, luôn phải gửi Request đi trước thì Máy chủ mới biết để trả Response về.</div>
+                                </details>
+                            </div>
+
+                            <div style="margin-bottom: 1.5rem; background: #f8fafc; padding: 1rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Câu 2: Đâu là điểm khác biệt cốt lõi nhất giữa một Trang web Tĩnh (Static) và Trang web Động (Dynamic)?</div>
+                                <div style="margin-bottom: 0.8rem; padding-left: 1rem;">
+                                    A. Web động có nhiều hiệu ứng hình ảnh bay lượn (animation) hơn web tĩnh.<br>
+                                    B. Web tĩnh được code bằng HTML/CSS, Web động bắt buộc phải code bằng JavaScript.<br>
+                                    C. Web tĩnh có sẵn 100% các file HTML trên Server, còn Web động thì các file này được "lắp ráp" và tạo ra từ Database mỗi lần có người truy cập.<br>
+                                    D. Web động chỉ hiển thị được trên điện thoại, web tĩnh chỉ hiển thị trên máy tính.
+                                </div>
+                                <details style="background: #e0f2fe; padding: 0.8rem; border-radius: 4px; cursor: pointer;">
+                                    <summary style="font-weight: 600; color: #0284c7; outline: none;">👉 Xem đáp án</summary>
+                                    <div style="margin-top: 0.5rem; color: #0369a1;"><strong>Đáp án C.</strong> Đừng để chữ "Động" đánh lừa. Động/Tĩnh ở đây là nói về cách Máy chủ (Server) chuẩn bị file HTML như thế nào từ dữ liệu, chứ không phải hiệu ứng hình ảnh.</div>
+                                </details>
+                            </div>
+
+                            <div style="margin-bottom: 1.5rem; background: #f8fafc; padding: 1rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Câu 3: Theo phép loại suy trong bài học, nếu một trang web là một ngôi nhà, thì lớp sơn tường màu xanh và những khung cửa sổ được sắp xếp ngay ngắn tương ứng với công nghệ nào?</div>
+                                <div style="margin-bottom: 0.8rem; padding-left: 1rem;">
+                                    A. HTML (Danh từ)<br>
+                                    B. CSS (Tính từ)<br>
+                                    C. JavaScript (Động từ)<br>
+                                    D. Database (Kho chứa)
+                                </div>
+                                <details style="background: #e0f2fe; padding: 0.8rem; border-radius: 4px; cursor: pointer;">
+                                    <summary style="font-weight: 600; color: #0284c7; outline: none;">👉 Xem đáp án</summary>
+                                    <div style="margin-top: 0.5rem; color: #0369a1;"><strong>Đáp án B.</strong> CSS đóng vai trò làm tính từ (để trang điểm, tô màu sắc, và sắp xếp bố cục). Khung gạch thô của ngôi nhà mới là HTML.</div>
+                                </details>
+                            </div>
+
+                            <div style="margin-bottom: 0; background: #f8fafc; padding: 1rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Câu 4 (Tình huống): Một doanh nghiệp muốn xây dựng sàn thương mại điện tử khổng lồ quản lý hàng chục ngàn sản phẩm, giỏ hàng, và tính toán điểm tích lũy cho người dùng. Đội ngũ Front-end Development (chỉ giỏi HTML, CSS, JavaScript) cam kết có thể làm toàn bộ hệ thống này mà không cần ai khác. Lời cam kết đó đúng hay sai? Tại sao?</div>
+                                <div style="margin-bottom: 0.8rem; padding-left: 1rem;">
+                                    A. Đúng, vì JavaScript đủ mạnh để làm mọi thứ hiển thị trên màn hình.<br>
+                                    B. Sai, vì họ bắt buộc phải cần hệ thống Back-end (Database, Server logic) để lưu trữ sản phẩm, mã hóa mật khẩu, và xử lý nghiệp vụ phức tạp ở phía sau.
+                                </div>
+                                <details style="background: #e0f2fe; padding: 0.8rem; border-radius: 4px; cursor: pointer;">
+                                    <summary style="font-weight: 600; color: #0284c7; outline: none;">👉 Xem đáp án</summary>
+                                    <div style="margin-top: 0.5rem; color: #0369a1;"><strong>Đáp án B.</strong> Những gì bạn học trong khóa này (Front-end) chỉ làm được phần Giao diện "bề nổi". Để vận hành các hệ thống thực tế như Udemy hay Shopee, bắt buộc phải có Back-end.</div>
+                                </details>
+                            </div>
+
                         </div>
                     </div>
 

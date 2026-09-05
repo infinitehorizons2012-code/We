@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB101x - Tiến Độ Học Tập</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <span class="badge">Web Development</span>
+                <h1>WEB101x <span class="highlight">Tiến Độ Học Tập</span></h1>
+                <p>Theo dõi quá trình chinh phục bộ môn Xây dựng Website đầu tiên của bạn.</p>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="completed-count">0</span>
+                        <span class="stat-label">Hoàn thành</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="total-count">0</span>
+                        <span class="stat-label">Tổng bài</span>
+                    </div>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar" id="main-progress"></div>
+                </div>
+                <div class="progress-percentage" id="progress-text">0%</div>
+            </div>
+        </header>
+
+        <main>
+            <div class="controls">
+                <button id="expand-all" class="btn btn-outline"><i class="fas fa-expand-alt"></i> Mở rộng tất cả</button>
+                <button id="collapse-all" class="btn btn-outline"><i class="fas fa-compress-alt"></i> Thu gọn tất cả</button>
+                <button id="reset-all" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Xóa tiến độ</button>
+            </div>
+            
+            <div class="accordion" id="course-accordion">
+
+                <div class="accordion-item" data-section-index="0">
+                    <div class="accordion-header">
+                        <div class="section-info">
+                            <h2>Mở đầu</h2>
+                            <span class="section-progress">0/3</span>
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="lesson-list">
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_0_0')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_0_0" class="lesson-checkbox" data-section="0" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Giới thiệu môn học</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_0_1')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_0_1" class="lesson-checkbox" data-section="0" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Hình thức đánh giá</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_0_2')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_0_2" class="lesson-checkbox" data-section="0" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Chuẩn bị học tập</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-section-index="1">
+                    <div class="accordion-header">
+                        <div class="section-info">
+                            <h2>Phần 1. HTML cơ bản</h2>
+                            <span class="section-progress">0/7</span>
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="lesson-list">
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_1_0')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_1_0" class="lesson-checkbox" data-section="1" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Giới thiệu phần 1</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_1_1')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_1_1" class="lesson-checkbox" data-section="1" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 1. Giới thiệu về lập trình web</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_1_2')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_1_2" class="lesson-checkbox" data-section="1" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 2. Giới thiệu về HTML</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_1_3')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_1_3" class="lesson-checkbox" data-section="1" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 3. Các thẻ HTML phổ biến</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_1_4')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_1_4" class="lesson-checkbox" data-section="1" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Tổng kết phần 1</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_1_5')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_1_5" class="lesson-checkbox" data-section="1" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-comments lesson-icon"></i>
+                                    <span class="lesson-title">Chia sẻ của học viên về nội dung phần 1</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_1_6')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_1_6" class="lesson-checkbox" data-section="1" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-chalkboard lesson-icon"></i>
+                                    <span class="lesson-title">Slide tổng kết: Lập trình web với HTML</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-section-index="2">
+                    <div class="accordion-header">
+                        <div class="section-info">
+                            <h2>Phần 2. CSS cơ bản</h2>
+                            <span class="section-progress">0/9</span>
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="lesson-list">
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_2_0')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_2_0" class="lesson-checkbox" data-section="2" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Giới thiệu phần 2</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_2_1')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_2_1" class="lesson-checkbox" data-section="2" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 4. Giới thiệu về CSS (Phần 1)</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_2_2')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_2_2" class="lesson-checkbox" data-section="2" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 5. Giới thiệu về CSS (Phần 2)</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_2_3')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_2_3" class="lesson-checkbox" data-section="2" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 6. Giới thiệu về CSS (Phần 3)</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_2_4')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_2_4" class="lesson-checkbox" data-section="2" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 7. Giới thiệu về CSS (Phần 4) & các kỹ năng quan trọng của một Developer</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_2_5')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_2_5" class="lesson-checkbox" data-section="2" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Tổng kết phần 2</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item assignment" onclick="toggleCheckbox('item_2_6')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_2_6" class="lesson-checkbox" data-section="2" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-laptop-code lesson-icon"></i>
+                                    <span class="lesson-title">Assignment 01: Xây dựng trang Digital CV</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_2_7')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_2_7" class="lesson-checkbox" data-section="2" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-chalkboard lesson-icon"></i>
+                                    <span class="lesson-title">Slide tổng kết: Làm chủ giao diện Web với CSS: Styling, Box Model & Positioning</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_2_8')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_2_8" class="lesson-checkbox" data-section="2" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-comments lesson-icon"></i>
+                                    <span class="lesson-title">Chia sẻ của học viên về nội dung phần 2</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-section-index="3">
+                    <div class="accordion-header">
+                        <div class="section-info">
+                            <h2>Phần 3. Layout (sắp đặt) cho website của bạn</h2>
+                            <span class="section-progress">0/8</span>
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="lesson-list">
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_3_0')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_3_0" class="lesson-checkbox" data-section="3" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Giới thiệu phần 3</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_3_1')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_3_1" class="lesson-checkbox" data-section="3" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 8. Layout cơ bản</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_3_2')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_3_2" class="lesson-checkbox" data-section="3" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 9. Xây dựng layout với CSS Flex-box</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_3_3')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_3_3" class="lesson-checkbox" data-section="3" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 10. Xây dựng layout với CSS Grid</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_3_4')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_3_4" class="lesson-checkbox" data-section="3" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Tổng kết phần 3</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item assignment" onclick="toggleCheckbox('item_3_5')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_3_5" class="lesson-checkbox" data-section="3" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-laptop-code lesson-icon"></i>
+                                    <span class="lesson-title">Assignment 02: Xây dựng website cá nhân</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_3_6')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_3_6" class="lesson-checkbox" data-section="3" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-chalkboard lesson-icon"></i>
+                                    <span class="lesson-title">Slide tổng kết: Làm chủ Layout: Từ Float truyền thống đến Flexbox & CSS Grid hiện đại</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_3_7')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_3_7" class="lesson-checkbox" data-section="3" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-comments lesson-icon"></i>
+                                    <span class="lesson-title">Chia sẻ của học viên về nội dung phần 3</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-section-index="4">
+                    <div class="accordion-header">
+                        <div class="section-info">
+                            <h2>Phần 4. Xây dựng web responsive - Đưa website lên mạng</h2>
+                            <span class="section-progress">0/7</span>
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="lesson-list">
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_4_0')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_4_0" class="lesson-checkbox" data-section="4" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Giới thiệu phần 4</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_4_1')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_4_1" class="lesson-checkbox" data-section="4" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 11. Responsive Web Design</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_4_2')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_4_2" class="lesson-checkbox" data-section="4" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 12. Thư viện Bootstrap</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_4_3')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_4_3" class="lesson-checkbox" data-section="4" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 13. Đưa trang web lên mạng</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_4_4')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_4_4" class="lesson-checkbox" data-section="4" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-chalkboard lesson-icon"></i>
+                                    <span class="lesson-title">Slide tổng kết: CSS Responsive, Thư viện Bootstrap và Triển khai Website</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_4_5')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_4_5" class="lesson-checkbox" data-section="4" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Tổng kết phần 4</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_4_6')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_4_6" class="lesson-checkbox" data-section="4" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-comments lesson-icon"></i>
+                                    <span class="lesson-title">Chia sẻ của học viên về nội dung phần 4</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-section-index="5">
+                    <div class="accordion-header">
+                        <div class="section-info">
+                            <h2>Phần 5. JavaScript cơ bản</h2>
+                            <span class="section-progress">0/13</span>
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="lesson-list">
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_0')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_0" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Giới thiệu phần 5</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_1')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_1" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 14. Làm quen với JavaScript</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_2')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_2" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 15. Toán tử</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_3')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_3" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 16. Boolean và câu lệnh có điều kiện</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_4')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_4" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 17. Hàm và mảng</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_5')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_5" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 18. Object và vòng lặp</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_6')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_6" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-chalkboard lesson-icon"></i>
+                                    <span class="lesson-title">Slide tổng kết: JavaScript Fundamentals: Từ biến đến cấu trúc dữ liệu</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_7')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_7" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 19. DOM and Event - Phần 1</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_8')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_8" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Bài 20. DOM and Event - Phần 2</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_9')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_9" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Tổng kết phần 5</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item assignment" onclick="toggleCheckbox('item_5_10')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_10" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-laptop-code lesson-icon"></i>
+                                    <span class="lesson-title">Assignment 03: Thiết kế và triển khai một website hoàn chỉnh</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_11')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_11" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-chalkboard lesson-icon"></i>
+                                    <span class="lesson-title">Slide tổng kết: Thao tác DOM và Xử lý Sự kiện (Events)</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_5_12')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_5_12" class="lesson-checkbox" data-section="5" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-comments lesson-icon"></i>
+                                    <span class="lesson-title">Chia sẻ của học viên về nội dung phần 5</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-section-index="6">
+                    <div class="accordion-header">
+                        <div class="section-info">
+                            <h2>Kết thúc khóa học</h2>
+                            <span class="section-progress">0/3</span>
+                        </div>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <ul class="lesson-list">
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_6_0')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_6_0" class="lesson-checkbox" data-section="6" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Nội dung chia sẻ từ học viên</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_6_1')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_6_1" class="lesson-checkbox" data-section="6" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-file-alt lesson-icon"></i>
+                                    <span class="lesson-title">Nguồn học liệu và tài liệu đọc thêm</span>
+                                </div>
+                            </li>
+
+                            <li class="lesson-item " onclick="toggleCheckbox('item_6_2')">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="item_6_2" class="lesson-checkbox" data-section="6" onclick="event.stopPropagation()">
+                                    <span class="custom-checkbox"></span>
+                                </div>
+                                <div class="lesson-details">
+                                    <i class="fas fa-comments lesson-icon"></i>
+                                    <span class="lesson-title">Khảo sát đánh giá môn học dành cho học viên</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        
+        <footer>
+            <p>Made with ❤️ for Web Development learning.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

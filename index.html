@@ -574,6 +574,7 @@
             <button class="tab-btn active" onclick="switchTab('course-web101x')">WEB101x: Xây dựng Website đầu tiên</button>
             <button class="tab-btn" onclick="switchTab('clo')">Course Learning Outcomes (CLO)</button>
         <button class="tab-btn" onclick="switchTab('analysis')">Phân Tích UbD</button>
+        <button class="tab-btn" onclick="switchTab(\'lesson1\')">Bài 1: Giới thiệu</button>
         </nav>
 
         <div id="course-web101x" class="tab-content active">
@@ -865,6 +866,121 @@
             </div>
         </div>
 
+
+        <!-- TAB LESSON 1 -->
+        <div id="lesson1" class="tab-content">
+            <div class="course-detail-container" style="max-width: 100%; display: flex; gap: 2rem; background: transparent; padding: 0; box-shadow: none; border: none;">
+                
+                <!-- Sidebar Videos -->
+                <div style="flex: 0 0 250px; background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 1rem;">
+                    <h3 style="margin-top: 0; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); font-size: 1.1rem;">Danh sách Video</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.8rem; background: rgba(99, 102, 241, 0.1); border-radius: 6px; border-left: 3px solid var(--primary-color); color: var(--text-primary); font-weight: 500; cursor: pointer; margin-bottom: 0.5rem;"><i class="fas fa-play-circle" style="color: var(--primary-color); margin-right: 8px;"></i> Video 1: Tổng quan</li>
+                        <li style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s;"><i class="fas fa-lock" style="margin-right: 8px;"></i> Video 2 (Khóa)</li>
+                        <li style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s;"><i class="fas fa-lock" style="margin-right: 8px;"></i> Video 3 (Khóa)</li>
+                    </ul>
+                </div>
+
+                <!-- Video Content -->
+                <div style="flex: 1; background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 2rem;">
+                    <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;">Video 1: Tổng quan về Web Development</h2>
+                    
+                    <div style="width: 100%; height: 350px; background: #0f172a; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; position: relative; overflow: hidden; box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+                        <i class="fas fa-play" style="font-size: 4rem; color: rgba(255,255,255,0.8); cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
+                    </div>
+
+                    <div class="video-tabs" style="display: flex; gap: 1rem; border-bottom: 2px solid var(--border-color); margin-bottom: 1.5rem;">
+                        <button class="v-tab-btn active" onclick="switchVideoTab('v-ubd')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--primary-color); font-weight: 600; cursor: pointer; border-bottom: 3px solid var(--primary-color); margin-bottom: -2px;">Phân tích UbD</button>
+                        <button class="v-tab-btn" onclick="switchVideoTab('v-note')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Chú giải</button>
+                        <button class="v-tab-btn" onclick="switchVideoTab('v-sub')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Subtitle (EN)</button>
+                    </div>
+
+                    <!-- UBD TAB -->
+                    <div id="v-ubd" class="v-tab-content active" style="animation: fadeIn 0.3s ease;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-top: 4px solid var(--primary-color);">
+                                <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--primary-color);"><i class="fas fa-book-open"></i> Nội dung bài học (Learning Plan)</h3>
+                                <ul style="padding-left: 1.2rem; font-size: 0.95rem; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>Cơ chế Web:</strong> Trình duyệt (Client) gửi Request, Máy chủ (Server) trả về Response (chứa file HTML, CSS, JS).</li>
+                                    <li style="margin-bottom: 0.5rem;">Phân biệt <strong>Front-end</strong> (hiển thị, UI) và <strong>Back-end</strong> (xử lý logic, database).</li>
+                                    <li style="margin-bottom: 0.5rem;">Phân biệt <strong>Static Web</strong> (trang tĩnh, file có sẵn) vs <strong>Dynamic Web</strong> (trang động, server sinh ra mỗi lần truy cập).</li>
+                                    <li><strong>Vai trò cốt lõi:</strong> HTML (Danh từ - Cấu trúc), CSS (Tính từ - Trang trí), JS (Động từ - Tương tác).</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="background: #fff1f2; padding: 1.5rem; border-radius: 8px; border-top: 4px solid var(--danger);">
+                                <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--danger);"><i class="fas fa-exclamation-triangle"></i> Bẫy kiến thức (Cognitive Traps)</h3>
+                                <ul style="padding-left: 1.2rem; font-size: 0.95rem; margin-bottom: 0; color: #881337;">
+                                    <li style="margin-bottom: 0.5rem;"><strong>🚨 Hiểu sai về "Web động":</strong> Người mới thường nghĩ web có hiệu ứng bay lượn (animation) là web động. Thực chất, tính "động" (Dynamic) ở đây nói về kiến trúc Server (dữ liệu lấy từ Database) chứ không phải hiệu ứng hình ảnh (dùng CSS/JS ở Front-end).</li>
+                                    <li><strong>🚨 Ảo tưởng sức mạnh Front-end:</strong> Nghĩ rằng chỉ cần học HTML/CSS là có thể xây dựng được các hệ thống lớn như Udemy, Shopee (thiếu back-end/database).</li>
+                                </ul>
+                            </div>
+
+                            <div style="background: #eff6ff; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #3b82f6; grid-column: 1 / -1;">
+                                <h3 style="margin-top: 0; font-size: 1.1rem; color: #1d4ed8;"><i class="fas fa-backward"></i> Suy ngược UbD (Backward Design Mapping)</h3>
+                                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                    <div style="display: flex; gap: 1rem;">
+                                        <div style="width: 150px; font-weight: bold; color: #1e40af;">Mục tiêu (CLO):</div>
+                                        <div style="flex: 1; font-size: 0.95rem;"><strong>WEB101x_o1:</strong> Hiểu được tổng quan về lập trình Web (Cấu trúc Client/Server, Static/Dynamic).</div>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <div style="width: 150px; font-weight: bold; color: #1e40af;">Skill Taxonomy:</div>
+                                        <div style="flex: 1; font-size: 0.95rem;"><span class="quiz-tag" style="margin-left: 0;">Web Architecture</span> <span class="quiz-tag">Client-Server Communication</span></div>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <div style="width: 150px; font-weight: bold; color: #1e40af;">Task Đánh Giá:</div>
+                                        <div style="flex: 1; font-size: 0.95rem;">
+                                            <ul style="padding-left: 1rem; margin: 0;">
+                                                <li><strong>Bài tập tình huống:</strong> Khách hàng muốn làm một trang Portfolio cá nhân, bạn tư vấn làm Web tĩnh hay Web động? Tại sao?</li>
+                                                <li><strong>Bài tập phân loại:</strong> Kéo thả các công nghệ (HTML, Python, CSS, Node.js, JS) vào 2 nhóm Front-end và Back-end.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHU GIAI TAB -->
+                    <div id="v-note" class="v-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.6; border: 1px solid var(--border-color);">
+                            <strong>(0:00)</strong> Giới thiệu<br>
+                            <strong>(0:45)</strong> Quá trình mở 1 website trên trình duyệt<br>
+                            <strong>(1:35)</strong> Giới thiệu về web server (máy chủ)<br>
+                            - Mọi trang web đều được lưu trữ tại Web server (máy tính kết nối internet, trả kết quả khi nhận yêu cầu).<br>
+                            - Trình duyệt truy cập web -> gửi Request. Web server nhận yêu cầu -> trả về toàn bộ tập tin (Response).<br><br>
+                            <strong>(2:20)</strong> 3 thành phần chính – HTML, CSS và JavaScript<br>
+                            - Trình duyệt phân tích mã HTML, CSS và JS để hiển thị cho người dùng.<br><br>
+                            <strong>(3:25)</strong> Khái niệm Front-end Web Development<br>
+                            <strong>(3:55)</strong> Khái niệm web tĩnh (static website)<br>
+                            <strong>(4:50)</strong> Khái niệm Back-end<br>
+                            <strong>(6:30)</strong> Ngôn ngữ Back-end: Node JS, PHP, Python<br>
+                            <strong>(7:05)</strong> Khái niệm web động (dynamic website)<br>
+                            <strong>(7:45)</strong> So sánh web tĩnh và web động<br>
+                            <strong>(8:50)</strong> Vai trò của HTML, CSS và JavaScript<br>
+                            - HTML: Nội dung (văn bản, hình ảnh).<br>
+                            - CSS: Trình bày (màu sắc, vị trí).<br>
+                            - Javascript: Hiệu ứng, tương tác người dùng.
+                        </div>
+                    </div>
+
+                    <!-- SUBTITLE TAB -->
+                    <div id="v-sub" class="v-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <div style="background: #f1f5f9; padding: 1.5rem; border-radius: 8px; font-size: 0.9rem; line-height: 1.7; height: 350px; overflow-y: auto; border: 1px solid var(--border-color); color: #475569;">
+                            Instructor: Welcome to the first actual lecture of this course. Now, there is a good chance that this course is gonna be your very first contact with any web development. And so before we start writing HTML and CSS code, I think it might be a good idea to actually begin this course with a very high-level overview of this field of web development. 
+                            <br><br>
+                            So we're gonna talk about things like clients and servers, front-end and back-end development, static and dynamic websites, and of course about the core languages and core technologies of web development. And I'm going to explain all this around the process that happens when we open up a webpage in a browser.
+                            <br><br>
+                            ... (We are trying to access a webpage in our browser at omnifood.dev. Our browser will send a request to the server where this page is hosted. The server will take all the files that make up the website and send them back to the browser as a response...)
+                            <br><br>
+                            <i>(Cuộn xuống để xem toàn bộ transcript trong ứng dụng thực tế)</i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     <script>
         function toggleAllDetails(state) {
             document.querySelectorAll('details.course-section').forEach(detail => {
@@ -877,6 +993,21 @@
         }
 
         // Tab switching logic
+        
+        function switchVideoTab(tabId) {
+            document.querySelectorAll('.v-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+            });
+            event.currentTarget.style.color = 'var(--primary-color)';
+            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
+            
+            document.querySelectorAll('.v-tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
+        }
+
         function switchTab(tabId) {
             // Update buttons
             document.querySelectorAll('.tab-btn').forEach(btn => {

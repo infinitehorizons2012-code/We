@@ -1604,12 +1604,11 @@
                             <div class="quiz-question" id="quiz1_q1" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
                                 <div style="font-weight: 600; margin-bottom: 1rem;">Câu 1. Các thành phần cơ bản tạo nên một trang web? (Chọn nhiều đáp án)</div>
                                 <div class="quiz-options">
-                                    <label class="quiz-option"><input type="checkbox" name="quiz1_q1" value="HTML"> HTML</label>
-                                    <label class="quiz-option"><input type="checkbox" name="quiz1_q1" value="CSS"> CSS</label>
-                                    <label class="quiz-option"><input type="checkbox" name="quiz1_q1" value="Javascript"> Javascript</label>
-                                    <label class="quiz-option"><input type="checkbox" name="quiz1_q1" value="Trình duyệt"> Trình duyệt</label>
+                                    <label class="quiz-option"><input type="checkbox" name="quiz1_q1" value="HTML" onchange="checkCheckboxAnswer('quiz1_q1', this, ['HTML', 'CSS', 'Javascript'], 'HTML, CSS và JavaScript là 3 ngôn ngữ cốt lõi để xây dựng cấu trúc, giao diện và tương tác cho trang web. Trình duyệt chỉ là công cụ phần mềm dùng để đọc và hiển thị web, không phải là thành phần cấu tạo nên trang web.')"> HTML</label>
+                                    <label class="quiz-option"><input type="checkbox" name="quiz1_q1" value="CSS" onchange="checkCheckboxAnswer('quiz1_q1', this, ['HTML', 'CSS', 'Javascript'], 'HTML, CSS và JavaScript là 3 ngôn ngữ cốt lõi để xây dựng cấu trúc, giao diện và tương tác cho trang web. Trình duyệt chỉ là công cụ phần mềm dùng để đọc và hiển thị web, không phải là thành phần cấu tạo nên trang web.')"> CSS</label>
+                                    <label class="quiz-option"><input type="checkbox" name="quiz1_q1" value="Javascript" onchange="checkCheckboxAnswer('quiz1_q1', this, ['HTML', 'CSS', 'Javascript'], 'HTML, CSS và JavaScript là 3 ngôn ngữ cốt lõi để xây dựng cấu trúc, giao diện và tương tác cho trang web. Trình duyệt chỉ là công cụ phần mềm dùng để đọc và hiển thị web, không phải là thành phần cấu tạo nên trang web.')"> Javascript</label>
+                                    <label class="quiz-option"><input type="checkbox" name="quiz1_q1" value="Trình duyệt" onchange="checkCheckboxAnswer('quiz1_q1', this, ['HTML', 'CSS', 'Javascript'], 'HTML, CSS và JavaScript là 3 ngôn ngữ cốt lõi để xây dựng cấu trúc, giao diện và tương tác cho trang web. Trình duyệt chỉ là công cụ phần mềm dùng để đọc và hiển thị web, không phải là thành phần cấu tạo nên trang web.')"> Trình duyệt</label>
                                 </div>
-                                <button onclick="checkMultiAnswer('quiz1_q1', ['HTML', 'CSS', 'Javascript'], 'HTML, CSS và JavaScript là 3 ngôn ngữ cốt lõi để xây dựng cấu trúc, giao diện và tương tác cho trang web. Trình duyệt chỉ là công cụ phần mềm dùng để đọc và hiển thị web, không phải là thành phần cấu tạo nên trang web.')" style="margin-top: 1rem; background: var(--primary-color); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s;" onmouseover="this.style.background='#4338ca'" onmouseout="this.style.background='var(--primary-color)'">Kiểm tra đáp án câu 1</button>
                                 <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
                             </div>
 
@@ -1756,7 +1755,60 @@
             document.getElementById(tabId).style.display = 'block';
         }
 
-                function checkMultiAnswer(questionId, correctAnswers, explanation) {
+                        function checkCheckboxAnswer(questionId, checkboxElem, correctAnswers, explanation) {
+            const qDiv = document.getElementById(questionId);
+            const feedback = qDiv.querySelector('.quiz-feedback');
+            const allCheckboxes = qDiv.querySelectorAll('input[type="checkbox"]');
+            
+            // Highlight immediate click
+            if (checkboxElem.checked) {
+                if (correctAnswers.includes(checkboxElem.value)) {
+                    checkboxElem.parentElement.classList.add('correct');
+                } else {
+                    checkboxElem.parentElement.classList.add('incorrect');
+                }
+            } else {
+                checkboxElem.parentElement.classList.remove('correct');
+                checkboxElem.parentElement.classList.remove('incorrect');
+            }
+            
+            // Count states
+            let correctCount = 0;
+            let incorrectCount = 0;
+            allCheckboxes.forEach(cb => {
+                if (cb.checked) {
+                    if (correctAnswers.includes(cb.value)) correctCount++;
+                    else incorrectCount++;
+                }
+            });
+            
+            feedback.style.display = 'block';
+            
+            if (incorrectCount > 0) {
+                feedback.style.background = '#fee2e2';
+                feedback.style.border = '1px solid #ef4444';
+                feedback.style.color = '#991b1b';
+                feedback.innerHTML = `<strong><i class="fas fa-times-circle"></i> Chưa chính xác!</strong> Bạn đã chọn một đáp án sai.<br><br><em>Giải thích:</em> ${explanation}`;
+            } else if (correctCount === correctAnswers.length) {
+                feedback.style.background = '#dcfce7';
+                feedback.style.border = '1px solid #22c55e';
+                feedback.style.color = '#166534';
+                feedback.innerHTML = `<strong><i class="fas fa-check-circle"></i> Hoàn toàn chính xác!</strong> ${explanation}`;
+                allCheckboxes.forEach(cb => {
+                    cb.disabled = true;
+                    cb.parentElement.classList.add('disabled');
+                });
+            } else if (correctCount > 0) {
+                feedback.style.background = '#eff6ff';
+                feedback.style.border = '1px solid #3b82f6';
+                feedback.style.color = '#1e3a8a';
+                feedback.innerHTML = `<strong><i class="fas fa-info-circle"></i> Đúng một phần!</strong> Bạn đã chọn đúng <strong>${correctCount}/${correctAnswers.length}</strong> đáp án. Hãy chọn thêm nhé!`;
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function checkMultiAnswer(questionId, correctAnswers, explanation) {
             const qDiv = document.getElementById(questionId);
             const checkboxes = qDiv.querySelectorAll('input[type="checkbox"]');
             const feedback = qDiv.querySelector('.quiz-feedback');

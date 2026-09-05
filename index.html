@@ -569,6 +569,12 @@
         
 
         <!-- TAB 2: COURSE DETAIL -->
+        
+        <nav class="tabs-nav">
+            <button class="tab-btn active" onclick="switchTab('course-web101x')">WEB101x: Xây dựng Website đầu tiên</button>
+            <button class="tab-btn" onclick="switchTab('clo')">Course Learning Outcomes (CLO)</button>
+        </nav>
+
         <div id="course-web101x" class="tab-content active">
             <div class="course-detail-container">
                 <div class="course-header">
@@ -692,6 +698,82 @@
         
     </div>
     
+
+        <!-- TAB CLO -->
+        <div id="clo" class="tab-content">
+            <div class="course-detail-container" style="max-width: 100%;">
+                <div class="course-header">
+                    <h2>Mục tiêu môn học & Course Learning Outcomes (CLO)</h2>
+                </div>
+                <div class="table-container">
+                    <table style="min-width: 100%;">
+                        <thead>
+                            <tr>
+                                <th style="width: 35%">Mục tiêu môn học</th>
+                                <th>CLO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="5" style="font-weight: 600; color: var(--primary-color);">Nắm bắt và vận dụng các thẻ HTML cơ bản</td>
+                                <td><strong>WEB101x_o1:</strong> Hiểu được tổng quan về lập trình Web</td>
+                            </tr>
+                            <tr><td><strong>WEB101x_o2:</strong> Cài đặt và thiết lập được các công cụ để lập trình Web</td></tr>
+                            <tr><td><strong>WEB101x_o3:</strong> Hiểu được khái niệm về HTML, cách viết các đoạn mã HTML</td></tr>
+                            <tr><td><strong>WEB101x_o4:</strong> Vận dụng được các thẻ HTML cơ bản về Text, List, Image, ...</td></tr>
+                            <tr><td><strong>WEB101x_o5:</strong> Biết cách thay đổi các thuộc tính cho thẻ HTML</td></tr>
+
+                            <tr>
+                                <td rowspan="8" style="font-weight: 600; color: var(--primary-color);">Nắm bắt và vận dụng các thuộc tính CSS cơ bản</td>
+                                <td><strong>WEB101x_o6:</strong> Hiểu được khái niệm về CSS, cách viết các đoạn mã CSS</td>
+                            </tr>
+                            <tr><td><strong>WEB101x_o7:</strong> Phân biệt được Inline CSS, Internal CSS và External CSS</td></tr>
+                            <tr><td><strong>WEB101x_o8:</strong> Vận dụng được các CSS Selector khác nhau</td></tr>
+                            <tr><td><strong>WEB101x_o9:</strong> Phân biệt được Class và ID</td></tr>
+                            <tr><td><strong>WEB101x_o10:</strong> Sử dụng được các thuộc tính CSS cơ bản về text, color, ...</td></tr>
+                            <tr><td><strong>WEB101x_o11:</strong> Nắm được cơ chế ghi đè và kế thừa trong CSS</td></tr>
+                            <tr><td><strong>WEB101x_o12:</strong> Vận dụng được các thuộc tính CSS liên quan đến Box Model</td></tr>
+                            <tr><td><strong>WEB101x_o13:</strong> Hiểu được cách sử dụng Relative Position bằng CSS</td></tr>
+
+                            <tr>
+                                <td rowspan="4" style="font-weight: 600; color: var(--primary-color);">Xây dựng được layout cho Website</td>
+                                <td><strong>WEB101x_o14:</strong> Nắm được về Layout, một số cách để tạo Layout</td>
+                            </tr>
+                            <tr><td><strong>WEB101x_o15:</strong> Sử dụng được thuộc tính float và clear để tạo Layout cơ bản</td></tr>
+                            <tr><td><strong>WEB101x_o16:</strong> Tạo được Flex Box Layout</td></tr>
+                            <tr><td><strong>WEB101x_o17:</strong> Tạo được Grid Layout</td></tr>
+
+                            <tr>
+                                <td rowspan="10" style="font-weight: 600; color: var(--primary-color);">Nắm bắt và vận dụng cơ bản JavaScript trong xây dựng Website</td>
+                                <td><strong>WEB101x_o22:</strong> Hiểu khái niệm tổng quan, vai trò của ngôn ngữ Javascript</td>
+                            </tr>
+                            <tr><td><strong>WEB101x_o23:</strong> Hiểu khái niệm về biến và các kiểu dữ liệu trong JavaScript. Các kiểu dữ liệu gồm: number, string, boolean, undefined, null, symbol, bigint</td></tr>
+                            <tr><td><strong>WEB101x_o24:</strong> Biết cách khai báo biến, phân biệt giữa let, const và var</td></tr>
+                            <tr><td><strong>WEB101x_o25:</strong> Vận dụng được các toán tử cơ bản, độ ưu tiên giữa các toán tử</td></tr>
+                            <tr><td><strong>WEB101x_o26:</strong> Nắm cơ bản về các toán tử, biểu thức điều kiện, toán tử ba ngôi, logic</td></tr>
+                            <tr><td><strong>WEB101x_o27:</strong> Nắm được cơ bản về vòng lặp, câu lệnh điều kiện</td></tr>
+                            <tr><td><strong>WEB101x_o28:</strong> Hiểu được cơ bản về mảng, đối tượng. Các phép toán với mảng</td></tr>
+                            <tr><td><strong>WEB101x_o29:</strong> Hiểu được hàm, tạo hàm với cú pháp thường và với cú pháp arrow function</td></tr>
+                            <tr><td><strong>WEB101x_o30:</strong> Nắm được kiến thức cơ bản về DOM, thao tác cơ bản với DOM</td></tr>
+                            <tr><td><strong>WEB101x_o31:</strong> Nắm được cách sử dụng DOM event</td></tr>
+
+                            <tr>
+                                <td rowspan="3" style="font-weight: 600; color: var(--primary-color);">Xây dựng được Website Responsive</td>
+                                <td><strong>WEB101x_o18:</strong> Hiểu được khái niệm và ý nghĩa của việc xây dựng Responsive Website</td>
+                            </tr>
+                            <tr><td><strong>WEB101x_o19:</strong> Sử dụng @media query để xây dựng Responsive Website</td></tr>
+                            <tr><td><strong>WEB101x_o20:</strong> Hiểu và vận dụng được các thành phần trong Bootstrap để xây dựng Website</td></tr>
+
+                            <tr>
+                                <td style="font-weight: 600; color: var(--primary-color);">Đưa được Website lên online</td>
+                                <td><strong>WEB101x_o21:</strong> Đưa được Website lên Online</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     <script>
         function toggleAllDetails(state) {
             document.querySelectorAll('details.course-section').forEach(detail => {

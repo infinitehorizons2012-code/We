@@ -2365,6 +2365,9 @@
             l2_v1_q2: { correct: 'B', explanation: 'Cấu trúc chuẩn của một Element có nội dung bắt buộc phải gồm thẻ mở &lt;p&gt; và thẻ đóng có dấu gạch chéo &lt;/p&gt;.' },
             l2_v2_q1: { correct: 'C', explanation: 'Thẻ &lt;body&gt; (phần thân) chứa tất cả các phần tử sẽ được hiển thị ra màn hình cho người dùng xem.' },
             l2_v2_q2: { correct: 'B', explanation: 'Khai báo &lt;!DOCTYPE html&gt; là tiêu chuẩn bắt buộc của HTML5, giúp trình duyệt không bị nhầm lẫn với các phiên bản HTML cũ.' },
+            l2_v3_q1: { correct: 'B', explanation: 'Thẻ H1 có ý nghĩa SEO rất quan trọng. Các bộ máy tìm kiếm dùng H1 để hiểu chủ đề chính của trang, vì thế chỉ nên có một H1 duy nhất (tiêu đề bài viết/trang).' },
+            l2_v3_q2: { correct: 'C', explanation: 'Thẻ &lt;b&gt; chỉ in đậm vật lý. Thẻ &lt;strong&gt; vừa in đậm vừa mang ý nghĩa ngữ nghĩa (Semantic), trình duyệt đọc màn hình sẽ nhấn giọng ở những từ này.' },
+            l2_v3_q3: { correct: 'C', explanation: 'Đó là cú pháp &lt;!-- comment --&gt; chuẩn của HTML, mọi thứ nằm trong này sẽ không hiển thị lên giao diện nhưng lập trình viên vẫn đọc được trong code.' },
             q1: { correct: 'B', explanation: 'Trình duyệt đóng vai trò là Client, luôn phải gửi Request đi trước thì Máy chủ mới biết để trả Response về.' },
             q2: { correct: 'C', explanation: 'Đừng để chữ "Động" đánh lừa. Động/Tĩnh ở đây là nói về cách Máy chủ (Server) chuẩn bị file HTML như thế nào từ dữ liệu, chứ không phải hiệu ứng hình ảnh.' },
             q3: { correct: 'B', explanation: 'CSS đóng vai trò làm tính từ (để trang điểm, tô màu sắc, và sắp xếp bố cục). Khung gạch thô của ngôi nhà mới là HTML.' },
@@ -2390,6 +2393,20 @@
             event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
             
             document.querySelectorAll('.l2v2-tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
+        }
+        
+        function switchL2V3Tab(tabId) {
+            document.querySelectorAll('.l2v3-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+            });
+            event.currentTarget.style.color = 'var(--primary-color)';
+            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
+            
+            document.querySelectorAll('.l2v3-tab-content').forEach(content => {
                 content.style.display = 'none';
             });
             document.getElementById(tabId).style.display = 'block';

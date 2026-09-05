@@ -557,6 +557,38 @@
             .course-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
             .course-btn { margin-left: 0; }
         }
+    
+        .quiz-option {
+            display: block;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #fff;
+        }
+        .quiz-option:hover {
+            background: #f1f5f9;
+        }
+        .quiz-option input {
+            margin-right: 10px;
+        }
+        .quiz-option.correct {
+            background: #dcfce7 !important;
+            border-color: #22c55e !important;
+            color: #166534;
+        }
+        .quiz-option.incorrect {
+            background: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            color: #991b1b;
+        }
+        .quiz-option.disabled {
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
     </style>
 </head>
 <body>
@@ -978,64 +1010,57 @@
                         </div>
                     </div>
 
+                    
                     <!-- QUIZ TAB -->
                     <div id="v-quiz" class="v-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
                         <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.6; border: 1px solid var(--border-color); color: #334155;">
-                            <h3 style="margin-top: 0; color: var(--primary-color); font-size: 1.2rem; border-bottom: 2px dashed #e2e8f0; padding-bottom: 0.8rem;"><i class="fas fa-tasks" style="margin-right: 8px;"></i> Bài Tập Đánh Giá (Quiz)</h3>
-                            <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Hãy tự trả lời các câu hỏi sau để kiểm tra xem bạn đã thực sự hiểu bài hay chưa. (Click vào nút "Xem đáp án" để kiểm tra).</p>
+                            <h3 style="margin-top: 0; color: var(--primary-color); font-size: 1.2rem; border-bottom: 2px dashed #e2e8f0; padding-bottom: 0.8rem;"><i class="fas fa-tasks" style="margin-right: 8px;"></i> Bài Tập Đánh Giá (Interactive Quiz)</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Hãy chọn đáp án đúng cho các câu hỏi sau để nhận feedback ngay lập tức.</p>
 
-                            <div style="margin-bottom: 1.5rem; background: #f8fafc; padding: 1rem; border-radius: 6px;">
-                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Câu 1: Khi bạn nhập một URL (ví dụ: facebook.com) vào trình duyệt và nhấn Enter, hành động đầu tiên xảy ra là gì?</div>
-                                <div style="margin-bottom: 0.8rem; padding-left: 1rem;">
-                                    A. Trình duyệt lập tức tải HTML có sẵn trên máy và hiển thị.<br>
-                                    B. Trình duyệt gửi một Yêu cầu (Request) thông qua Internet đến Máy chủ (Server) của Facebook.<br>
-                                    C. Database của Facebook tự động sinh ra giao diện người dùng mà không cần chờ yêu cầu.<br>
-                                    D. Cả 3 ý trên đều đúng.
+                            <!-- Question 1 -->
+                            <div class="quiz-question" id="q1" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 1rem; font-size: 1.05rem;">Câu 1: Khi bạn nhập một URL (ví dụ: facebook.com) vào trình duyệt và nhấn Enter, hành động đầu tiên xảy ra là gì?</div>
+                                <div class="quiz-options">
+                                    <label class="quiz-option"><input type="radio" name="q1" value="A" onclick="checkAnswer('q1', 'A')"> A. Trình duyệt lập tức tải HTML có sẵn trên máy và hiển thị.</label>
+                                    <label class="quiz-option"><input type="radio" name="q1" value="B" onclick="checkAnswer('q1', 'B')"> B. Trình duyệt gửi một Yêu cầu (Request) thông qua Internet đến Máy chủ (Server) của Facebook.</label>
+                                    <label class="quiz-option"><input type="radio" name="q1" value="C" onclick="checkAnswer('q1', 'C')"> C. Database của Facebook tự động sinh ra giao diện người dùng mà không cần chờ yêu cầu.</label>
+                                    <label class="quiz-option"><input type="radio" name="q1" value="D" onclick="checkAnswer('q1', 'D')"> D. Cả 3 ý trên đều đúng.</label>
                                 </div>
-                                <details style="background: #e0f2fe; padding: 0.8rem; border-radius: 4px; cursor: pointer;">
-                                    <summary style="font-weight: 600; color: #0284c7; outline: none;">👉 Xem đáp án</summary>
-                                    <div style="margin-top: 0.5rem; color: #0369a1;"><strong>Đáp án B.</strong> Trình duyệt đóng vai trò là Client, luôn phải gửi Request đi trước thì Máy chủ mới biết để trả Response về.</div>
-                                </details>
+                                <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
                             </div>
 
-                            <div style="margin-bottom: 1.5rem; background: #f8fafc; padding: 1rem; border-radius: 6px;">
-                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Câu 2: Đâu là điểm khác biệt cốt lõi nhất giữa một Trang web Tĩnh (Static) và Trang web Động (Dynamic)?</div>
-                                <div style="margin-bottom: 0.8rem; padding-left: 1rem;">
-                                    A. Web động có nhiều hiệu ứng hình ảnh bay lượn (animation) hơn web tĩnh.<br>
-                                    B. Web tĩnh được code bằng HTML/CSS, Web động bắt buộc phải code bằng JavaScript.<br>
-                                    C. Web tĩnh có sẵn 100% các file HTML trên Server, còn Web động thì các file này được "lắp ráp" và tạo ra từ Database mỗi lần có người truy cập.<br>
-                                    D. Web động chỉ hiển thị được trên điện thoại, web tĩnh chỉ hiển thị trên máy tính.
+                            <!-- Question 2 -->
+                            <div class="quiz-question" id="q2" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 1rem; font-size: 1.05rem;">Câu 2: Đâu là điểm khác biệt cốt lõi nhất giữa một Trang web Tĩnh (Static) và Trang web Động (Dynamic)?</div>
+                                <div class="quiz-options">
+                                    <label class="quiz-option"><input type="radio" name="q2" value="A" onclick="checkAnswer('q2', 'A')"> A. Web động có nhiều hiệu ứng hình ảnh bay lượn (animation) hơn web tĩnh.</label>
+                                    <label class="quiz-option"><input type="radio" name="q2" value="B" onclick="checkAnswer('q2', 'B')"> B. Web tĩnh được code bằng HTML/CSS, Web động bắt buộc phải code bằng JavaScript.</label>
+                                    <label class="quiz-option"><input type="radio" name="q2" value="C" onclick="checkAnswer('q2', 'C')"> C. Web tĩnh có sẵn 100% các file HTML trên Server, còn Web động thì các file này được "lắp ráp" và tạo ra từ Database mỗi lần có người truy cập.</label>
+                                    <label class="quiz-option"><input type="radio" name="q2" value="D" onclick="checkAnswer('q2', 'D')"> D. Web động chỉ hiển thị được trên điện thoại, web tĩnh chỉ hiển thị trên máy tính.</label>
                                 </div>
-                                <details style="background: #e0f2fe; padding: 0.8rem; border-radius: 4px; cursor: pointer;">
-                                    <summary style="font-weight: 600; color: #0284c7; outline: none;">👉 Xem đáp án</summary>
-                                    <div style="margin-top: 0.5rem; color: #0369a1;"><strong>Đáp án C.</strong> Đừng để chữ "Động" đánh lừa. Động/Tĩnh ở đây là nói về cách Máy chủ (Server) chuẩn bị file HTML như thế nào từ dữ liệu, chứ không phải hiệu ứng hình ảnh.</div>
-                                </details>
+                                <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
                             </div>
 
-                            <div style="margin-bottom: 1.5rem; background: #f8fafc; padding: 1rem; border-radius: 6px;">
-                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Câu 3: Theo phép loại suy trong bài học, nếu một trang web là một ngôi nhà, thì lớp sơn tường màu xanh và những khung cửa sổ được sắp xếp ngay ngắn tương ứng với công nghệ nào?</div>
-                                <div style="margin-bottom: 0.8rem; padding-left: 1rem;">
-                                    A. HTML (Danh từ)<br>
-                                    B. CSS (Tính từ)<br>
-                                    C. JavaScript (Động từ)<br>
-                                    D. Database (Kho chứa)
+                            <!-- Question 3 -->
+                            <div class="quiz-question" id="q3" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 1rem; font-size: 1.05rem;">Câu 3: Theo phép loại suy trong bài học, nếu một trang web là một ngôi nhà, thì lớp sơn tường màu xanh và những khung cửa sổ được sắp xếp ngay ngắn tương ứng với công nghệ nào?</div>
+                                <div class="quiz-options">
+                                    <label class="quiz-option"><input type="radio" name="q3" value="A" onclick="checkAnswer('q3', 'A')"> A. HTML (Danh từ)</label>
+                                    <label class="quiz-option"><input type="radio" name="q3" value="B" onclick="checkAnswer('q3', 'B')"> B. CSS (Tính từ)</label>
+                                    <label class="quiz-option"><input type="radio" name="q3" value="C" onclick="checkAnswer('q3', 'C')"> C. JavaScript (Động từ)</label>
+                                    <label class="quiz-option"><input type="radio" name="q3" value="D" onclick="checkAnswer('q3', 'D')"> D. Database (Kho chứa)</label>
                                 </div>
-                                <details style="background: #e0f2fe; padding: 0.8rem; border-radius: 4px; cursor: pointer;">
-                                    <summary style="font-weight: 600; color: #0284c7; outline: none;">👉 Xem đáp án</summary>
-                                    <div style="margin-top: 0.5rem; color: #0369a1;"><strong>Đáp án B.</strong> CSS đóng vai trò làm tính từ (để trang điểm, tô màu sắc, và sắp xếp bố cục). Khung gạch thô của ngôi nhà mới là HTML.</div>
-                                </details>
+                                <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
                             </div>
 
-                            <div style="margin-bottom: 0; background: #f8fafc; padding: 1rem; border-radius: 6px;">
-                                <div style="font-weight: 600; margin-bottom: 0.5rem;">Câu 4 (Tình huống): Một doanh nghiệp muốn xây dựng sàn thương mại điện tử khổng lồ quản lý hàng chục ngàn sản phẩm, giỏ hàng, và tính toán điểm tích lũy cho người dùng. Đội ngũ Front-end Development (chỉ giỏi HTML, CSS, JavaScript) cam kết có thể làm toàn bộ hệ thống này mà không cần ai khác. Lời cam kết đó đúng hay sai? Tại sao?</div>
-                                <div style="margin-bottom: 0.8rem; padding-left: 1rem;">
-                                    A. Đúng, vì JavaScript đủ mạnh để làm mọi thứ hiển thị trên màn hình.<br>
-                                    B. Sai, vì họ bắt buộc phải cần hệ thống Back-end (Database, Server logic) để lưu trữ sản phẩm, mã hóa mật khẩu, và xử lý nghiệp vụ phức tạp ở phía sau.
+                            <!-- Question 4 -->
+                            <div class="quiz-question" id="q4" style="margin-bottom: 0; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 1rem; font-size: 1.05rem;">Câu 4 (Tình huống): Một doanh nghiệp muốn xây dựng sàn thương mại điện tử khổng lồ quản lý hàng chục ngàn sản phẩm, giỏ hàng, và tính toán điểm tích lũy cho người dùng. Đội ngũ Front-end Development (chỉ giỏi HTML, CSS, JavaScript) cam kết có thể làm toàn bộ hệ thống này mà không cần ai khác. Lời cam kết đó đúng hay sai? Tại sao?</div>
+                                <div class="quiz-options">
+                                    <label class="quiz-option"><input type="radio" name="q4" value="A" onclick="checkAnswer('q4', 'A')"> A. Đúng, vì JavaScript đủ mạnh để làm mọi thứ hiển thị trên màn hình.</label>
+                                    <label class="quiz-option"><input type="radio" name="q4" value="B" onclick="checkAnswer('q4', 'B')"> B. Sai, vì họ bắt buộc phải cần hệ thống Back-end (Database, Server logic) để lưu trữ sản phẩm, mã hóa mật khẩu, và xử lý nghiệp vụ phức tạp ở phía sau.</label>
                                 </div>
-                                <details style="background: #e0f2fe; padding: 0.8rem; border-radius: 4px; cursor: pointer;">
-                                    <summary style="font-weight: 600; color: #0284c7; outline: none;">👉 Xem đáp án</summary>
-                                    <div style="margin-top: 0.5rem; color: #0369a1;"><strong>Đáp án B.</strong> Những gì bạn học trong khóa này (Front-end) chỉ làm được phần Giao diện "bề nổi". Để vận hành các hệ thống thực tế như Udemy hay Shopee, bắt buộc phải có Back-end.</div>
-                                </details>
+                                <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
                             </div>
 
                         </div>
@@ -1210,6 +1235,50 @@
 
         // Tab switching logic
         
+        
+        const quizData = {
+            q1: { correct: 'B', explanation: 'Trình duyệt đóng vai trò là Client, luôn phải gửi Request đi trước thì Máy chủ mới biết để trả Response về.' },
+            q2: { correct: 'C', explanation: 'Đừng để chữ "Động" đánh lừa. Động/Tĩnh ở đây là nói về cách Máy chủ (Server) chuẩn bị file HTML như thế nào từ dữ liệu, chứ không phải hiệu ứng hình ảnh.' },
+            q3: { correct: 'B', explanation: 'CSS đóng vai trò làm tính từ (để trang điểm, tô màu sắc, và sắp xếp bố cục). Khung gạch thô của ngôi nhà mới là HTML.' },
+            q4: { correct: 'B', explanation: 'Những gì bạn học trong khóa này (Front-end) chỉ làm được phần Giao diện "bề nổi". Để vận hành các hệ thống thực tế như Udemy hay Shopee, bắt buộc phải có Back-end.' }
+        };
+
+        function checkAnswer(questionId, selectedValue) {
+            const data = quizData[questionId];
+            const qDiv = document.getElementById(questionId);
+            const options = qDiv.querySelectorAll('.quiz-option');
+            const feedback = qDiv.querySelector('.quiz-feedback');
+            
+            // Disable all options
+            options.forEach(opt => {
+                opt.classList.add('disabled');
+                const radio = opt.querySelector('input');
+                
+                if (radio.value === selectedValue) {
+                    if (selectedValue === data.correct) {
+                        opt.classList.add('correct');
+                        feedback.style.display = 'block';
+                        feedback.style.background = '#dcfce7';
+                        feedback.style.border = '1px solid #22c55e';
+                        feedback.style.color = '#166534';
+                        feedback.innerHTML = `<strong><i class="fas fa-check-circle"></i> Chính xác!</strong> ${data.explanation}`;
+                    } else {
+                        opt.classList.add('incorrect');
+                        feedback.style.display = 'block';
+                        feedback.style.background = '#fee2e2';
+                        feedback.style.border = '1px solid #ef4444';
+                        feedback.style.color = '#991b1b';
+                        feedback.innerHTML = `<strong><i class="fas fa-times-circle"></i> Rất tiếc, chưa đúng.</strong> Đáp án đúng là <strong>${data.correct}</strong>.<br><br><em>Giải thích:</em> ${data.explanation}`;
+                    }
+                }
+                
+                // Highlight the correct answer if they got it wrong
+                if (radio.value === data.correct && selectedValue !== data.correct) {
+                     opt.classList.add('correct');
+                }
+            });
+        }
+
         function switchVideoTab(tabId) {
             document.querySelectorAll('.v-tab-btn').forEach(btn => {
                 btn.style.color = 'var(--text-secondary)';

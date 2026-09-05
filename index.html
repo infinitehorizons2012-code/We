@@ -907,14 +907,17 @@
                 <div style="flex: 0 0 250px; background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 1rem;">
                     <h3 style="margin-top: 0; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); font-size: 1.1rem;">Danh sách Video</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="padding: 0.8rem; background: rgba(99, 102, 241, 0.1); border-radius: 6px; border-left: 3px solid var(--primary-color); color: var(--text-primary); font-weight: 500; cursor: pointer; margin-bottom: 0.5rem;"><i class="fas fa-play-circle" style="color: var(--primary-color); margin-right: 8px;"></i> Video 1: Tổng quan</li>
-                        <li style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s;"><i class="fas fa-lock" style="margin-right: 8px;"></i> Video 2 (Khóa)</li>
+                        <li id="menu-v1" onclick="switchMainVideo('v1')" style="padding: 0.8rem; background: rgba(99, 102, 241, 0.1); border-radius: 6px; border-left: 3px solid var(--primary-color); color: var(--text-primary); font-weight: 500; cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s;"><i class="fas fa-play-circle" id="icon-v1" style="color: var(--primary-color); margin-right: 8px;"></i> Video 1: Tổng quan</li>
+                        <li id="menu-v2" onclick="switchMainVideo('v2')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s; border-left: 3px solid transparent;"><i class="fas fa-play-circle" id="icon-v2" style="color: inherit; margin-right: 8px;"></i> Video 2: Cài đặt công cụ</li>
                         <li style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s;"><i class="fas fa-lock" style="margin-right: 8px;"></i> Video 3 (Khóa)</li>
                     </ul>
                 </div>
 
                 <!-- Video Content -->
-                <div style="flex: 1; background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 2rem;">
+                <div style="flex: 1; background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 2rem; position: relative;">
+                    
+                    <!-- Content Video 1 -->
+                    <div id="content-v1" class="main-video-content" style="display: block; animation: fadeIn 0.3s ease;">
                     <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;">Video 1: Tổng quan về Web Development</h2>
                     
                     <a href="https://funix.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/27511928#overview" target="_blank" style="text-decoration: none;">
@@ -1212,6 +1215,162 @@
 
                         </div>
                     </div>
+                    </div> <!-- End content-v1 -->
+
+                    <!-- Content Video 2 -->
+                    <div id="content-v2" class="main-video-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;">Video 2: Cài đặt công cụ Code Editor</h2>
+                        
+                        <div style="width: 100%; height: 350px; background: #0f172a; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 2rem; position: relative; overflow: hidden; box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+                            <i class="fas fa-play-circle" style="font-size: 4.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                            <span style="color: white; font-size: 1.1rem; font-weight: 500;">(Mô phỏng Video Player)</span>
+                        </div>
+
+                        <div class="video-tabs" style="display: flex; gap: 1rem; border-bottom: 2px solid var(--border-color); margin-bottom: 1.5rem;">
+                            <button class="v2-tab-btn active" onclick="switchVideo2Tab('v2-ubd')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--primary-color); font-weight: 600; cursor: pointer; border-bottom: 3px solid var(--primary-color); margin-bottom: -2px;">Phân tích UbD</button>
+                            <button class="v2-tab-btn" onclick="switchVideo2Tab('v2-note')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Chú giải</button>
+                            <button class="v2-tab-btn" onclick="switchVideo2Tab('v2-sub')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Transcript (Song ngữ)</button>
+                            <button class="v2-tab-btn" onclick="switchVideo2Tab('v2-takeaway')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Nội dung trọng tâm</button>
+                            <button class="v2-tab-btn" onclick="switchVideo2Tab('v2-quiz')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Bài tập đánh giá</button>
+                        </div>
+
+                        <!-- V2 UBD -->
+                        <div id="v2-ubd" class="v2-tab-content active" style="animation: fadeIn 0.3s ease;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-top: 4px solid var(--primary-color);">
+                                    <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--primary-color);"><i class="fas fa-book-open"></i> Nội dung bài học (Learning Plan)</h3>
+                                    <ul style="padding-left: 1.2rem; font-size: 0.95rem; margin-bottom: 0;">
+                                        <li>Tải và cài đặt <strong>Visual Studio Code</strong>.</li>
+                                        <li>Cài đặt extension <strong>Prettier</strong> để tự động căn lề.</li>
+                                        <li>Cấu hình: <strong>Format on save</strong>, <strong>Auto save (onFocusChange)</strong>, <strong>Tab size (2)</strong>.</li>
+                                        <li>Cài đặt Theme màu <strong>One Monokai</strong> và Icon theme <strong>Seti</strong>.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: #fff1f2; padding: 1.5rem; border-radius: 8px; border-top: 4px solid var(--danger);">
+                                    <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--danger);"><i class="fas fa-exclamation-triangle"></i> Bẫy kiến thức (Cognitive Traps)</h3>
+                                    <ul style="padding-left: 1.2rem; font-size: 0.95rem; margin-bottom: 0; color: #881337;">
+                                        <li><strong>🚨 Code "xấu":</strong> Không cài Prettier hoặc quên bật Format On Save dẫn đến code lộn xộn, khó debug lỗi.</li>
+                                        <li><strong>🚨 Quên lưu file:</strong> Không bật Auto-save dẫn đến việc code xong chạy thử trên trình duyệt không thấy thay đổi, hoang mang tưởng code sai.</li>
+                                    </ul>
+                                </div>
+
+                                <div style="background: #eff6ff; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #3b82f6; grid-column: 1 / -1;">
+                                    <h3 style="margin-top: 0; font-size: 1.1rem; color: #1d4ed8;"><i class="fas fa-backward"></i> Suy ngược UbD (Backward Design Mapping)</h3>
+                                    <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
+                                        <div style="width: 150px; font-weight: bold; color: #1e40af;">Mục tiêu (CLO):</div>
+                                        <div style="flex: 1; font-size: 0.95rem;"><strong>WEB101x_o2:</strong> Cài đặt và thiết lập được các công cụ để lập trình Web.</div>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
+                                        <div style="width: 150px; font-weight: bold; color: #1e40af;">Skill Taxonomy:</div>
+                                        <div style="flex: 1; font-size: 0.95rem;"><span class="quiz-tag" style="margin-left: 0;">Development Environment</span> <span class="quiz-tag">Tooling Setup</span></div>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <div style="width: 150px; font-weight: bold; color: #1e40af;">Task Đánh Giá:</div>
+                                        <div style="flex: 1; font-size: 0.95rem;">Cài đặt VS Code, Prettier và thực hiện trắc nghiệm kiểm tra hiểu biết về các setting cấu hình (Auto-save, Format).</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- V2 NOTE -->
+                        <div id="v2-note" class="v2-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.6; border: 1px solid var(--border-color);">
+                                <strong>(0:00)</strong> Giới thiệu về code editor<br>
+                                <strong>(0:45)</strong> Giới thiệu về Visual Studio code của Microsoft<br>
+                                <strong>(1:10)</strong> Hướng dẫn tải về VSC và cài đặt<br>
+                                <strong>(2:10)</strong> Hướng dẫn cài đặt extension trên VSC – prettier<br>
+                                <strong>(3:45)</strong> Hướng dẫn tùy chỉnh các option khác trên VSC với default format, format on save, auto save, tab size.<br>
+                                <strong>(7:00)</strong> Cài đặt color theme với One Monokai Theme.<br><br>
+                                <em>Lưu ý của giáo viên: Học viên có thể cài đặt các code editor tương tự như Visual Studio Code như: Sublime Text, Atom, Webstorm,...Có nhiều công cụ có thể viết mã cho trang web, tuy nhiên các bạn nên sử dụng công cụ Visual studio code của Microsoft. Đây là công cụ viết mã được đánh giá cao và có thể sử dụng với các hệ điều hành Windows, Mac OS và Linux.</em>
+                            </div>
+                        </div>
+
+                        <!-- V2 SUB -->
+                        <div id="v2-sub" class="v2-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; font-size: 0.9rem; line-height: 1.7; height: 350px; overflow-y: auto; border: 1px solid var(--border-color); color: #334155;">
+                                
+                                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> Instructor: Now, before we can start writing a single line of code, we first need to install a special tool called a code editor. And a code editor is essentially a special software that allows us to write programming codes, like HTML in CSS, in a very easy way. And since this course is probably your first contact with any coding, in this video I will guide you through installing the very best code editor in the world. And I will then also show you how to set it up a little bit with some special settings, color themes and extensions.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (0:00)</strong> Giảng viên: Bây giờ, trước khi bắt đầu viết dòng mã đầu tiên, chúng ta cần cài đặt một công cụ đặc biệt gọi là trình soạn thảo mã (code editor). Về cơ bản, nó là phần mềm cho phép chúng ta viết mã lập trình (HTML, CSS) dễ dàng. Vì đây có lẽ là lần đầu bạn code, tôi sẽ hướng dẫn bạn cài đặt trình soạn thảo tốt nhất thế giới, và thiết lập nó với các cấu hình, theme và extension đặc biệt.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> And the code editor that we're gonna use in this course is called Visual Studio Code from Microsoft. And as I just said earlier, this is, in my opinion and in the opinion of many other developers, the very best code editor for web development in the world. So actually every developer that I know, right now uses this code editor. And so you also can't go wrong by using VS Code.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (0:45)</strong> Trình soạn thảo chúng ta dùng là Visual Studio Code của Microsoft. Theo tôi và nhiều lập trình viên khác, đây là trình soạn thảo tốt nhất cho web development trên thế giới. Hầu như mọi lập trình viên tôi biết đều đang sử dụng nó. Bạn sẽ không bao giờ sai lầm khi chọn VS Code.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> So to download it, just go to code.visualstudio.com, or to make it even easier, you can just Google VS Code... (Tải về và cài đặt giống như bất kỳ chương trình nào khác). Once you open up the code editor, it should look something like this.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (1:10)</strong> Để tải xuống, vào code.visualstudio.com hoặc Google "VS Code". Nó miễn phí cho macOS, Windows và Linux. Hãy tải và cài đặt nó vào máy của bạn. Khi mở lên, nó sẽ trông như thế này.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> And as I said earlier, we will now set up VS Code a little bit to make it easier for you to follow this course. And we will start by installing an extension... called Prettier. ... Now what this extension does is to automatically format your code whenever you save it. And this is going to be very important so that your code always looks exactly the same way as the code that I am typing in the video, because that way it will be way easier for you to find any errors or any mistakes that you have in your own code.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (2:10)</strong> Bây giờ ta sẽ cài extension. Nó giống như extension của Chrome. Chúng ta sẽ cài Prettier (hơn 12 triệu lượt tải). Chức năng của nó là tự động định dạng mã mỗi khi bạn bấm lưu. Điều này cực kỳ quan trọng để code của bạn thụt lề giống hệt tôi trên video, giúp bạn dễ dàng đối chiếu và tìm ra lỗi sai.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> So now let's come down here to this Settings icon... type here default formatter. And so here we actually need to set it to Prettier... Next, we need to set another setting for that which is the format on save setting... Another one that is very important is the auto-save setting. So auto save, we need to set it to on focus change... And another one that I like to use is to set the tab-size to two.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (3:45)</strong> Vào Settings: 1. Tìm "default formatter" và chọn Prettier. 2. Bật "format on save" để nó tự format mỗi khi lưu. 3. Tìm "auto save" và chọn "onFocusChange" để máy tự động lưu file khi bạn chuyển tab, tránh bị mất dữ liệu. 4. Chỉnh "tab-size" thành 2 để thụt lề chuẩn.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> And now finally, let's talk about these colors... a color theme is basically just another extension that we need to install, and this one is called One Monokai. ... Finally, there's just one more small thing which is this File icon theme... I set mine to Seti. And with that, we are done setting up VS Code for now.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (7:00)</strong> Cuối cùng là màu sắc. Ta sẽ cài color theme tên là "One Monokai" giúp mã dễ đọc hơn. Chủ đề biểu tượng file thì tôi dùng "Seti". Cài đặt xong phần này là bạn đã sẵn sàng viết dòng code đầu tiên!</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- V2 TAKEAWAY -->
+                        <div id="v2-takeaway" class="v2-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #fdf4ff; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.6; border: 1px solid #f5d0fe; color: #4a044e;">
+                                <h3 style="margin-top: 0; color: #701a75; font-size: 1.2rem;"><i class="fas fa-check-circle" style="margin-right: 8px;"></i> Cấu hình "Sống còn" trên VS Code</h3>
+                                <p>Đừng coi thường việc cấu hình công cụ. 4 thiết lập sau đây sẽ cứu bạn khỏi 80% rắc rối ngớ ngẩn khi mới học code:</p>
+                                <ul style="padding-left: 1.5rem;">
+                                    <li><strong>Auto-save (onFocusChange):</strong> Tự động lưu file khi bạn chuyển cửa sổ. Không còn cảnh gõ code xong ra trình duyệt F5 mãi không thấy đổi vì quên ấn Ctrl+S.</li>
+                                    <li><strong>Extension Prettier:</strong> Trợ lý dọn dẹp code tự động.</li>
+                                    <li><strong>Default Formatter = Prettier & Format On Save:</strong> Bộ đôi quyền lực. Cứ bấm Save (hoặc tự động lưu) là code dù lộn xộn đến đâu cũng lập tức được căn lề thẳng tắp, dễ dàng dò lỗi.</li>
+                                    <li><strong>Tab-size = 2:</strong> Khoảng cách thụt lề chuẩn mực để code gọn gàng, không bị thụt ra vào quá sâu.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- V2 QUIZ -->
+                        <div id="v2-quiz" class="v2-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.6; border: 1px solid var(--border-color); color: #334155;">
+                                <h3 style="margin-top: 0; color: var(--primary-color); font-size: 1.2rem; border-bottom: 2px dashed #e2e8f0; padding-bottom: 0.8rem;"><i class="fas fa-tasks" style="margin-right: 8px;"></i> Bài Tập Đánh Giá (Interactive Quiz)</h3>
+                                
+                                <div class="quiz-question" id="v2q1" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                    <div style="font-weight: 600; margin-bottom: 1rem;">Câu 1: Vì sao Giảng viên lại khuyên cài đặt extension Prettier?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="v2q1" value="A" onclick="checkAnswer('v2q1', 'A')"> A. Để trình soạn thảo có giao diện màu sắc đẹp hơn.</label>
+                                        <label class="quiz-option"><input type="radio" name="v2q1" value="B" onclick="checkAnswer('v2q1', 'B')"> B. Để tự động sửa các lỗi sai cú pháp tiếng Anh trong lúc code.</label>
+                                        <label class="quiz-option"><input type="radio" name="v2q1" value="C" onclick="checkAnswer('v2q1', 'C')"> C. Để tự động định dạng (format) và căn lề code, giúp code sạch đẹp và dễ đọc.</label>
+                                    </div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+
+                                <div class="quiz-question" id="v2q2" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                    <div style="font-weight: 600; margin-bottom: 1rem;">Câu 2: Tính năng "Auto save: on focus change" có tác dụng gì?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="v2q2" value="A" onclick="checkAnswer('v2q2', 'A')"> A. Tự động lưu file mỗi khi bạn bấm chuột sang một tab khác hoặc cửa sổ khác.</label>
+                                        <label class="quiz-option"><input type="radio" name="v2q2" value="B" onclick="checkAnswer('v2q2', 'B')"> B. Tự động lưu file lên đám mây (Cloud).</label>
+                                        <label class="quiz-option"><input type="radio" name="v2q2" value="C" onclick="checkAnswer('v2q2', 'C')"> C. Tự động phục hồi file nếu máy tính bị sập nguồn.</label>
+                                    </div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+
+                                <div class="quiz-question" id="v2q3" style="margin-bottom: 0; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                    <div style="font-weight: 600; margin-bottom: 1rem;">Câu 3 (Tình huống): Một học viên code HTML, đã lưu file nhưng code không tự động căn lề thụt vào cho đẹp giống như trên video. Nguyên nhân nào sau đây có thể đúng nhất?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="v2q3" value="A" onclick="checkAnswer('v2q3', 'A')"> A. Bạn ấy chưa cài extension One Monokai.</label>
+                                        <label class="quiz-option"><input type="radio" name="v2q3" value="B" onclick="checkAnswer('v2q3', 'B')"> B. Bạn ấy đã cài Prettier nhưng quên chưa bật tính năng "Format on save" hoặc chưa chọn Prettier làm "Default Formatter".</label>
+                                        <label class="quiz-option"><input type="radio" name="v2q3" value="C" onclick="checkAnswer('v2q3', 'C')"> C. Bàn phím của bạn ấy bị hỏng nút Tab.</label>
+                                    </div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div> <!-- End content-v2 -->
 
                 </div>
             </div>
@@ -1236,12 +1395,53 @@
         // Tab switching logic
         
         
+        
         const quizData = {
             q1: { correct: 'B', explanation: 'Trình duyệt đóng vai trò là Client, luôn phải gửi Request đi trước thì Máy chủ mới biết để trả Response về.' },
             q2: { correct: 'C', explanation: 'Đừng để chữ "Động" đánh lừa. Động/Tĩnh ở đây là nói về cách Máy chủ (Server) chuẩn bị file HTML như thế nào từ dữ liệu, chứ không phải hiệu ứng hình ảnh.' },
             q3: { correct: 'B', explanation: 'CSS đóng vai trò làm tính từ (để trang điểm, tô màu sắc, và sắp xếp bố cục). Khung gạch thô của ngôi nhà mới là HTML.' },
-            q4: { correct: 'B', explanation: 'Những gì bạn học trong khóa này (Front-end) chỉ làm được phần Giao diện "bề nổi". Để vận hành các hệ thống thực tế như Udemy hay Shopee, bắt buộc phải có Back-end.' }
+            q4: { correct: 'B', explanation: 'Những gì bạn học trong khóa này (Front-end) chỉ làm được phần Giao diện "bề nổi". Để vận hành các hệ thống thực tế như Udemy hay Shopee, bắt buộc phải có Back-end.' },
+            v2q1: { correct: 'C', explanation: 'Prettier là công cụ "dọn dẹp" tự động, giúp code của bạn thụt lề ngay ngắn, chuẩn chỉ, cực kỳ dễ đọc và dò lỗi.' },
+            v2q2: { correct: 'A', explanation: 'Focus change nghĩa là "chuyển điểm tập trung" của chuột. Cứ bấm sang tab khác hoặc ra ngoài cửa sổ là VS Code sẽ tự lưu file cho bạn.' },
+            v2q3: { correct: 'B', explanation: 'Chỉ cài Prettier là chưa đủ, bạn phải nói cho VS Code biết là hãy dùng nó làm công cụ mặc định (Default Formatter) và kích hoạt nó mỗi khi lưu (Format on save).' }
         };
+
+        function switchMainVideo(vidId) {
+            // Update menu visual
+            document.querySelectorAll('.video-menu-item, li[id^="menu-"]').forEach(item => {
+                item.style.background = 'transparent';
+                item.style.borderLeft = '3px solid transparent';
+                item.style.color = 'var(--text-secondary)';
+                let icon = item.querySelector('i');
+                if(icon) icon.style.color = 'inherit';
+            });
+            
+            let activeItem = document.getElementById('menu-' + vidId);
+            activeItem.style.background = 'rgba(99, 102, 241, 0.1)';
+            activeItem.style.borderLeft = '3px solid var(--primary-color)';
+            activeItem.style.color = 'var(--text-primary)';
+            activeItem.querySelector('i').style.color = 'var(--primary-color)';
+            
+            // Switch content
+            document.querySelectorAll('.main-video-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById('content-' + vidId).style.display = 'block';
+        }
+
+        function switchVideo2Tab(tabId) {
+            document.querySelectorAll('.v2-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+            });
+            event.currentTarget.style.color = 'var(--primary-color)';
+            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
+            
+            document.querySelectorAll('.v2-tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
+        }
 
         function checkAnswer(questionId, selectedValue) {
             const data = quizData[questionId];

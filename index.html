@@ -607,6 +607,7 @@
             <button class="tab-btn" onclick="switchTab('clo')">Course Learning Outcomes (CLO)</button>
         <button class="tab-btn" onclick="switchTab('analysis')">Phân Tích UbD</button>
         <button class="tab-btn" onclick="switchTab('lesson1')">Bài 1: Giới thiệu</button>
+            <button class="tab-btn" onclick="switchTab('lesson2')">Bài 2: Giới thiệu về HTML</button>
         </nav>
 
         <div id="course-web101x" class="tab-content active">
@@ -1670,6 +1671,160 @@
                 </div>
             </div>
         </div>
+        </div>
+
+
+        <!-- TAB LESSON 2 -->
+        <div id="lesson2" class="tab-content">
+            <div class="course-detail-container" style="max-width: 100%; display: flex; gap: 2rem; background: transparent; padding: 0; box-shadow: none; border: none;">
+                
+                <!-- Sidebar Videos -->
+                <div style="flex: 0 0 250px; background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 1rem;">
+                    <h3 style="margin-top: 0; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); font-size: 1.1rem;">Nội dung</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li id="menu-l2-v1" onclick="switchMainVideo('l2-v1')" style="padding: 0.8rem; background: rgba(99, 102, 241, 0.1); border-radius: 6px; border-left: 3px solid var(--primary-color); color: var(--text-primary); font-weight: 500; cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s;"><i class="fas fa-play-circle" id="icon-l2-v1" style="color: var(--primary-color); margin-right: 8px;"></i> <span style="font-size: 0.7rem; background: #e0e7ff; color: #4338ca; padding: 2px 5px; border-radius: 4px; margin-right: 4px; font-weight: bold;">VIDEO</span> 1: HTML là gì?</li>
+                    </ul>
+                </div>
+
+                <!-- Video Content -->
+                <div style="flex: 1; background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 2rem; position: relative;">
+                    
+                    <!-- Content Video 1 (Lesson 2) -->
+                    <div id="content-l2-v1" class="main-video-content" style="display: block; animation: fadeIn 0.3s ease;">
+                        <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;">Video 1: Giới thiệu về HTML</h2>
+                        
+                        <a href="https://funix.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/27512010#overview" target="_blank" style="text-decoration: none;">
+                            <div style="width: 100%; height: 350px; background: #0f172a; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 2rem; position: relative; overflow: hidden; box-shadow: inset 0 0 50px rgba(0,0,0,0.5); cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='#1e293b'" onmouseout="this.style.background='#0f172a'">
+                                <i class="fas fa-play-circle" style="font-size: 4.5rem; color: var(--primary-color); margin-bottom: 1rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
+                                <span style="color: white; font-size: 1.1rem; font-weight: 500;">Xem video bài giảng trên Udemy <i class="fas fa-external-link-alt" style="font-size: 0.9rem; margin-left: 5px;"></i></span>
+                            </div>
+                        </a>
+
+                        <!-- Sub-tabs for Video 1 -->
+                        <div class="video-tabs">
+                            <button class="video-tab-btn active" onclick="switchVideoXTab('l2-v1', 'transcript')">Transcript (Song ngữ)</button>
+                            <button class="video-tab-btn" onclick="switchVideoXTab('l2-v1', 'notes')">Chú giải</button>
+                            <button class="video-tab-btn" onclick="switchVideoXTab('l2-v1', 'ubd')">Phân tích UbD (Sẽ cập nhật)</button>
+                            <button class="video-tab-btn" onclick="switchVideoXTab('l2-v1', 'takeaways')">Nội dung trọng tâm (Sẽ cập nhật)</button>
+                        </div>
+
+                        <!-- Transcript Content -->
+                        <div id="l2-v1-transcript" class="video-tab-content active" style="margin-top: 1.5rem;">
+                            <div style="display: flex; flex-direction: column; gap: 1rem; background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Instructor: Welcome back. Let's now very quickly learn what HTML actually is and what we can do with it.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Giáo viên: Chào mừng trở lại. Bây giờ chúng ta hãy cùng tìm hiểu thật nhanh HTML thực chất là gì và chúng ta có thể làm gì với nó.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> So basically, HTML stands for hypertext markup language. And remember how we learned earlier that HTML is one of the core web technologies, along with CSS and JavaScript, right?</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Về cơ bản, HTML là viết tắt của HyperText Markup Language (Ngôn ngữ đánh dấu siêu văn bản). Và bạn có nhớ lúc trước chúng ta đã học rằng HTML là một trong những công nghệ web cốt lõi, cùng với CSS và JavaScript chứ?</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Now, HTML is a markup language that we web developers can use to structure and describe the entire content of any webpage.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Giờ thì, HTML là một ngôn ngữ đánh dấu mà các lập trình viên web chúng ta có thể sử dụng để xây dựng cấu trúc và mô tả toàn bộ nội dung của bất kỳ trang web nào.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> So notice how I said markup language because HTML is really not a programming language. It's a markup language because we use it to describe something.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Hãy chú ý cách tôi gọi nó là "ngôn ngữ đánh dấu" bởi vì HTML thực sự không phải là một ngôn ngữ lập trình. Nó là một ngôn ngữ đánh dấu vì chúng ta dùng nó để mô tả thứ gì đó.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> And in the case of HTML, we do describe content using elements. So we have different elements that we can use to describe different types of content.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Và trong trường hợp của HTML, chúng ta thực hiện việc mô tả nội dung bằng các "phần tử" (elements). Có rất nhiều phần tử khác nhau mà ta có thể dùng để mô tả các loại nội dung khác nhau.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> So, for example, we have the &lt;p&gt; element that we already used in the lecture where we created our very first webpage. And so we used the &lt;p&gt; element there to create a paragraph.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Ví dụ, chúng ta có phần tử &lt;p&gt; mà chúng ta đã dùng ở bài giảng tạo trang web đầu tiên. Ta dùng phần tử &lt;p&gt; đó để tạo ra một đoạn văn bản.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> But we really have all kinds of different elements. So elements to create links, to create page headings, images, video, and a lot more, as you'll learn throughout this section and basically throughout the entire course.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Nhưng chúng ta còn có đủ các loại phần tử khác. Từ phần tử tạo liên kết, tạo tiêu đề, chèn hình ảnh, video, và nhiều hơn thế nữa, mà bạn sẽ được học trong phần này và xuyên suốt cả khóa học.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Then as we also learned in that lecture where we built our very first webpage, web browsers, such as Google Chrome, do essentially understand HTML code and can render it as a final website, so a website that we can see in the browser.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Như chúng ta đã học ở bài trước, các trình duyệt web (như Google Chrome) về cơ bản có thể hiểu được mã HTML và có thể render (hiển thị) nó thành một website hoàn chỉnh mà ta có thể xem trên trình duyệt.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Okay, so this is essentially what HTML is and what we can do with it. But now, let's just zoom in a little bit and take a look at the anatomy of an HTML element.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Đó là bản chất của HTML và những gì ta có thể làm với nó. Nhưng bây giờ, hãy phóng to một chút để nhìn vào "cấu trúc giải phẫu" của một phần tử HTML.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> So basically, take a look at the building blocks of each HTML element. And again, we are looking at the paragraph element here, as you can see by the &lt;p&gt;.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Về cơ bản, ta hãy xem các khối cấu tạo nên mỗi phần tử HTML. Và một lần nữa, chúng ta đang lấy ví dụ phần tử đoạn văn ở đây (kí hiệu là &lt;p&gt;).</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> And so all of this here is actually the element itself. Now, an HTML element is usually made up of three parts. First is the opening tag, which is the name of the element.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Toàn bộ cấu trúc này chính là một "phần tử" (element). Một phần tử HTML thường được cấu tạo bởi 3 phần. Đầu tiên là thẻ mở (opening tag) mang tên của phần tử đó.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> So, in this case, it's the &lt;p&gt; wrapped in the less than and the greater than symbols. Probably, they have some other names, but that's how I like to call the symbols. So it's less than &lt;p&gt; and then greater than.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Trong trường hợp này, chữ "p" được bọc giữa dấu nhỏ hơn (&lt;) và dấu lớn hơn (&gt;). Có thể chúng có tên gọi khác, nhưng tôi thích gọi chúng như vậy.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Then after that, we have basically the content of the element. So in this example, that is just text, but there might be other types of content. For example, an element can contain in itself another element, which we then call a child element.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Sau thẻ mở, chúng ta sẽ có nội dung của phần tử. Trong ví dụ này nó chỉ là văn bản, nhưng nó có thể là các loại nội dung khác. Ví dụ, một phần tử có thể chứa bên trong nó một phần tử khác, ta gọi đó là phần tử con (child element).</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Also, some elements, such as images, have actually no content at all and have only an opening tag. And all of this will, of course, become very intuitive as we start writing HTML.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Ngoài ra, vài phần tử (như hình ảnh) không có nội dung gì bên trong cả, chúng chỉ có duy nhất thẻ mở. Mọi thứ sẽ trở nên rất trực quan khi chúng ta bắt đầu viết code HTML thật.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> This is just so that you know what I'm talking about when I speak of opening tag or closing tag, or content. And speaking of the closing tag, it is basically the same as the opening tag, but with a slash.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Tôi nói điều này chỉ để bạn hiểu tôi đang nói tới cái gì mỗi khi tôi nhắc tới "thẻ mở", "thẻ đóng" hay "nội dung". Nhắc đến thẻ đóng, nó hoàn toàn giống thẻ mở, chỉ khác là có thêm dấu gạch chéo (/).</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> So we open this paragraph element simply with the &lt;p&gt;. And we then close it with &lt;/p&gt;. Okay?</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Chúng ta mở đoạn văn bằng thẻ &lt;p&gt; và đóng nó lại bằng thẻ &lt;/p&gt;.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Now, for elements that do not have content, such as the image element that I mentioned before, we actually omit the closing tag. So, in that case, we only have the opening tag, and that's it.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Đối với các phần tử không có nội dung (như thẻ hình ảnh), chúng ta bỏ qua luôn thẻ đóng. Khi đó ta chỉ cần thẻ mở là đủ.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> And we will see that in action, of course, once we start integrating images into a webpage. Okay, and that's really all you need in order to start learning HTML and practice, which is exactly what we will do in the next lecture.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Chúng ta sẽ tận mắt thấy điều này khi bắt đầu chèn ảnh vào trang web. Và đó là tất cả những gì bạn cần biết để bắt đầu học và thực hành HTML ngay trong bài giảng tiếp theo.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notes Content -->
+                        <div id="l2-v1-notes" class="video-tab-content" style="display: none; margin-top: 1.5rem;">
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 4px;">
+                                <h4 style="margin-top: 0; color: #b45309;"><i class="fas fa-sticky-note" style="margin-right: 8px;"></i>Chú giải của giáo viên</h4>
+                                <ul style="line-height: 1.8; color: #92400e; padding-left: 1rem; margin-bottom: 0;">
+                                    <li><strong>(0:00)</strong> Giới thiệu về HTML</li>
+                                    <li><strong>(2:00)</strong> Cấu trúc 1 block của HTML với tags và contents
+                                        <ul style="margin-top: 0.5rem; list-style-type: circle;">
+                                            <li>Trong tài liệu HTML, mỗi phần tử hay mỗi tag được gọi là một <strong>element</strong>.</li>
+                                            <li>Cấu trúc chung cơ bản của một element gồm phần nội dung (content) được đặt trong khối thẻ bắt đầu (opening tag) và thẻ kết thúc (closing tag).</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- UbD Content -->
+                        <div id="l2-v1-ubd" class="video-tab-content" style="display: none; margin-top: 1.5rem;">
+                            <div style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 2rem; border-radius: 8px; text-align: center;">
+                                <i class="fas fa-hammer" style="font-size: 2rem; color: #94a3b8; margin-bottom: 1rem;"></i>
+                                <h3 style="margin: 0; color: #475569;">Đang cập nhật Phân tích UbD</h3>
+                                <p style="color: #64748b;">Nội dung phân tích ngược (Backward Design) cho video này đang được giáo viên biên soạn.</p>
+                            </div>
+                        </div>
+
+                        <!-- Takeaways Content -->
+                        <div id="l2-v1-takeaways" class="video-tab-content" style="display: none; margin-top: 1.5rem;">
+                            <div style="background: #f8fafc; border: 1px dashed #cbd5e1; padding: 2rem; border-radius: 8px; text-align: center;">
+                                <i class="fas fa-hammer" style="font-size: 2rem; color: #94a3b8; margin-bottom: 1rem;"></i>
+                                <h3 style="margin: 0; color: #475569;">Đang cập nhật Nội dung trọng tâm</h3>
+                                <p style="color: #64748b;">Nội dung tổng hợp đang được biên soạn.</p>
+                            </div>
+                        </div>
+
+                    </div> <!-- End content-l2-v1 -->
+
+                </div>
+            </div>
         </div>
 
     <script>

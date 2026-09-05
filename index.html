@@ -892,7 +892,7 @@
                     <div class="video-tabs" style="display: flex; gap: 1rem; border-bottom: 2px solid var(--border-color); margin-bottom: 1.5rem;">
                         <button class="v-tab-btn active" onclick="switchVideoTab('v-ubd')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--primary-color); font-weight: 600; cursor: pointer; border-bottom: 3px solid var(--primary-color); margin-bottom: -2px;">Phân tích UbD</button>
                         <button class="v-tab-btn" onclick="switchVideoTab('v-note')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Chú giải</button>
-                        <button class="v-tab-btn" onclick="switchVideoTab('v-sub')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Subtitle (EN)</button>
+                        <button class="v-tab-btn" onclick="switchVideoTab('v-sub')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Transcript (Song ngữ)</button>
                     </div>
 
                     <!-- UBD TAB -->
@@ -965,20 +965,129 @@
                     </div>
 
                     <!-- SUBTITLE TAB -->
+                    
                     <div id="v-sub" class="v-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
-                        <div style="background: #f1f5f9; padding: 1.5rem; border-radius: 8px; font-size: 0.9rem; line-height: 1.7; height: 350px; overflow-y: auto; border: 1px solid var(--border-color); color: #475569;">
-                            Instructor: Welcome to the first actual lecture of this course. Now, there is a good chance that this course is gonna be your very first contact with any web development. And so before we start writing HTML and CSS code, I think it might be a good idea to actually begin this course with a very high-level overview of this field of web development. 
-                            <br><br>
-                            So we're gonna talk about things like clients and servers, front-end and back-end development, static and dynamic websites, and of course about the core languages and core technologies of web development. And I'm going to explain all this around the process that happens when we open up a webpage in a browser.
-                            <br><br>
-                            ... (We are trying to access a webpage in our browser at omnifood.dev. Our browser will send a request to the server where this page is hosted. The server will take all the files that make up the website and send them back to the browser as a response...)
-                            <br><br>
-                            <i>(Cuộn xuống để xem toàn bộ transcript trong ứng dụng thực tế)</i>
+                        <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; font-size: 0.9rem; line-height: 1.7; height: 350px; overflow-y: auto; border: 1px solid var(--border-color); color: #334155;">
+                            
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> Welcome to the first actual lecture of this course. Now, there is a good chance that this course is gonna be your very first contact with any web development. And so before we start writing HTML and CSS code, I think it might be a good idea to actually begin this course with a very high-level overview of this field of web development. So we're gonna talk about things like clients and servers, front-end and back-end development, static and dynamic websites, and of course about the core languages and core technologies of web development. And I'm going to explain all this around the process that happens when we open up a webpage in a browser. Just keep in mind again that this is just a high-level overview and so I'm gonna leave out a lot of details here. This is really just so you get familiar with some of these concepts and terms that all web developers know before you start your own journey.
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(0:00) Giới thiệu</strong><br>
+                                    Chào mừng bạn đến với bài giảng thực sự đầu tiên của khóa học này. Có khả năng đây là lần đầu tiên bạn tiếp xúc với lập trình web. Vì vậy, trước khi bắt đầu viết mã HTML và CSS, tôi nghĩ chúng ta nên bắt đầu bằng một cái nhìn tổng quan cấp cao về lĩnh vực này. Chúng ta sẽ nói về client và server, front-end và back-end, web tĩnh và web động, cùng các ngôn ngữ cốt lõi. Tôi sẽ giải thích dựa trên quá trình xảy ra khi mở một trang web trên trình duyệt. Hãy nhớ đây chỉ là tổng quan nên tôi sẽ bỏ qua nhiều chi tiết, mục đích là để bạn làm quen với các khái niệm trước khi bắt đầu.
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> But anyway, let's say that we're trying to access a webpage in our browser at omnifood.dev. And by the way, this is actually the website that we're gonna develop throughout this course. Now, what happens as we try to access this page is that our browser will send a request to the server where this page is hosted on the internet.
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(0:45) Quá trình mở 1 website trên trình duyệt</strong><br>
+                                    Giả sử chúng ta đang cố truy cập trang web omnifood.dev trên trình duyệt (đây cũng là trang web chúng ta sẽ xây dựng). Điều gì xảy ra khi truy cập trang này? Trình duyệt của chúng ta sẽ gửi một yêu cầu (request) đến máy chủ (server) nơi trang này được lưu trữ trên internet.
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> So each and every website is stored on something called a server, which is basically a computer that is connected to the internet and is able to receive requests like this one. So again, when we browse to a certain website our web browser will send a request to the server where the website is stored, so where it is hosted. Then when the server receives the request, it will take all the files that make up the website and send them back to the browser. And so we say that the server sends a response to the browser, which essentially contains all of these files that the website is made of.
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(1:35) Giới thiệu về web server (máy chủ)</strong><br>
+                                    Về cơ bản mọi trang web đều được lưu trữ tại Web server (một máy tính có kết nối internet, cho phép lưu trữ và trả ra kết quả khi nhận yêu cầu). Khi chúng ta dùng trình duyệt truy cập web, tức là đang gửi yêu cầu (Request). Sau khi nhận yêu cầu, web server sẽ lấy toàn bộ tập tin tạo nên trang web và gửi trả lại trình duyệt (Response).
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> Now, as you can see from these file extensions we have some HTML, CSS, and also JavaScript code here. And these are precisely the three languages that browsers can understand. So what this means is that all of the code that makes up a website needs to always be written in HTML, CSS, and JavaScript because again, these are essentially the three core technologies that any browser can understand. All right, now, once the browser receives these HTML, CSS, and JavaScript files from the service response, it will take the code and render the website that we were trying to access. So based on that code, okay? And with this you already have a good understanding of what actually happens when we browse to a website and also about the technologies that we use to build any website.
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(2:20) 3 thành phần chính: HTML, CSS, JavaScript</strong><br>
+                                    Như bạn thấy, các tập tin mà web server trả về có đuôi HTML, CSS và JavaScript. Đây chính là ba ngôn ngữ cốt lõi mà mọi trình duyệt có thể hiểu được. Khi trình duyệt nhận được các tập tin này từ máy chủ, nó sẽ phân tích mã và kết xuất (render) trang web cho người dùng dựa trên mã đó.
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> And that process of writing HTML, CSS and JavaScript code that the browser can understand is the process that we call front-end web development. So whenever you hear someone talking about front-end development, what they mean is developers writing the code that is displayed in a browser, which is basically the front-end of a website. And in fact, this is essentially what we're gonna learn in this course, or at least the very, very fundamentals of front-end development, which is learning HTML and CSS.
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(3:25) Front-end Web Development là gì?</strong><br>
+                                    Quá trình viết mã HTML, CSS và JS để trình duyệt hiểu được gọi là lập trình Front-end. Lập trình viên Front-end viết mã để hiển thị giao diện trên trình duyệt (phần bề nổi). Và đây chính xác là những gì chúng ta sẽ học trong khóa này: nền tảng cơ bản của Front-end (HTML & CSS).
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> Now, just as a side note here, whenever the files that make up the website are simply stored on the web server and are then sent to the browser as they are, we say that we have a static website, okay? And this will make a little bit more sense in a minute when we talk about what a dynamic website is. But for now, just keep in mind that a static website is basically a website where the files are simply sent from the server to the browser as they are, so without any transformations, all right?
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(3:55) Khái niệm web tĩnh (static website)</strong><br>
+                                    Một lưu ý nhỏ, khi các tập tin tạo nên trang web được lưu trữ trên server và gửi thẳng đến trình duyệt y như nguyên bản, ta gọi đó là trang web tĩnh (static). Web tĩnh là web mà các tập tin được gửi đi mà không thông qua bất kỳ sự biến đổi hay xử lý nào trên server.
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> So I hope that from this you learned what front-end development is, and also about the three core technologies that make up any website. And so now let's take it one step further and talk about something called back-end development. So let's try another example here, and this time let's try to understand what would happen when we try to access a website like udemy.com. So once again, the first step is that a request is sent to the web server where udemy.com is hosted. Now, why is a website like udemy so different from something like the static omnifood website that I showed you earlier? Well, a complex site like udemy.com is really completely different from a static site because there is a lot of content that is always changing all the time. Like on Udemy, there are always new courses and new reviews being added to the site. New ratings, and new course length are calculated for example, and really a bunch of other things like that are always happening. And so in order to make a system like this work udemy.com needs a whole application running on the server and they also need a big database, which basically contains all the courses, and all the reviews, all the users, and really all the content that is being displayed on their website. Now, to do all this front-end technologies like HTML and CSS are simply not enough. So basically, with what you're gonna learn in this course, you are not going to be able to build something like udemy.com, all right?
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(4:50) Khái niệm Back-end</strong><br>
+                                    Bây giờ tìm hiểu khái niệm Back-end. Lấy ví dụ Udemy, một trang web phức tạp hoàn toàn khác với web tĩnh vì nội dung thay đổi liên tục (khóa học, đánh giá mới...). Để hệ thống hoạt động, Udemy cần một ứng dụng chạy ngầm trên máy chủ và một cơ sở dữ liệu (database) khổng lồ. Để làm điều này, công nghệ Front-end (HTML/CSS) đơn thuần là không đủ.
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> So to write applications that are actually executed on web servers, developers use some kind of back-end language like Node.js, PHP, or Python. So what these languages do is to take data out of a database and basically assemble that data into the final files that will then be sent to the browser as the response. And this whole process is called back-end development because this is basically the invisible part of a website and so it's the website's back-end.
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(6:30) Ngôn ngữ Back-end</strong><br>
+                                    Để viết ứng dụng thực thi trên máy chủ, lập trình viên sử dụng ngôn ngữ Back-end như Node.js, PHP, hoặc Python. Chức năng của chúng là lấy dữ liệu từ database, lắp ráp thành các tập tin hoàn chỉnh và gửi về trình duyệt dưới dạng phản hồi. Toàn bộ phần chìm vô hình này gọi là phát triển Back-end.
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> Now, in this situation, we say that we have a dynamic website because the website is dynamically assembled from different pieces on the server and that happens each time that someone visits the website. So returning to the example of udemy.com, in fact each time that you visit udemy, a new version of the website is gonna be generated from their database and sent to your browser.
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(7:05) Khái niệm web động (dynamic website)</strong><br>
+                                    Trong tình huống này, ta gọi đó là web động (dynamic) bởi vì trang web được lắp ráp tự động từ nhiều mảnh dữ liệu trên máy chủ mỗi khi có người truy cập. Ví dụ với udemy, mỗi lần bạn truy cập, một phiên bản trang web mới sẽ được sinh ra từ cơ sở dữ liệu và gửi tới bạn.
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> Now, on the other hand, if udemy was a static website, then the website files would already be sitting on the server just waiting for someone to access them, okay? So that's the big difference between static and dynamic. In static, the files are already done and in dynamic, they first need to be generated by an application that is running on the server. All right, but now the rest of the process is actually the same as before. So these files are now ready to be sent to the browser as a response, which will then be converted to the final website like this one we see here of udemy.com. Great. Now, of course, there is no need for you to memorize all these names that I mentioned here, and also no need to deeply understand this process. All I want here is to give you an overview of what front-end and back-end actually are, what the browser and the server are, and also what static and dynamic websites are. Because I really think that this is gonna be extremely helpful as you start your developer journey.
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(7:45) So sánh web tĩnh và web động</strong><br>
+                                    Nếu udemy là web tĩnh, các tập tin sẽ làm sẵn và nằm chờ trên server. Đó là sự khác biệt lớn: Web tĩnh thì file đã làm sẵn 100%, còn Web động thì file cần được hệ thống sinh ra dựa trên yêu cầu truy cập. Sau đó thì mọi quá trình trả Response đều giống nhau. Bạn không cần nhớ hết các thuật ngữ, đây chỉ là cái nhìn tổng quan.
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 2rem;">
+                                <div style="flex: 1;">
+                                    <strong style="color: var(--primary-color);">[EN]</strong> But now just to finish, let's take a closer look at the three languages of the front-end, so HTML, CSS, and JavaScript. And starting with HTML, HTML is responsible for the content of the page. So that's the text, the images, the buttons, and really all the content that you see on a webpage is always written inside an HTML file. Then the CSS, is responsible for the presentation of that content, so basically for styling and for laying out the elements on the webpage. Now finally, JavaScript is the actual programming language of the front-end. So it allows us to add dynamic and interactive effects to webpages. We can also use it to manipulate the content or the CSS to load data from web servers and even to build entire front-end applications, which we then call web applications. Now, we can also use the analogy of nouns, adjectives, and verbs to make the separation of rolls here a little bit easier to understand. So in this analogy, HTML represents the nouns, for example, saying that the p element is a paragraph. So paragraph is the noun here. The CSS then is the adjective because it basically describes the noun, for example, like this piece of CSS saying that the paragraph text is red. And so red is the adjective describing the noun, all right? Finally, JavaScript is of course the verb, like saying, hide the paragraph. So we're actually doing something here and so we have a verb, okay? Does that make sense? All right, and with this we finish our introduction to web development, and so we're now ready to start working with HTML and CSS code in this course.
+                                </div>
+                                <div style="flex: 1; color: #475569;">
+                                    <strong style="color: var(--secondary-color);">(8:50) Vai trò HTML, CSS và JavaScript</strong><br>
+                                    - <strong>HTML (Danh từ)</strong>: Chịu trách nhiệm nội dung (văn bản, hình ảnh, nút bấm...). Ví dụ: Đây là 1 đoạn văn (Noun).<br>
+                                    - <strong>CSS (Tính từ)</strong>: Trình bày, định kiểu và dàn trang. Ví dụ: Đoạn văn có màu đỏ (Adjective).<br>
+                                    - <strong>Javascript (Động từ)</strong>: Ngôn ngữ lập trình, thêm các hiệu ứng và tương tác. Ví dụ: Ẩn đoạn văn đi (Verb).<br>
+                                    Hiểu theo loại suy Danh từ - Tính từ - Động từ sẽ giúp bạn phân biệt rất dễ. Giờ ta đã sẵn sàng bắt đầu code HTML/CSS!
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
                 </div>
             </div>
+        </div>
         </div>
 
     <script>

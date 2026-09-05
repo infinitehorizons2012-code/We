@@ -1683,6 +1683,7 @@
                     <h3 style="margin-top: 0; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); font-size: 1.1rem;">Nội dung</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         <li id="menu-l2-v1" onclick="switchMainVideo('l2-v1')" style="padding: 0.8rem; background: rgba(99, 102, 241, 0.1); border-radius: 6px; border-left: 3px solid var(--primary-color); color: var(--text-primary); font-weight: 500; cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s;"><i class="fas fa-play-circle" id="icon-l2-v1" style="color: var(--primary-color); margin-right: 8px;"></i> <span style="font-size: 0.7rem; background: #e0e7ff; color: #4338ca; padding: 2px 5px; border-radius: 4px; margin-right: 4px; font-weight: bold;">VIDEO</span> 1: HTML là gì?</li>
+                        <li id="menu-l2-v2" onclick="switchMainVideo('l2-v2')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s; border-left: 3px solid transparent;"><i class="fas fa-play-circle" id="icon-l2-v2" style="color: inherit; margin-right: 8px;"></i> <span style="font-size: 0.7rem; background: #e0e7ff; color: #4338ca; padding: 2px 5px; border-radius: 4px; margin-right: 4px; font-weight: bold;">VIDEO</span> 2: Cấu trúc HTML cơ bản</li>
                     </ul>
                 </div>
 
@@ -1915,6 +1916,226 @@
 
                     </div> <!-- End content-l2-v1 -->
 
+                    <!-- Content Video 2 (Lesson 2) -->
+                    <div id="content-l2-v2" class="main-video-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;">Video 2: Cấu trúc HTML cơ bản</h2>
+                        
+                        <a href="https://funix.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/27512022#overview" target="_blank" style="text-decoration: none;">
+                            <div style="width: 100%; height: 350px; background: #0f172a; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 2rem; position: relative; overflow: hidden; box-shadow: inset 0 0 50px rgba(0,0,0,0.5); cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='#1e293b'" onmouseout="this.style.background='#0f172a'">
+                                <i class="fas fa-play-circle" style="font-size: 4.5rem; color: var(--primary-color); margin-bottom: 1rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
+                                <span style="color: white; font-size: 1.1rem; font-weight: 500;">Xem video bài giảng trên Udemy <i class="fas fa-external-link-alt" style="font-size: 0.9rem; margin-left: 5px;"></i></span>
+                            </div>
+                        </a>
+
+                        <!-- Sub-tabs for Video 2 -->
+                        <div class="video-tabs" style="display: flex; gap: 1rem; border-bottom: 2px solid var(--border-color); margin-bottom: 1.5rem;">
+                            <button class="l2v2-tab-btn active" onclick="switchL2V2Tab('l2-v2-ubd')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--primary-color); font-weight: 600; cursor: pointer; border-bottom: 3px solid var(--primary-color); margin-bottom: -2px;">Phân tích UbD</button>
+                            <button class="l2v2-tab-btn" onclick="switchL2V2Tab('l2-v2-notes')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Chú giải</button>
+                            <button class="l2v2-tab-btn" onclick="switchL2V2Tab('l2-v2-transcript')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Transcript (Song ngữ)</button>
+                            <button class="l2v2-tab-btn" onclick="switchL2V2Tab('l2-v2-takeaways')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Nội dung trọng tâm</button>
+                            <button class="l2v2-tab-btn" onclick="switchL2V2Tab('l2-v2-quiz')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Bài tập đánh giá</button>
+                        </div>
+
+                        <!-- UbD Content -->
+                        <div id="l2-v2-ubd" class="l2v2-tab-content active" style="display: block; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
+                            <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem;">
+                                
+                                <!-- Learning Plan -->
+                                <div style="flex: 1; background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                    <h3 style="margin-top: 0; color: var(--primary-color); border-bottom: 2px solid #e0e7ff; padding-bottom: 0.5rem; display: inline-block;">Nội dung bài học (Learning Plan)</h3>
+                                    <ul style="line-height: 1.8; color: #334155; padding-left: 1rem; margin-top: 1rem;">
+                                        <li><strong>Khởi tạo dự án:</strong> Copy thư mục starter thay vì làm trực tiếp, tạo file <code>index.html</code>.</li>
+                                        <li><strong>!DOCTYPE html:</strong> Khai báo bắt buộc để trình duyệt hiểu đây là tài liệu HTML5.</li>
+                                        <li><strong>Thẻ &lt;html&gt;:</strong> Thẻ gốc (root) chứa toàn bộ trang web.</li>
+                                        <li><strong>Thẻ &lt;head&gt;:</strong> Chứa các thông tin cấu hình và meta, không hiển thị trực tiếp (VD: thẻ <code>&lt;title&gt;</code>).</li>
+                                        <li><strong>Thẻ &lt;body&gt;:</strong> Nơi chứa mọi nội dung sẽ hiển thị cho người dùng xem (VD: <code>&lt;h1&gt;</code>, văn bản, ảnh).</li>
+                                        <li><strong>Indentation (Thụt lề):</strong> Quy tắc format code giúp lập trình viên dễ đọc cấu trúc cha-con, không ảnh hưởng đến trình duyệt.</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Cognitive Traps -->
+                                <div style="flex: 1; background: #fdf2f8; border: 1px solid #fbcfe8; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                    <h3 style="margin-top: 0; color: #be185d; border-bottom: 2px solid #fce7f3; padding-bottom: 0.5rem; display: inline-block;">Bẫy kiến thức (Cognitive Traps)</h3>
+                                    <ul style="line-height: 1.8; color: #831843; padding-left: 1rem; margin-top: 1rem;">
+                                        <li>🚨 <strong>Viết nội dung hiển thị sai chỗ:</strong> Người mới dễ viết nhầm văn bản hiển thị vào trong thẻ <code>&lt;head&gt;</code> hoặc viết ra ngoài thẻ <code>&lt;body&gt;</code>.</li>
+                                        <li>🚨 <strong>Bỏ qua thụt lề:</strong> Viết tất cả các thẻ thẳng hàng nhau từ trên xuống dưới, dẫn đến khi code dài ra sẽ không thể kiểm soát được thẻ nào là con của thẻ nào.</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+
+                            <!-- Backward Design Mapping -->
+                            <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <h3 style="margin-top: 0; color: var(--primary-color); border-bottom: 2px solid #e0e7ff; padding-bottom: 0.5rem; display: inline-block;">Suy ngược UbD (Backward Design Mapping)</h3>
+                                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem;">
+                                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                                        <td style="padding: 0.8rem; font-weight: 600; color: #475569; width: 150px;">Mục tiêu (CLO):</td>
+                                        <td style="padding: 0.8rem; color: #334155;"><strong>WEB101x_o1:</strong> Hiểu được cấu trúc khung xương bắt buộc của một tài liệu HTML.</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                                        <td style="padding: 0.8rem; font-weight: 600; color: #475569;">Bài tập (Task):</td>
+                                        <td style="padding: 0.8rem; color: #334155;">Trắc nghiệm phân loại vai trò của thẻ head và body.</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0.8rem; font-weight: 600; color: #475569;">Phân loại Bloom:</td>
+                                        <td style="padding: 0.8rem; color: #334155;"><span style="background: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 4px; font-weight: 600; font-size: 0.85rem;">HIỂU (UNDERSTAND)</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Notes Content -->
+                        <div id="l2-v2-notes" class="l2v2-tab-content" style="display: none; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 4px;">
+                                <h4 style="margin-top: 0; color: #b45309;"><i class="fas fa-sticky-note" style="margin-right: 8px;"></i>Chú giải của giáo viên</h4>
+                                <ul style="line-height: 1.8; color: #92400e; padding-left: 1rem; margin-bottom: 0;">
+                                    <li><strong>(0:00)</strong> Giới thiệu về project chúng ta sẽ cùng nhau xây dựng</li>
+                                    <li><strong>(1:10)</strong> Tạo project folder</li>
+                                    <li><strong>(3:35)</strong> Xây dựng cấu trúc 1 html file</li>
+                                    <li><strong>(4:05)</strong> Thẻ <code>!DOCTYPE html</code> và <code>html</code></li>
+                                    <li><strong>(5:10)</strong> Tắt tạm thời chức năng tự tạo closing tag để tập viết code từ đầu</li>
+                                    <li><strong>(6:00)</strong> Sử dụng thẻ <code>head</code> và thẻ <code>body</code> trong html</li>
+                                    <li><strong>(7:10)</strong> Thẻ <code>title</code> bên trong <code>head</code></li>
+                                    <li><strong>(8:00)</strong> Thẻ <code>h1</code> bên trong <code>body</code></li>
+                                    <li><strong>(8:20)</strong> Tác dụng của coding indentation (thụt lề)</li>
+                                    <li><strong>(9:30)</strong> Mở html file trên Google Chrome</li>
+                                    <li><strong>(10:05)</strong> Giải thích chi tiết cấu trúc của 1 html file
+                                        <ul style="margin-top: 0.5rem; list-style-type: circle;">
+                                            <li><code>&lt;!DOCTYPE html&gt;</code> đánh dấu đây là văn bản HTML5.</li>
+                                            <li><code>&lt;head&gt;</code> là phần đầu của trang. Nó chứa thẻ <code>&lt;title&gt;</code> để hiển thị tiêu đề của trang ở vị trí tên tab.</li>
+                                            <li><code>&lt;body&gt;</code> là phần thân của trang. Nó hiển thị nội dung tài liệu. Ở đây, chúng ta dùng thẻ <code>&lt;h1&gt;</code> để hiển thị nội dung.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Transcript Content -->
+                        <div id="l2-v2-transcript" class="l2v2-tab-content" style="display: none; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
+                            <div style="display: flex; flex-direction: column; gap: 1rem; background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0; max-height: 600px; overflow-y: auto;">
+                                
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Instructor: Welcome back. So the first thing that we need to learn about HTML is the common HTML document structure. So a structure that each and every HTML document needs to have.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Giáo viên: Chào mừng trở lại. Điều đầu tiên chúng ta cần học về HTML là cấu trúc chuẩn của một tài liệu HTML. Đây là cấu trúc mà mọi tài liệu HTML đều bắt buộc phải có.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> But let's start by taking a very quick look at a project that we're going to build throughout this section. So we are building The Code Magazine.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Nhưng trước tiên, hãy cùng lướt nhanh qua dự án mà chúng ta sẽ xây dựng xuyên suốt phần này. Chúng ta sẽ làm trang "The Code Magazine".</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> So as you can see here, and in this Code Magazine we are building this very simple kind of blog post called the Basic Language of the Web. So we have some links here, we have images, we have some bold text, italic text, lists, and a bunch of stuff that we will learn.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Như bạn thấy ở đây, chúng ta sẽ xây dựng một bài blog đơn giản có tên "Ngôn ngữ cơ bản của Web". Chúng ta có các đường link, hình ảnh, chữ in đậm, chữ in nghiêng, các danh sách, và rất nhiều thứ khác chúng ta sẽ học.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Okay, but anyway, let's now finally get to work. And the first thing that we need to do again is to create our project folder. I'm going to reach into this starter folder and grab a copy of the starter files here.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Bắt tay vào việc thôi. Điều đầu tiên chúng ta cần làm là tạo thư mục dự án (project folder). Tôi sẽ lấy thư mục "starter" mà chúng ta đã tải về ở phần trước và copy nó ra Desktop.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Okay, let's go back to VS Code. Then let's come here to the menu and then file and open a new window. And then right here we can select open folder. So remember that this will define our project folder.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Trở lại VS Code. Ta vào menu, chọn File -> Open a new window. Sau đó ta chọn Open Folder để mở thư mục dự án vừa copy ra Desktop.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> And then here inside of our project folder, we can just like before create a new file and we will once again call it index.html. So it's just a regular file with the HTML file extension and the name of index which should always be the main page of any website.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Tại đây, ta sẽ tạo một file mới và đặt tên là index.html. "Index" thường luôn là tên dành cho trang chủ chính của mọi website.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> So we start with an empty page and then the first thing that we need to do is to declare a so-called doc type. So just write the less than symbol, exclamation mark and then doc type.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Bắt đầu từ trang trắng, điều đầu tiên ta cần khai báo là "doc type". Hãy gõ: &lt;!DOCTYPE html&gt;.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> So we have to write exclamation mark doc type html in order to basically tell the browser that this document uses html. Next up, we need to create an HTML element.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Việc khai báo này giúp trình duyệt biết rằng tài liệu này đang sử dụng chuẩn HTML5. Tiếp theo, ta tạo phần tử &lt;html&gt;.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> And then inside of the html, we want first a head element. So let's write its opening and closing tag. Okay, so the head and then the body and I will explain in a second what each of these actually is.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Bên trong thẻ html, chúng ta cần thẻ &lt;head&gt; đầu tiên. Hãy tạo thẻ mở và đóng. Kế đó là thẻ &lt;body&gt;. Tôi sẽ giải thích chức năng của chúng ngay bây giờ.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Now the head element is basically for things that are not visible in the browser window. So this head will contain the page title, some additional information, links to CSS files...</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Thẻ &lt;head&gt; được dành cho những thứ KHÔNG hiển thị trên cửa sổ trình duyệt. Nó chứa tiêu đề trang, thông tin cấu hình, link kết nối tới CSS...</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Then the body is actually for all the elements that will be visible on the page. So all the elements that we see here in the browser will always be inside of the body element.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Còn thẻ &lt;body&gt; dành cho tất cả những nội dung thực sự HIỂN THỊ trên trang web. Mọi thứ ta nhìn thấy trên màn hình đều phải nằm trong thẻ body.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> And by indentation what I mean is that since this head element, for example, is inside the html, it should have some space here to make that visually obvious.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> "Indentation" (thụt lề) nghĩa là khi thẻ head nằm TRONG thẻ html, ta nên bấm nút Tab để đẩy nó lùi vào một khoảng, giúp phân biệt rõ ràng cấp độ cha/con bằng mắt thường.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem;">
+                                    <div style="flex: 1; color: #334155;"><strong>[EN]</strong> Now this is just for aesthetic reasons to make our code more readable. So the browser really doesn't care about this indentation but it is still important for us to be able to read the code.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI]</strong> Việc thụt lề chỉ mang tính thẩm mỹ giúp code dễ đọc. Trình duyệt hoàn toàn không bận tâm bạn có thụt lề hay không, nhưng nó lại là kĩ năng tối quan trọng để lập trình viên bảo trì code.</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Takeaways Content -->
+                        <div id="l2-v2-takeaways" class="l2v2-tab-content" style="display: none; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
+                            <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <h3 style="margin-top: 0; color: var(--primary-color); border-bottom: 2px solid #e0e7ff; padding-bottom: 0.5rem; display: inline-block;"><i class="fas fa-star" style="margin-right: 8px; color: #f59e0b;"></i>3 Điểm Trọng Tâm Cần Nhớ</h3>
+                                
+                                <div style="margin-top: 1.5rem;">
+                                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start;">
+                                        <div style="background: var(--primary-color); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+                                        <div>
+                                            <h4 style="margin: 0 0 0.5rem 0; color: #1e293b;">Bắt buộc khai báo &lt;!DOCTYPE html&gt;</h4>
+                                            <p style="margin: 0; color: #475569; line-height: 1.6;">Dòng đầu tiên của mọi file HTML phải là khai báo này để báo hiệu cho trình duyệt sử dụng quy chuẩn HTML5 mới nhất.</p>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start;">
+                                        <div style="background: var(--primary-color); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+                                        <div>
+                                            <h4 style="margin: 0 0 0.5rem 0; color: #1e293b;">Quy tắc thẻ Head vs Body</h4>
+                                            <p style="margin: 0; color: #475569; line-height: 1.6;">Thẻ <code>&lt;head&gt;</code> dùng chứa cài đặt và thông tin ẩn (như tiêu đề tab trình duyệt). Trong khi thẻ <code>&lt;body&gt;</code> ôm trọn mọi văn bản, hình ảnh... được hiển thị thực tế ra màn hình.</p>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                                        <div style="background: var(--primary-color); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+                                        <div>
+                                            <h4 style="margin: 0 0 0.5rem 0; color: #1e293b;">Thụt lề (Indentation)</h4>
+                                            <p style="margin: 0; color: #475569; line-height: 1.6;">Trình duyệt web không cần thụt lề, nhưng thụt lề là bắt buộc để lập trình viên nhìn rõ cấp độ phân nhánh (Thẻ con lùi vào 1 phím Tab so với thẻ cha).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Content -->
+                        <div id="l2-v2-quiz" class="l2v2-tab-content" style="display: none; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
+                            <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <h3 style="margin-top: 0; color: var(--primary-color); border-bottom: 2px solid #e0e7ff; padding-bottom: 0.5rem; display: inline-block;"><i class="fas fa-tasks" style="margin-right: 8px;"></i>Bài tập đánh giá</h3>
+                                
+                                <div class="quiz-question" id="l2_v2_q1" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+                                    <div style="font-weight: 600; margin-bottom: 1rem; color: #1e293b;">Câu 1. Mọi nội dung mà người dùng (user) có thể nhìn thấy trực tiếp trên trang web phải được đặt trong thẻ nào?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="l2_v2_q1" value="A" onclick="checkAnswer('l2_v2_q1', 'A')"> A. &lt;head&gt;</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v2_q1" value="B" onclick="checkAnswer('l2_v2_q1', 'B')"> B. &lt;html&gt;</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v2_q1" value="C" onclick="checkAnswer('l2_v2_q1', 'C')"> C. &lt;body&gt;</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v2_q1" value="D" onclick="checkAnswer('l2_v2_q1', 'D')"> D. &lt;title&gt;</label>
+                                    </div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+
+                                <div class="quiz-question" id="l2_v2_q2">
+                                    <div style="font-weight: 600; margin-bottom: 1rem; color: #1e293b;">Câu 2. Vai trò của dòng khai báo &lt;!DOCTYPE html&gt; ở đầu file là gì?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="l2_v2_q2" value="A" onclick="checkAnswer('l2_v2_q2', 'A')"> A. Để kết nối với file CSS.</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v2_q2" value="B" onclick="checkAnswer('l2_v2_q2', 'B')"> B. Báo cho trình duyệt biết tài liệu này sử dụng chuẩn HTML5.</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v2_q2" value="C" onclick="checkAnswer('l2_v2_q2', 'C')"> C. Để hiển thị một cảnh báo cho người dùng.</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v2_q2" value="D" onclick="checkAnswer('l2_v2_q2', 'D')"> D. Tạo ra phần tiêu đề của trang web.</label>
+                                    </div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div> <!-- End content-l2-v2 -->
+
+
                 </div>
             </div>
         </div>
@@ -1937,6 +2158,8 @@
         const quizData = {
             l2_v1_q1: { correct: 'B', explanation: 'HTML không phải là ngôn ngữ lập trình vì nó không có tư duy logic (if/else, for). Nó là ngôn ngữ đánh dấu siêu văn bản (Markup Language) dùng để tạo khung xương và cấu trúc cho web.' },
             l2_v1_q2: { correct: 'B', explanation: 'Cấu trúc chuẩn của một Element có nội dung bắt buộc phải gồm thẻ mở &lt;p&gt; và thẻ đóng có dấu gạch chéo &lt;/p&gt;.' },
+            l2_v2_q1: { correct: 'C', explanation: 'Thẻ &lt;body&gt; (phần thân) chứa tất cả các phần tử sẽ được hiển thị ra màn hình cho người dùng xem.' },
+            l2_v2_q2: { correct: 'B', explanation: 'Khai báo &lt;!DOCTYPE html&gt; là tiêu chuẩn bắt buộc của HTML5, giúp trình duyệt không bị nhầm lẫn với các phiên bản HTML cũ.' },
             q1: { correct: 'B', explanation: 'Trình duyệt đóng vai trò là Client, luôn phải gửi Request đi trước thì Máy chủ mới biết để trả Response về.' },
             q2: { correct: 'C', explanation: 'Đừng để chữ "Động" đánh lừa. Động/Tĩnh ở đây là nói về cách Máy chủ (Server) chuẩn bị file HTML như thế nào từ dữ liệu, chứ không phải hiệu ứng hình ảnh.' },
             q3: { correct: 'B', explanation: 'CSS đóng vai trò làm tính từ (để trang điểm, tô màu sắc, và sắp xếp bố cục). Khung gạch thô của ngôi nhà mới là HTML.' },
@@ -1953,6 +2176,20 @@
             quiz1_q5: { correct: 'D', explanation: 'File HTML thực chất chỉ là một file văn bản trơn (plain text) được đổi đuôi thành .html. Vì vậy, bất cứ công cụ soạn thảo văn bản nào (như Notepad) cũng tạo được, nhưng dùng VS Code sẽ hỗ trợ lập trình chuyên nghiệp nhất.' }
         };
 
+        function switchL2V2Tab(tabId) {
+            document.querySelectorAll('.l2v2-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+            });
+            event.currentTarget.style.color = 'var(--primary-color)';
+            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
+            
+            document.querySelectorAll('.l2v2-tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
+        }
+        
         function switchL2V1Tab(tabId) {
             document.querySelectorAll('.l2v1-tab-btn').forEach(btn => {
                 btn.style.color = 'var(--text-secondary)';

@@ -909,7 +909,7 @@
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         <li id="menu-v1" onclick="switchMainVideo('v1')" style="padding: 0.8rem; background: rgba(99, 102, 241, 0.1); border-radius: 6px; border-left: 3px solid var(--primary-color); color: var(--text-primary); font-weight: 500; cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s;"><i class="fas fa-play-circle" id="icon-v1" style="color: var(--primary-color); margin-right: 8px;"></i> Video 1: Tổng quan</li>
                         <li id="menu-v2" onclick="switchMainVideo('v2')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s; border-left: 3px solid transparent;"><i class="fas fa-play-circle" id="icon-v2" style="color: inherit; margin-right: 8px;"></i> Video 2: Cài đặt công cụ</li>
-                        <li style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s;"><i class="fas fa-lock" style="margin-right: 8px;"></i> Video 3 (Khóa)</li>
+                        <li id="menu-v3" onclick="switchMainVideo('v3')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;"><i class="fas fa-play-circle" id="icon-v3" style="color: inherit; margin-right: 8px;"></i> Video 3: Xây dựng HTML đầu tiên</li>
                     </ul>
                 </div>
 
@@ -1374,6 +1374,179 @@
 
                     </div> <!-- End content-v2 -->
 
+                    <!-- Content Video 3 -->
+                    <div id="content-v3" class="main-video-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;">Video 3: Viết dòng code HTML đầu tiên</h2>
+                        
+                        <a href="https://funix.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/27511932#overview" target="_blank" style="text-decoration: none;">
+                            <div style="width: 100%; height: 350px; background: #0f172a; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 2rem; position: relative; overflow: hidden; box-shadow: inset 0 0 50px rgba(0,0,0,0.5); cursor: pointer; transition: background 0.3s;" onmouseover="this.style.background='#1e293b'" onmouseout="this.style.background='#0f172a'">
+                                <i class="fas fa-play-circle" style="font-size: 4.5rem; color: var(--primary-color); margin-bottom: 1rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
+                                <span style="color: white; font-size: 1.1rem; font-weight: 500;">Xem video bài giảng trên Udemy <i class="fas fa-external-link-alt" style="font-size: 0.9rem; margin-left: 5px;"></i></span>
+                            </div>
+                        </a>
+
+                        <div class="video-tabs" style="display: flex; gap: 1rem; border-bottom: 2px solid var(--border-color); margin-bottom: 1.5rem;">
+                            <button class="v3-tab-btn active" onclick="switchVideo3Tab('v3-ubd')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--primary-color); font-weight: 600; cursor: pointer; border-bottom: 3px solid var(--primary-color); margin-bottom: -2px;">Phân tích UbD</button>
+                            <button class="v3-tab-btn" onclick="switchVideo3Tab('v3-note')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Chú giải</button>
+                            <button class="v3-tab-btn" onclick="switchVideo3Tab('v3-sub')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Transcript (Song ngữ)</button>
+                            <button class="v3-tab-btn" onclick="switchVideo3Tab('v3-takeaway')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Nội dung trọng tâm</button>
+                            <button class="v3-tab-btn" onclick="switchVideo3Tab('v3-quiz')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Bài tập đánh giá</button>
+                        </div>
+
+                        <!-- V3 UBD -->
+                        <div id="v3-ubd" class="v3-tab-content active" style="animation: fadeIn 0.3s ease;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-top: 4px solid var(--primary-color);">
+                                    <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--primary-color);"><i class="fas fa-book-open"></i> Nội dung bài học (Learning Plan)</h3>
+                                    <ul style="padding-left: 1.2rem; font-size: 0.95rem; margin-bottom: 0;">
+                                        <li>Tạo thư mục dự án và mở bằng VS Code.</li>
+                                        <li>Khởi tạo file <strong>index.html</strong>.</li>
+                                        <li>Sử dụng phím tắt Emmet (<code>!</code> + Tab/Enter) để tạo khung HTML5 cơ bản.</li>
+                                        <li>Cấu trúc trang: <code>&lt;head&gt;</code> (chứa thẻ <code>&lt;title&gt;</code>) và <code>&lt;body&gt;</code> (chứa nội dung hiển thị).</li>
+                                        <li>Viết mã HTML đầu tiên với thẻ tiêu đề <code>&lt;h1&gt;</code> và thẻ đoạn văn <code>&lt;p&gt;</code>.</li>
+                                        <li>Mở file trực tiếp trên Google Chrome để xem kết quả và thấy được tác dụng tự format của Prettier.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div style="background: #fff1f2; padding: 1.5rem; border-radius: 8px; border-top: 4px solid var(--danger);">
+                                    <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--danger);"><i class="fas fa-exclamation-triangle"></i> Bẫy kiến thức (Cognitive Traps)</h3>
+                                    <ul style="padding-left: 1.2rem; font-size: 0.95rem; margin-bottom: 0; color: #881337;">
+                                        <li><strong>🚨 Đặt sai tên trang chủ:</strong> Đặt là <code>trangchu.html</code> thay vì <code>index.html</code> sẽ khiến server khi đưa lên mạng không nhận ra điểm xuất phát của web.</li>
+                                        <li><strong>🚨 Nhầm lẫn Head và Body:</strong> Vứt các nội dung văn bản muốn người dùng đọc vào thẻ <code>&lt;head&gt;</code> thay vì <code>&lt;body&gt;</code>.</li>
+                                    </ul>
+                                </div>
+
+                                <div style="background: #eff6ff; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #3b82f6; grid-column: 1 / -1;">
+                                    <h3 style="margin-top: 0; font-size: 1.1rem; color: #1d4ed8;"><i class="fas fa-backward"></i> Suy ngược UbD (Backward Design Mapping)</h3>
+                                    <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
+                                        <div style="width: 150px; font-weight: bold; color: #1e40af;">Mục tiêu (CLO):</div>
+                                        <div style="flex: 1; font-size: 0.95rem;"><strong>WEB101x_o3 & o4:</strong> Hiểu được khái niệm, cách viết và vận dụng các thẻ HTML cơ bản (Text, Headings).</div>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
+                                        <div style="width: 150px; font-weight: bold; color: #1e40af;">Skill Taxonomy:</div>
+                                        <div style="flex: 1; font-size: 0.95rem;"><span class="quiz-tag" style="margin-left: 0;">HTML5 Fundamentals</span> <span class="quiz-tag">Project Structure</span></div>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <div style="width: 150px; font-weight: bold; color: #1e40af;">Task Đánh Giá:</div>
+                                        <div style="flex: 1; font-size: 0.95rem;">Yêu cầu tạo thành công file index.html, dùng Emmet, và render được "Hello World" ra trình duyệt Chrome.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- V3 NOTE -->
+                        <div id="v3-note" class="v3-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.6; border: 1px solid var(--border-color);">
+                                <strong>(0:00)</strong> Tạo và mở 1 thư mục (folder).<br>
+                                <strong>(1:25)</strong> Tạo 1 file html mới trên VSC.<br>
+                                <strong>(2:20) Ý nghĩa của cái tên "index"</strong><br>
+                                - Mọi trang website đều có một trang hiển thị đầu tiên và mặc định đặt tên là index.html. Như vậy khi chúng ta truy cập vào một website thì trang hiển thị đầu tiên là trang index.html.<br><br>
+                                <strong>(2:40)</strong> Bắt đầu thử viết html code.<br>
+                                <strong>(3:25) Cấu trúc 1 file html rỗng</strong><br>
+                                - Chúng ta có thể tạo nhanh cấu trúc bằng phím tắt "!" + Enter/Tab.<br>
+                                - Cấu trúc gồm: <code>&lt;!DOCTYPE html&gt;</code> (Khai báo HTML5), <code>&lt;html lang="en"&gt;</code> (Ngôn ngữ), <code>&lt;head&gt;</code> (Chứa meta, title hiển thị trên tab trình duyệt), <code>&lt;body&gt;</code> (Nội dung trang web).<br><br>
+                                <strong>(3:40)</strong> Sửa title (tiêu đề).<br>
+                                <strong>(3:55) Viết body với thẻ h1</strong><br>
+                                - Thẻ h1 dùng xác định tiêu đề chính quan trọng nhất. Ngoài ra có h2, h3, h4, h5, h6 với mức độ quan trọng giảm dần.<br>
+                                <strong>(4:50) Thẻ p</strong><br>
+                                - Thẻ p dùng để hiển thị đoạn văn bản (Paragraph).<br><br>
+                                <strong>(5:15)</strong> Lưu lại file.<br>
+                                <strong>(5:45) Tác dụng của Prettier</strong><br>
+                                - Giúp tự động điều chỉnh indentation (thụt lề), trình bày code dễ nhìn, dễ sửa chữa.<br>
+                                <strong>(6:40) Mở file HTML bằng Chrome</strong><br>
+                                - Trình duyệt có thể hiểu mã HTML và hiển thị trang web ngay trong máy tính của bạn mà không cần server mạng.<br>
+                                <strong>(9:10)</strong> Tổng kết.
+                            </div>
+                        </div>
+
+                        <!-- V3 SUB -->
+                        <div id="v3-sub" class="v3-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; font-size: 0.9rem; line-height: 1.7; height: 350px; overflow-y: auto; border: 1px solid var(--border-color); color: #334155;">
+                                
+                                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> Jonas: Welcome back. Let's now write our very first line of code and build our very first and very small webpage. So here we are back in VS Code. And let's now close all of this up and then we're going here to this first tab. So this explorer tab. So in VS Code we always need to be inside of some folder and that folder is called the project folder. ... And I'm calling this folder here, zero one and test. Okay, so let's go back here and now click on open folder. And so going to my desktop I will now select this folder that I just created.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (0:00)</strong> Chào mừng trở lại. Hãy viết dòng mã đầu tiên và xây dựng trang web nhỏ đầu tiên của chúng ta. Chúng ta đã trở lại VS Code. Đóng các màn hình chào mừng lại và mở tab Explorer (Trình khám phá). Trong VS Code, ta luôn cần ở trong một thư mục dự án (project folder). Tôi sẽ tạo một thư mục ngoài Desktop tên là "01-test". Sau đó quay lại VS Code, bấm "Open folder" và mở thư mục này ra.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> So you see we get a new welcome screen and here we can click on New File to add our very first file to the project. ... So we are about to create our very first webpage and a webpage is basically just an HTML file. And let's call it "index dot html". ... we are calling it "index" because that is the default name of the first page of any website. So index is basically always the entry point to any website, and so all web projects always need to have an "index dot html".</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (1:25 - 2:20)</strong> Tại màn hình chào mừng mới, bấm "New File" (Tạo tệp mới). Một trang web thực chất chỉ là một tệp HTML. Chúng ta sẽ đặt tên nó là "index.html". Chúng ta gọi nó là "index" bởi vì đó là tên mặc định của trang chủ của bất kỳ website nào. File index luôn là điểm khởi đầu (entry point), nên mọi dự án web luôn bắt buộc phải có một file "index.html". Hãy nhớ kỹ điều đó.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> Now my goal in this lecture is not yet to really teach you HTML. Right now, all I want to do is to create this file, and to add a little bit of code to it, and then see the result in the browser. ... And so instead of writing a whole page structure, as we usually need to, we are going to use a small cheat that we can use in VS Code. So to do that, just write an exclamation mark (!). ... and then you can hit tab on your keyboard... And with that we get this very basic and almost empty HTML structure. So it has a head and it has a body.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (2:40 - 3:25)</strong> Mục tiêu lúc này chưa phải là dạy sâu về HTML, mà chỉ là tạo file, viết vài dòng và xem thử trên trình duyệt. Thay vì phải gõ toàn bộ cấu trúc dài dòng, ta sẽ dùng một mẹo (cheat) trong VS Code. Bạn chỉ cần gõ một dấu chấm than (!), sau đó bấm phím Tab. Nó sẽ tự động sinh ra cấu trúc HTML cơ bản hoàn chỉnh, gồm có phần Head (đầu) và Body (thân).</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> So let's change the content here of this title to, for example, "my first webpage". ... And then let's go inside of the body. So this is actually the part that we will be able to see in the browser. And here just write this less than sign. Then H one, which stands for heading one. And then the greater than symbol. ... I'm writing "Hello World", which is kind of a standard... Next, let's try another one. ... Now let's try P, which stands for paragraph. ... So, let's say my name is Jonas... And this is my very first webpage.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (3:40 - 4:50)</strong> Hãy đổi nội dung trong thẻ title thành "My first webpage". Sau đó ta tiến vào trong phần Body. Đây mới là phần thực sự hiển thị trên trình duyệt. Gõ dấu nhỏ hơn, thẻ h1 (Heading 1), đóng ngoặc. Ta viết vào giữa chữ "Hello World" (câu chào tiêu chuẩn của mọi ngôn ngữ lập trình). Tiếp tục với thẻ p (Paragraph) để viết một đoạn văn bản giới thiệu tên của bạn.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem; border-bottom: 1px dashed #cbd5e1; padding-bottom: 1rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> Okay, now we can give it a save by hitting command or Control S... And we also have the auto save active. So if we just leave this tab... it will also automatically save the file. ... So now the file has been saved and maybe you'll also noticed that the formatting has changed here a little bit. And this happened because of the prettier extension ... that is exactly what just happened. ... And so that's the power of prettier.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (5:15 - 5:45)</strong> Nhấn Ctrl+S để lưu, hoặc vì ta đã bật Auto-save nên chỉ cần bấm chuột ra ngoài là file sẽ tự lưu. Khi lưu, bạn sẽ để ý cấu trúc thụt lề (formatting) bị thay đổi nhẹ. Đó là nhờ extension Prettier mà ta đã cài. Nó tự động dọn dẹp và căn lề mã. Đó chính là sức mạnh của Prettier.</div>
+                                </div>
+                                <div style="display: flex; gap: 2rem;">
+                                    <div style="flex: 1;"><strong>[EN]</strong> And so now we have this index dot html file and we can open it up in a browser. So let's go to our project folder... And to now open it up in Google Chrome... we just need to double click the file or we can just also right click it and then open with Google Chrome. ... Here is our very first webpage that we just created manually in VS Code. ... So from now on, we will always have our code here on the left side and then on the right side the browser, so that we can see our changes. ... And this is actually enough for this very first coding video.</div>
+                                    <div style="flex: 1; color: #475569;"><strong>[VI] (6:40 - 9:10)</strong> Bây giờ hãy mở file index.html này bằng trình duyệt. Mở thư mục dự án bên ngoài desktop, nhấp đúp vào file hoặc click chuột phải chọn "Open with Google Chrome". Đây là kết quả trang web đầu tiên của ta! Từ nay, ta sẽ luôn chia đôi màn hình: Code (trái) và Trình duyệt (phải) để xem thay đổi ngay lập tức. Nội dung trong thẻ h1 biến thành chữ in đậm lớn, thẻ p thành chữ nhỏ. Thẻ title nằm trên thanh tab của Chrome. Thế là xong bài học đầu tiên về code rồi!</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- V3 TAKEAWAY -->
+                        <div id="v3-takeaway" class="v3-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #fdf4ff; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.6; border: 1px solid #f5d0fe; color: #4a044e;">
+                                <h3 style="margin-top: 0; color: #701a75; font-size: 1.2rem;"><i class="fas fa-check-circle" style="margin-right: 8px;"></i> Nội dung cần nắm vững sau Video 3</h3>
+                                <ul style="padding-left: 1.5rem; margin-bottom: 0;">
+                                    <li style="margin-bottom: 0.8rem;"><strong>Tại sao lại là index.html?</strong> Từ "index" là quy ước toàn cầu của Internet. Bất kỳ máy chủ web nào khi nhận truy cập vào một thư mục cũng sẽ tự động đi tìm tệp có tên là <code>index.html</code> để hiển thị đầu tiên. Việc đặt tên khác (ví dụ trangchu.html) sẽ khiến web không chạy.</li>
+                                    <li style="margin-bottom: 0.8rem;"><strong>Cheat code của VS Code:</strong> Trong một file HTML trống, chỉ cần gõ <code>!</code> và nhấn phím <code>Tab</code>, toàn bộ khung xương chuẩn của HTML5 sẽ được sinh ra mà không cần gõ thuộc lòng.</li>
+                                    <li style="margin-bottom: 0.8rem;"><strong>Phân biệt Head và Body:</strong> 
+                                        <br>- <code>&lt;head&gt;</code>: Nơi chứa các cấu hình ngầm, thẻ meta, và thẻ <code>&lt;title&gt;</code> (chỉ hiển thị trên thanh tab của trình duyệt, không nằm trong trang web).
+                                        <br>- <code>&lt;body&gt;</code>: Đây mới là "mặt tiền". Bất cứ chữ gì, hình gì bạn muốn người dùng nhìn thấy trên màn hình đều phải đặt trong Body.
+                                    </li>
+                                    <li><strong>Thẻ h1 và p:</strong> <code>&lt;h1&gt;</code> dùng làm Tiêu đề chính lớn nhất (Heading 1). <code>&lt;p&gt;</code> dùng để viết các Đoạn văn thông thường (Paragraph).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- V3 QUIZ -->
+                        <div id="v3-quiz" class="v3-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; line-height: 1.6; border: 1px solid var(--border-color); color: #334155;">
+                                <h3 style="margin-top: 0; color: var(--primary-color); font-size: 1.2rem; border-bottom: 2px dashed #e2e8f0; padding-bottom: 0.8rem;"><i class="fas fa-tasks" style="margin-right: 8px;"></i> Bài Tập Đánh Giá (Interactive Quiz)</h3>
+                                
+                                <div class="quiz-question" id="v3q1" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                    <div style="font-weight: 600; margin-bottom: 1rem;">Câu 1: Vì sao tên của tệp HTML đầu tiên luôn bắt buộc nên đặt là "index.html"?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="v3q1" value="A" onclick="checkAnswer('v3q1', 'A')"> A. Vì từ "index" là từ dễ nhớ nhất đối với lập trình viên mới học.</label>
+                                        <label class="quiz-option"><input type="radio" name="v3q1" value="B" onclick="checkAnswer('v3q1', 'B')"> B. Vì "index.html" là tên mặc định đóng vai trò làm điểm khởi đầu (entry point) cho mọi website khi tải lên Máy chủ.</label>
+                                        <label class="quiz-option"><input type="radio" name="v3q1" value="C" onclick="checkAnswer('v3q1', 'C')"> C. Vì VS Code yêu cầu file đầu tiên trong thư mục phải tên là index.</label>
+                                    </div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+
+                                <div class="quiz-question" id="v3q2" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                    <div style="font-weight: 600; margin-bottom: 1rem;">Câu 2: Phím tắt cực nhanh (cheat) trên VS Code để tạo tự động toàn bộ khung sườn cấu trúc chuẩn của HTML5 là gì?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="v3q2" value="A" onclick="checkAnswer('v3q2', 'A')"> A. Gõ chữ "html" rồi bấm phím Enter.</label>
+                                        <label class="quiz-option"><input type="radio" name="v3q2" value="B" onclick="checkAnswer('v3q2', 'B')"> B. Gõ dấu chấm cảm (!) rồi bấm phím Tab hoặc Enter.</label>
+                                        <label class="quiz-option"><input type="radio" name="v3q2" value="C" onclick="checkAnswer('v3q2', 'C')"> C. Bấm tổ hợp phím Ctrl + Shift + P.</label>
+                                    </div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+
+                                <div class="quiz-question" id="v3q3" style="margin-bottom: 0; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                    <div style="font-weight: 600; margin-bottom: 1rem;">Câu 3 (Tình huống): Một học viên viết <code>&lt;title&gt;Xin chào các bạn&lt;/title&gt;</code> vào bên trong thẻ <code>&lt;body&gt;</code> thay vì thẻ <code>&lt;head&gt;</code>. Lỗi tư duy nào đang xảy ra ở đây?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="v3q3" value="A" onclick="checkAnswer('v3q3', 'A')"> A. Học viên nghĩ nội dung chữ hiển thị cho người xem cứ phải để trong Body. Nhưng Title là tiêu đề của thanh tab trình duyệt, thuộc về cấu hình hệ thống nên phải nằm trong Head.</label>
+                                        <label class="quiz-option"><input type="radio" name="v3q3" value="B" onclick="checkAnswer('v3q3', 'B')"> B. Học viên dùng sai thẻ, lẽ ra phải dùng thẻ <code>&lt;h1&gt;</code> thay cho thẻ Title để đặt trong Body.</label>
+                                        <label class="quiz-option"><input type="radio" name="v3q3" value="C" onclick="checkAnswer('v3q3', 'C')"> C. Không có lỗi, đặt Title trong Body cũng được vì trình duyệt vẫn đọc được.</label>
+                                    </div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div> <!-- End content-v3 -->
+
                 </div>
             </div>
         </div>
@@ -1405,7 +1578,10 @@
             q4: { correct: 'B', explanation: 'Những gì bạn học trong khóa này (Front-end) chỉ làm được phần Giao diện "bề nổi". Để vận hành các hệ thống thực tế như Udemy hay Shopee, bắt buộc phải có Back-end.' },
             v2q1: { correct: 'C', explanation: 'Prettier là công cụ "dọn dẹp" tự động, giúp code của bạn thụt lề ngay ngắn, chuẩn chỉ, cực kỳ dễ đọc và dò lỗi.' },
             v2q2: { correct: 'A', explanation: 'Focus change nghĩa là "chuyển điểm tập trung" của chuột. Cứ bấm sang tab khác hoặc ra ngoài cửa sổ là VS Code sẽ tự lưu file cho bạn.' },
-            v2q3: { correct: 'B', explanation: 'Chỉ cài Prettier là chưa đủ, bạn phải nói cho VS Code biết là hãy dùng nó làm công cụ mặc định (Default Formatter) và kích hoạt nó mỗi khi lưu (Format on save).' }
+                        v2q3: { correct: 'B', explanation: 'Chỉ cài Prettier là chưa đủ, bạn phải nói cho VS Code biết là hãy dùng nó làm công cụ mặc định (Default Formatter) và kích hoạt nó mỗi khi lưu (Format on save).' },
+            v3q1: { correct: 'B', explanation: 'Đó là một quy ước chung của Internet. Khi truy cập 1 thư mục web, máy chủ sẽ ngầm hiểu đi tìm file index.html để xuất trình đầu tiên.' },
+            v3q2: { correct: 'B', explanation: 'Đó là tính năng tuyệt vời của Emmet được tích hợp sẵn trong VS Code. Gõ "!" và Tab.' },
+            v3q3: { correct: 'A', explanation: 'Thẻ <head> chứa các thông tin metadata (vô hình trong trang). Thẻ <title> là tiêu đề tab, thuộc về siêu dữ liệu chứ không phải là nội dung hiển thị trong trang web.' }
         };
 
         function switchMainVideo(vidId) {
@@ -1429,6 +1605,20 @@
                 content.style.display = 'none';
             });
             document.getElementById('content-' + vidId).style.display = 'block';
+        }
+
+                function switchVideo3Tab(tabId) {
+            document.querySelectorAll('.v3-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+            });
+            event.currentTarget.style.color = 'var(--primary-color)';
+            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
+            
+            document.querySelectorAll('.v3-tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
         }
 
         function switchVideo2Tab(tabId) {

@@ -909,7 +909,8 @@
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         <li id="menu-v1" onclick="switchMainVideo('v1')" style="padding: 0.8rem; background: rgba(99, 102, 241, 0.1); border-radius: 6px; border-left: 3px solid var(--primary-color); color: var(--text-primary); font-weight: 500; cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s;"><i class="fas fa-play-circle" id="icon-v1" style="color: var(--primary-color); margin-right: 8px;"></i> Video 1: Tổng quan</li>
                         <li id="menu-v2" onclick="switchMainVideo('v2')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s; border-left: 3px solid transparent;"><i class="fas fa-play-circle" id="icon-v2" style="color: inherit; margin-right: 8px;"></i> Video 2: Cài đặt công cụ</li>
-                        <li id="menu-v3" onclick="switchMainVideo('v3')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;"><i class="fas fa-play-circle" id="icon-v3" style="color: inherit; margin-right: 8px;"></i> Video 3: Xây dựng HTML đầu tiên</li>
+                        <li id="menu-v3" onclick="switchMainVideo('v3')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent; margin-bottom: 0.5rem;"><i class="fas fa-play-circle" id="icon-v3" style="color: inherit; margin-right: 8px;"></i> Video 3: Xây dựng HTML đầu tiên</li>
+                        <li id="menu-lab1" onclick="switchMainVideo('lab1')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent; margin-bottom: 0.5rem;"><i class="fas fa-laptop-code" id="icon-lab1" style="color: inherit; margin-right: 8px;"></i> Lab 1.1: Tạo web đầu tiên</li>
                     </ul>
                 </div>
 
@@ -1546,6 +1547,45 @@
                         </div>
 
                     </div> <!-- End content-v3 -->
+
+                    <!-- Content Lab 1.1 -->
+                    <div id="content-lab1" class="main-video-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;"><i class="fas fa-laptop-code" style="margin-right: 10px;"></i>Lab 1.1: Cài đặt VSCode và tạo trang web đầu tiên</h2>
+                        
+                        <div style="background: #ffffff; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); color: #334155; line-height: 1.7; font-size: 1.05rem;">
+                            
+                            <h3 style="color: #0f172a; margin-top: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;">1. Cài đặt VSCode</h3>
+                            <p>Để cài đặt VSCode, bạn có thể tham khảo hướng dẫn ở <a href="https://code.visualstudio.com/" target="_blank" style="color: #0284c7; text-decoration: underline; font-weight: 500;">link sau</a>. Sau khi cài đặt thành công, bước tiếp theo là cài đặt những Extension hỗ trợ trong việc lập trình Web.</p>
+
+                            <h3 style="color: #0f172a; margin-top: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;">2. Cài đặt các Extension hỗ trợ</h3>
+                            <p>Bạn sẽ cần cài đặt một số các Extension hỗ trợ như sau:</p>
+                            <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                                <li style="margin-bottom: 0.8rem;">
+                                    <strong><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank" style="color: #0284c7; text-decoration: underline;">Prettier</a>:</strong> Giúp trình bày code dễ nhìn, dễ đọc hơn. Giúp dễ dàng thao tác, tìm, chỉnh sửa nội dung đối với các trang web có độ phức tạp cao.
+                                </li>
+                                <li style="margin-bottom: 0.8rem;">
+                                    <strong><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank" style="color: #0284c7; text-decoration: underline;">Live Server</a>:</strong> Giúp cho bạn không cần mất thời gian reload lại file HTML khi chỉnh sửa code, Live server sẽ tự động reload lại nếu có thay đổi.
+                                </li>
+                                <li>
+                                    <strong><a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense" target="_blank" style="color: #0284c7; text-decoration: underline;">Path Intellisense</a>:</strong> Extension giúp bạn ghi các đường dẫn cho file dễ dàng hơn.
+                                </li>
+                            </ul>
+
+                            <h3 style="color: #0f172a; margin-top: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;">3. Thực hành tạo trang Web đầu tiên</h3>
+                            <p>Tiếp theo, bạn hãy tạo một file HTML trên VSCode và mở file đó trên trình duyệt để xem kết quả. Bạn có thể xem lại hướng dẫn ở phần "Giới thiệu về lập trình web" của bài học này. Bạn có thể sử dụng đoạn code HTML như ảnh dưới đây:</p>
+                            
+                            <div style="text-align: center; margin: 2rem 0; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; background: #f8fafc;">
+                                <img src="assets/lab1-1.png" alt="Mẫu code HTML Lab 1.1" style="max-width: 100%; border-radius: 4px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                            </div>
+
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 4px; margin-top: 2rem;">
+                                <h4 style="margin-top: 0; color: #b45309;"><i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Lưu ý của giáo viên</h4>
+                                <p style="margin-bottom: 0.5rem;">Sau khi hoàn thành bài lab ở trên, học viên <strong>lưu lại hình ảnh cài đặt thành công</strong> trên máy tính cá nhân để phục vụ cho việc review lab sau này.</p>
+                                <p style="margin-bottom: 0; color: #92400e; font-weight: 500;">Học viên cần hoàn thành tất cả các bài lab của môn học mới tiến hành đăng ký review.</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- End content-lab1 -->
 
                 </div>
             </div>

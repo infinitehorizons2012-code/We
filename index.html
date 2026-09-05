@@ -573,6 +573,7 @@
         <nav class="tabs-nav">
             <button class="tab-btn active" onclick="switchTab('course-web101x')">WEB101x: Xây dựng Website đầu tiên</button>
             <button class="tab-btn" onclick="switchTab('clo')">Course Learning Outcomes (CLO)</button>
+        <button class="tab-btn" onclick="switchTab(\'analysis\')">Phân Tích UbD</button>
         </nav>
 
         <div id="course-web101x" class="tab-content active">
@@ -767,6 +768,96 @@
                             <tr>
                                 <td style="font-weight: 600; color: var(--primary-color);">Đưa được Website lên online</td>
                                 <td><strong>WEB101x_o21:</strong> Đưa được Website lên Online</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- TAB ANALYSIS -->
+        <div id="analysis" class="tab-content">
+            <div class="course-detail-container" style="max-width: 100%;">
+                <div class="course-header">
+                    <h2>Phân tích Backward Design (UbD) ứng dụng AI</h2>
+                    <p style="color: var(--text-secondary); margin-top: 5px;">Từ Market-driven Skills đến Learning Plan</p>
+                </div>
+                
+                <div style="background-color: #f8fafc; border-left: 4px solid var(--primary-color); padding: 1.5rem; border-radius: 4px; margin-bottom: 2rem;">
+                    <h3 style="margin-top: 0; color: var(--primary-color); font-size: 1.1rem;"><i class="fas fa-lightbulb"></i> Triết lý thiết kế (Market-driven Backward Design)</h3>
+                    <p style="margin-bottom: 0.5rem; font-size: 0.95rem;">Bản chất của toàn bộ quy trình này dựa trên <strong>Understanding by Design (UbD)</strong> kết hợp với sức mạnh của AI trong bối cảnh kinh tế lao động hiện đại:</p>
+                    <ul style="margin-bottom: 0; padding-left: 1.5rem; font-size: 0.95rem;">
+                        <li><strong>Giai đoạn 1 (Desired Results):</strong> AI quét thị trường tuyển dụng (Skill Taxonomies) -> Định hình <strong>CLOs</strong> sát với nhu cầu doanh nghiệp.</li>
+                        <li><strong>Giai đoạn 2 (Assessment Evidence):</strong> Thiết kế các <strong>Task/Mini-project</strong> để đánh giá chính xác các Skill Gaps đó trước khi viết bài giảng.</li>
+                        <li><strong>Giai đoạn 3 (Learning Plan):</strong> Cung cấp <strong>Nội dung học (Just-in-time learning)</strong> và nhận diện <strong>Bẫy kiến thức</strong> để sinh viên vượt qua task thành công.</li>
+                    </ul>
+                </div>
+
+                <div class="table-container">
+                    <table style="min-width: 100%;">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%">Nhóm CLO (Desired Results)</th>
+                                <th style="width: 25%">Task Đánh Giá (Assessment Evidence)</th>
+                                <th style="width: 20%">Skill Taxonomy (Thị trường việc làm)</th>
+                                <th style="width: 30%">Nội dung học & Bẫy kiến thức (Learning Plan)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: 500; color: var(--primary-color);">1. Khung xương HTML<br><span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: normal;">(CLO 1-5: Thẻ HTML, Text, List, Image)</span></td>
+                                <td style="font-size: 0.9rem;">Xây dựng bộ khung xương (wireframe markup) cho trang CV cá nhân, đảm bảo tính cấu trúc và Semantic.</td>
+                                <td style="font-size: 0.9rem;"><span class="quiz-tag">HTML5 Semantic Structuring</span><br><br><span class="quiz-tag">Web Accessibility (a11y)</span></td>
+                                <td style="font-size: 0.9rem;">
+                                    <strong>Nội dung:</strong> Phân biệt block vs inline, các thẻ cơ bản.<br>
+                                    <span style="color: var(--danger);"><strong>🚨 Bẫy:</strong> Lạm dụng thẻ <code>&lt;div&gt;</code> thay vì dùng các thẻ ngữ nghĩa (Semantic tags như <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>). Quên thuộc tính <code>alt</code> cho ảnh gây lỗi Accessibility.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 500; color: var(--primary-color);">2. Trang điểm bằng CSS<br><span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: normal;">(CLO 6-13: CSS Selectors, Box Model, Position)</span></td>
+                                <td style="font-size: 0.9rem;">Tạo file CSS chuyên biệt để "trang điểm" cho trang CV: thiết lập khoảng cách, định dạng text, màu sắc.</td>
+                                <td style="font-size: 0.9rem;"><span class="quiz-tag">CSS3 Styling</span><br><br><span class="quiz-tag">Box Model Architecture</span><br><br><span class="quiz-tag">CSS Specificity</span></td>
+                                <td style="font-size: 0.9rem;">
+                                    <strong>Nội dung:</strong> Margin/Padding, Box-sizing, Selector Specificity.<br>
+                                    <span style="color: var(--danger);"><strong>🚨 Bẫy:</strong> Không hiểu cơ chế <code>box-sizing</code> (content-box vs border-box) dẫn đến vỡ layout khi thêm padding. Lạm dụng <code>!important</code> để ghi đè style khiến code khó maintain.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 500; color: var(--primary-color);">3. Kiến trúc Layout<br><span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: normal;">(CLO 14-17: Float, Flexbox, Grid)</span></td>
+                                <td style="font-size: 0.9rem;">Dàn trang hoàn chỉnh cho website thành nhiều cột, header/footer cố định và nội dung chia mảng rõ ràng.</td>
+                                <td style="font-size: 0.9rem;"><span class="quiz-tag">CSS Flexbox</span><br><br><span class="quiz-tag">CSS Grid Layout</span><br><br><span class="quiz-tag">UI Structuring</span></td>
+                                <td style="font-size: 0.9rem;">
+                                    <strong>Nội dung:</strong> Flexbox (dàn trang 1D) vs Grid (dàn trang 2D).<br>
+                                    <span style="color: var(--danger);"><strong>🚨 Bẫy:</strong> Cố gắng dùng Flexbox ép để giải quyết bài toán Grid (layout 2D phức tạp). Hoặc lạm dụng <code>Float</code> (công nghệ cũ) để chia cột thay vì dùng các Layout hệ mới.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 500; color: var(--primary-color);">4. Thổi hồn với JavaScript<br><span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: normal;">(CLO 22-31: DOM, Events, Variables, Loops)</span></td>
+                                <td style="font-size: 0.9rem;">Viết script xử lý logic form liên hệ, tạo hiệu ứng accordion/tab động, validate dữ liệu đầu vào.</td>
+                                <td style="font-size: 0.9rem;"><span class="quiz-tag">Vanilla JavaScript</span><br><br><span class="quiz-tag">DOM Manipulation</span><br><br><span class="quiz-tag">Event Handling</span></td>
+                                <td style="font-size: 0.9rem;">
+                                    <strong>Nội dung:</strong> let/const/var, vòng lặp, tương tác cây DOM, Arrow functions.<br>
+                                    <span style="color: var(--danger);"><strong>🚨 Bẫy:</strong> Không hiểu scope của <code>var</code> dẫn đến lỗi rò rỉ biến (hoisting). Quên <code>preventDefault()</code> khi submit form. Gắn quá nhiều Event Listener rời rạc gây phình bộ nhớ.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 500; color: var(--primary-color);">5. Website Responsive<br><span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: normal;">(CLO 18-20: Media Query, Bootstrap)</span></td>
+                                <td style="font-size: 0.9rem;">Tối ưu hóa hiển thị website hoàn hảo trên mọi kích thước màn hình (Mobile, Tablet, PC) dùng hệ thống lưới Bootstrap.</td>
+                                <td style="font-size: 0.9rem;"><span class="quiz-tag">Mobile-First Design</span><br><br><span class="quiz-tag">Responsive Web Design</span><br><br><span class="quiz-tag">CSS Frameworks</span></td>
+                                <td style="font-size: 0.9rem;">
+                                    <strong>Nội dung:</strong> Triết lý Mobile-first, Hệ thống lưới 12 cột, Breakpoints.<br>
+                                    <span style="color: var(--danger);"><strong>🚨 Bẫy:</strong> Code theo tư duy Desktop-first rồi mới vá lỗi cho mobile. Ghi đè class mặc định của Bootstrap thủ công phá vỡ tính nhất quán của framework.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 500; color: var(--primary-color);">6. Đưa sản phẩm lên Online<br><span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: normal;">(CLO 21: Online Deployment)</span></td>
+                                <td style="font-size: 0.9rem;">Đẩy mã nguồn lên GitHub Repository và cấu hình GitHub Pages để xuất bản website lên Internet.</td>
+                                <td style="font-size: 0.9rem;"><span class="quiz-tag">Git & GitHub Basics</span><br><br><span class="quiz-tag">Static Site Hosting</span><br><br><span class="quiz-tag">Deployment</span></td>
+                                <td style="font-size: 0.9rem;">
+                                    <strong>Nội dung:</strong> Vòng đời Git (add, commit, push), cấu hình branch cho Pages.<br>
+                                    <span style="color: var(--danger);"><strong>🚨 Bẫy:</strong> Đặt sai tên file trang chủ (vd: <code>Index.html</code>, <code>INDEX.HTML</code>) khiến server từ chối hiển thị. Push các thông tin nhạy cảm lên repository công khai.</span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

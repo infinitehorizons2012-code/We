@@ -1726,6 +1726,14 @@
                                 <span style="font-size: 0.8rem; color: #64748b;">20 phút</span>
                             </div>
                         </li>
+                        <li id="menu-l2-exercise" class="video-menu-item" style="padding: 1rem 1.5rem; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;" onclick="switchMainVideo('l2-exercise')" onmouseover="this.style.background='#f1f5f9'" onmouseout="if(this.style.backgroundColor !== 'rgb(240, 24df4, 248)' && this.style.backgroundColor !== '#f0f4f8') this.style.background='transparent'">
+                            <div style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span id="icon-l2-exercise" style="background: #e0e7ff; color: #4338ca; font-size: 0.75rem; font-weight: bold; padding: 2px 6px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; width: 40px;">BÀI TẬP</span>
+                                    <span style="font-weight: 500; color: #334155;">Exercise</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
@@ -3047,6 +3055,278 @@
 
                         </div>
                     </div> <!-- End content-l2-quiz2 -->
+                    <!-- Content Exercise -->
+                    <div id="content-l2-exercise" class="main-video-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;"><i class="fas fa-dumbbell" style="margin-right: 10px;"></i>Exercise</h2>
+                        
+                        <div style="background: #ffffff; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); color: #334155; line-height: 1.7;">
+                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Ở bài Exercise, bạn sẽ làm các bài tập ở trên trang <a href="https://www.w3schools.com/html/default.asp" target="_blank" style="color: #2563eb; font-weight: 600; text-decoration: none;">W3schools</a>, chọn khóa HTML để ôn tập thêm về các kiến thức vừa học.</p>
+                            <p style="margin-bottom: 1rem; font-weight: 600;">Bạn sẽ cần hoàn thành các phần dưới đây:</p>
+                            
+                            <div style="overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 8px;">
+                                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                                    <thead>
+                                        <tr style="background-color: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+                                            <th style="padding: 12px 16px; font-weight: 600; color: #475569; width: 30%;">Nội dung (Topic)</th>
+                                            <th style="padding: 12px 16px; font-weight: 600; color: #475569; width: 70%;">Link thực hành W3Schools</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML HOME</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/default.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/default.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Introduction</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_intro.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Editors</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_editors.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_editors.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Basic</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_basic.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_basic.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Elements</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_elements.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_elements.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Attributes</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_attributes.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_attributes.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Headings</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_headings.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_headings.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Paragraphs</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_paragraphs.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_paragraphs.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Formatting</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_formatting.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_formatting.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Quotations</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_quotation_elements.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_quotation_elements.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Comments</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_comments.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_comments.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Colors</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_colors.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_colors.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Links</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_links.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_links.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Images</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_images.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_images.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Favicon</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_favicon.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_favicon.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Tables</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_tables.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_tables.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Lists</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_lists.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_lists.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Block & Inline</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_blocks.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Classes</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_classes.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_classes.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Id</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_id.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_id.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Iframes</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_iframe.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_iframe.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML JavaScript</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_scripts.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_scripts.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML File Paths</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_filepaths.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_filepaths.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Head</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_head.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_head.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Layout</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_layout.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Computercode</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_computercode_elements.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_computercode_elements.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Semantics</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html5_semantic_elements.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Entities</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_entities.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_entities.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Symbols</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_symbols.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_symbols.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Emojis</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_emoji.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_emoji.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 12px 16px; font-weight: 500; color: #334155;">HTML Charset</td>
+                                    <td style="padding: 12px 16px;">
+                                        <a href="https://www.w3schools.com/html/html_charset.asp" target="_blank" style="color: #2563eb; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                            https://www.w3schools.com/html/html_charset.asp <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div> <!-- End content-l2-exercise -->
+
 
 
 

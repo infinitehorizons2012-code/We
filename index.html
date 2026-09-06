@@ -2525,17 +2525,56 @@
                             <button class="l2v4-tab-btn" onclick="switchL2V4Tab('l2-v4-quiz')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Bài tập đánh giá</button>
                         </div>
 
+                        
                         <!-- UbD Content -->
                         <div id="l2-v4-ubd" class="l2v4-tab-content" style="display: block; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
-                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem;">
-                                <h4 style="margin-top: 0; color: #334155;"><i class="fas fa-map-signs" style="margin-right: 8px; color: #6366f1;"></i>Suy ngược UbD (Backward Design Mapping)</h4>
-                                <div style="margin-top: 1rem;">
-                                    <p><strong>Mục tiêu (CLO):</strong></p>
-                                    <p style="margin-left: 1rem; color: #475569;">WEB101x_o4: Sử dụng được các thẻ HTML cơ bản để định dạng danh sách.</p>
-                                    <p><strong>Bài tập (Task):</strong></p>
-                                    <p style="margin-left: 1rem; color: #475569;">Trắc nghiệm xác định đúng các thẻ tạo danh sách trong HTML.</p>
-                                    <p><strong>Phân loại Bloom:</strong></p>
-                                    <p style="margin-left: 1rem; color: #475569;"><span style="background: #e0e7ff; color: #4338ca; padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 0.85rem;">HIỂU (UNDERSTAND)</span></p>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+
+                                <!-- Learning Plan -->
+                                <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-top: 4px solid var(--primary-color);">
+                                    <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--primary-color);"><i class="fas fa-book-open"></i> Nội dung bài học (Learning Plan)</h3>
+                                    <ul style="padding-left: 1.2rem; font-size: 0.95rem; margin-bottom: 0;">
+                                        <li style="margin-bottom: 0.5rem;"><strong>Khái niệm danh sách:</strong> Thẻ <code>&lt;ol&gt;</code> (có thứ tự) và <code>&lt;ul&gt;</code> (không thứ tự).</li>
+                                        <li style="margin-bottom: 0.5rem;"><strong>Thành phần:</strong> Thẻ <code>&lt;li&gt;</code> (list item) dùng làm phần tử con bên trong danh sách.</li>
+                                        <li style="margin-bottom: 0.5rem;"><strong>Tính phân cấp:</strong> Khái niệm mối quan hệ cha - con (Parent Element / Child Element) trong HTML.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Cognitive Traps -->
+                                <div style="background: #fff1f2; padding: 1.5rem; border-radius: 8px; border-top: 4px solid var(--danger);">
+                                    <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--danger);"><i class="fas fa-exclamation-triangle"></i> Bẫy kiến thức (Cognitive Traps)</h3>
+                                    <ul style="padding-left: 1.2rem; font-size: 0.95rem; margin-bottom: 0; color: #881337;">
+                                        <li style="margin-bottom: 0.5rem;">🚨 <strong>Nhầm lẫn cấu trúc cha con:</strong> Để văn bản tự do hoặc các thẻ khác trực tiếp bên trong <code>&lt;ul&gt;</code>/<code>&lt;ol&gt;</code> thay vì dùng thẻ <code>&lt;li&gt;</code>. (Lưu ý: Child trực tiếp của ul/ol chỉ được phép là li).</li>
+                                        <li>🚨 <strong>Dùng sai loại danh sách:</strong> Dùng <code>&lt;ol&gt;</code> khi thứ tự không quan trọng, hoặc ngược lại, làm giảm tính chất ngữ nghĩa (Semantic) của trang.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Backward Design Mapping -->
+                            <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #3b82f6; margin-top: 1.5rem;">
+                                <h3 style="margin-top: 0; font-size: 1.1rem; color: #1d4ed8; margin-bottom: 1rem;">Suy ngược UbD (Backward Design Mapping)</h3>
+                                
+                                <div style="display: flex; gap: 1rem; align-items: baseline; margin-bottom: 0.8rem;">
+                                    <div style="width: 150px; font-weight: bold; color: #1e40af;">Mục tiêu (CLO):</div>
+                                    <div style="flex: 1; font-size: 0.95rem;"><strong>WEB101x_o4:</strong> Vận dụng được các thẻ HTML cơ bản về Text, List, Image, ...</div>
+                                </div>
+                                
+                                <div style="display: flex; gap: 1rem; align-items: baseline; margin-bottom: 0.8rem;">
+                                    <div style="width: 150px; font-weight: bold; color: #1e40af;">Skill Taxonomy:</div>
+                                    <div style="flex: 1; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                        <span style="background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; border: 1px solid #bae6fd;">HTML Structure</span>
+                                        <span style="background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; border: 1px solid #bae6fd;">List Formatting</span>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; gap: 1rem; padding-top: 1rem; border-top: 1px dashed #bfdbfe;">
+                                    <div style="width: 150px; font-weight: bold; color: #1e40af;">Task Đánh Giá:</div>
+                                    <div style="flex: 1; font-size: 0.95rem;">
+                                        <ul style="padding-left: 1rem; margin: 0;">
+                                            <li><strong>Bài tập tình huống:</strong> Bạn cần viết một danh sách hướng dẫn gồm 3 bước để người dùng đăng ký tài khoản. Bạn sẽ dùng cặp thẻ chính nào và tại sao?</li>
+                                            <li><strong>Bài tập phân loại:</strong> Phân biệt sự khác nhau trong cách trình duyệt đình dạng (render) thẻ <code>&lt;ol&gt;</code> so với thẻ <code>&lt;ul&gt;</code>.</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

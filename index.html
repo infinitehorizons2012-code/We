@@ -2899,6 +2899,7 @@
         
         
         const quizData = {
+            'l2-v4': { correct: 'c', explanation: 'Thẻ &lt;ol&gt; (ordered list) được dùng để tạo các danh sách được đánh số.' },
             l2_v1_q1: { correct: 'B', explanation: 'HTML không phải là ngôn ngữ lập trình vì nó không có tư duy logic (if/else, for). Nó là ngôn ngữ đánh dấu siêu văn bản (Markup Language) dùng để tạo khung xương và cấu trúc cho web.' },
             l2_v1_q2: { correct: 'B', explanation: 'Cấu trúc chuẩn của một Element có nội dung bắt buộc phải gồm thẻ mở &lt;p&gt; và thẻ đóng có dấu gạch chéo &lt;/p&gt;.' },
             l2_v2_q1: { correct: 'C', explanation: 'Thẻ &lt;body&gt; (phần thân) chứa tất cả các phần tử sẽ được hiển thị ra màn hình cho người dùng xem.' },
@@ -3265,6 +3266,21 @@
                 }
             }
         });
+    
+        function switchL2V4Tab(tabId) {
+            document.querySelectorAll('.l2v4-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+            });
+            event.target.style.color = 'var(--primary-color)';
+            event.target.style.borderBottom = '2px solid var(--primary-color)';
+            
+            document.querySelectorAll('.l2v4-tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
+        }
+
     </script>
 </body>
 </html>

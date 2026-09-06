@@ -3103,45 +3103,51 @@
 };
 
         function switchL2V2Tab(tabId) {
-            document.querySelectorAll('.l2v2-tab-btn').forEach(btn => {
-                btn.style.color = 'var(--text-secondary)';
-                btn.style.borderBottom = 'none';
-            });
-            event.currentTarget.style.color = 'var(--primary-color)';
-            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
-            
             document.querySelectorAll('.l2v2-tab-content').forEach(content => {
                 content.style.display = 'none';
             });
             document.getElementById(tabId).style.display = 'block';
+
+            document.querySelectorAll('.l2v2-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+                    btn.style.color = 'var(--primary-color)';
+                    btn.style.borderBottom = '3px solid var(--primary-color)';
+                }
+            });
         }
         
         function switchL2V3Tab(tabId) {
-            document.querySelectorAll('.l2v3-tab-btn').forEach(btn => {
-                btn.style.color = 'var(--text-secondary)';
-                btn.style.borderBottom = 'none';
-            });
-            event.currentTarget.style.color = 'var(--primary-color)';
-            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
-            
             document.querySelectorAll('.l2v3-tab-content').forEach(content => {
                 content.style.display = 'none';
             });
             document.getElementById(tabId).style.display = 'block';
+
+            document.querySelectorAll('.l2v3-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+                    btn.style.color = 'var(--primary-color)';
+                    btn.style.borderBottom = '3px solid var(--primary-color)';
+                }
+            });
         }
         
         function switchL2V1Tab(tabId) {
-            document.querySelectorAll('.l2v1-tab-btn').forEach(btn => {
-                btn.style.color = 'var(--text-secondary)';
-                btn.style.borderBottom = 'none';
-            });
-            event.currentTarget.style.color = 'var(--primary-color)';
-            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
-            
             document.querySelectorAll('.l2v1-tab-content').forEach(content => {
                 content.style.display = 'none';
             });
             document.getElementById(tabId).style.display = 'block';
+
+            document.querySelectorAll('.l2v1-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+                    btn.style.color = 'var(--primary-color)';
+                    btn.style.borderBottom = '3px solid var(--primary-color)';
+                }
+            });
         }
         
         function switchMainVideo(vidId) {
@@ -3168,31 +3174,35 @@
         }
 
                 function switchVideo3Tab(tabId) {
-            document.querySelectorAll('.v3-tab-btn').forEach(btn => {
-                btn.style.color = 'var(--text-secondary)';
-                btn.style.borderBottom = 'none';
-            });
-            event.currentTarget.style.color = 'var(--primary-color)';
-            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
-            
             document.querySelectorAll('.v3-tab-content').forEach(content => {
                 content.style.display = 'none';
             });
             document.getElementById(tabId).style.display = 'block';
+
+            document.querySelectorAll('.v3-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+                    btn.style.color = 'var(--primary-color)';
+                    btn.style.borderBottom = '3px solid var(--primary-color)';
+                }
+            });
         }
 
         function switchVideo2Tab(tabId) {
-            document.querySelectorAll('.v2-tab-btn').forEach(btn => {
-                btn.style.color = 'var(--text-secondary)';
-                btn.style.borderBottom = 'none';
-            });
-            event.currentTarget.style.color = 'var(--primary-color)';
-            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
-            
             document.querySelectorAll('.v2-tab-content').forEach(content => {
                 content.style.display = 'none';
             });
             document.getElementById(tabId).style.display = 'block';
+
+            document.querySelectorAll('.v2-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+                    btn.style.color = 'var(--primary-color)';
+                    btn.style.borderBottom = '3px solid var(--primary-color)';
+                }
+            });
         }
 
                         function checkCheckboxAnswer(questionId, checkboxElem, correctAnswers, explanation) {
@@ -3321,41 +3331,33 @@
         }
 
         function switchVideoTab(tabId) {
-            document.querySelectorAll('.v-tab-btn').forEach(btn => {
-                btn.style.color = 'var(--text-secondary)';
-                btn.style.borderBottom = 'none';
-            });
-            event.currentTarget.style.color = 'var(--primary-color)';
-            event.currentTarget.style.borderBottom = '3px solid var(--primary-color)';
-            
             document.querySelectorAll('.v-tab-content').forEach(content => {
                 content.style.display = 'none';
             });
             document.getElementById(tabId).style.display = 'block';
+
+            document.querySelectorAll('.v-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+                    btn.style.color = 'var(--primary-color)';
+                    btn.style.borderBottom = '3px solid var(--primary-color)';
+                }
+            });
         }
 
         function switchTab(tabId) {
-            // Update buttons
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-            
-            // Update content
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('active');
             });
             document.getElementById(tabId).classList.add('active');
             
-            // If called from a link instead of tab button directly
-            if (!event.currentTarget.classList.contains('tab-btn')) {
-                // Find and activate the correct tab button
-                document.querySelectorAll('.tab-btn').forEach(btn => {
-                    if(btn.getAttribute('onclick').includes(tabId)) {
-                        btn.classList.add('active');
-                    }
-                });
-            }
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+                    btn.classList.add('active');
+                }
+            });
         }
         
         document.addEventListener("DOMContentLoaded", function() {
@@ -3447,17 +3449,19 @@
         });
     
         function switchL2V4Tab(tabId) {
-            document.querySelectorAll('.l2v4-tab-btn').forEach(btn => {
-                btn.style.color = 'var(--text-secondary)';
-                btn.style.borderBottom = 'none';
-            });
-            event.target.style.color = 'var(--primary-color)';
-            event.target.style.borderBottom = '2px solid var(--primary-color)';
-            
             document.querySelectorAll('.l2v4-tab-content').forEach(content => {
                 content.style.display = 'none';
             });
             document.getElementById(tabId).style.display = 'block';
+
+            document.querySelectorAll('.l2v4-tab-btn').forEach(btn => {
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderBottom = 'none';
+                if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(tabId)) {
+                    btn.style.color = 'var(--primary-color)';
+                    btn.style.borderBottom = '2px solid var(--primary-color)';
+                }
+            });
         }
 
     </script>

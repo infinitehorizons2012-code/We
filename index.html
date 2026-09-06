@@ -1703,7 +1703,15 @@
                         <li id="menu-l2-lab6" onclick="switchMainVideo('l2-lab6')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent; margin-bottom: 0.5rem;"><i class="fas fa-laptop-code" id="icon-l2-lab6" style="color: inherit; margin-right: 8px;"></i> <span style="font-size: 0.7rem; background: #dcfce7; color: #15803d; padding: 2px 5px; border-radius: 4px; margin-right: 4px; font-weight: bold;">LAB</span> 2.6: Uncomment HTML
     <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; text-align: right;"><i class="far fa-clock"></i> 5 phút</div>
 </li>
-                        <li id="menu-l2-lab7" onclick="switchMainVideo('l2-lab7')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent; margin-bottom: 0.5rem;"><i class="fas fa-laptop-code" id="icon-l2-lab7" style="color: inherit; margin-right: 8px;"></i> <span style="font-size: 0.7rem; background: #dcfce7; color: #15803d; padding: 2px 5px; border-radius: 4px; margin-right: 4px; font-weight: bold;">LAB</span> 2.7: Create a Bulleted Unordered List
+                        
+                        <li id="menu-l2-v4" class="video-menu-item" onclick="switchMainVideo('l2-v4')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent; margin-bottom: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                            <div style="display: flex; align-items: flex-start;">
+                                <span style="font-size: 0.7rem; background: #e0e7ff; color: #4338ca; padding: 2px 5px; border-radius: 4px; margin-right: 8px; font-weight: bold; white-space: nowrap;">VIDEO</span> 
+                                <span style="line-height: 1.4;">4: Tạo danh sách trong HTML</span>
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary); align-self: flex-end;"><i class="far fa-clock"></i> 10 phút</div>
+                        </li>
+<li id="menu-l2-lab7" onclick="switchMainVideo('l2-lab7')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent; margin-bottom: 0.5rem;"><i class="fas fa-laptop-code" id="icon-l2-lab7" style="color: inherit; margin-right: 8px;"></i> <span style="font-size: 0.7rem; background: #dcfce7; color: #15803d; padding: 2px 5px; border-radius: 4px; margin-right: 4px; font-weight: bold;">LAB</span> 2.7: Create a Bulleted Unordered List
     <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; text-align: right;"><i class="far fa-clock"></i> 5 phút</div>
 </li>
                         <li id="menu-l2-lab8" onclick="switchMainVideo('l2-lab8')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent; margin-bottom: 0.5rem;"><i class="fas fa-laptop-code" id="icon-l2-lab8" style="color: inherit; margin-right: 8px;"></i> <span style="font-size: 0.7rem; background: #dcfce7; color: #15803d; padding: 2px 5px; border-radius: 4px; margin-right: 4px; font-weight: bold;">LAB</span> 2.8: Create an Ordered List
@@ -2498,6 +2506,326 @@
                     </div> <!-- End content-l2-lab6 -->
 
                     <!-- Content Lab 2.7 -->
+                    
+                    <!-- Content Video 4 -->
+                    <div id="content-l2-v4" class="main-video-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <h2 style="margin-top: 0; color: var(--text-primary); margin-bottom: 1.5rem;">Video 4: Tạo danh sách trong HTML</h2>
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div style="margin-top: 1rem; text-align: center;">
+                            <a href="https://funix.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/27512032#overview" target="_blank" style="display: inline-block; background: var(--primary-color); color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;"><i class="fas fa-external-link-alt" style="margin-right: 8px;"></i>Xem trên nền tảng Udemy</a>
+                        </div>
+                        
+                        <div style="margin-top: 2rem; border-bottom: 1px solid var(--border-color); display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 0px;">
+                            <button class="l2v4-tab-btn" onclick="switchL2V4Tab('l2-v4-ubd')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--primary-color); border-bottom: 2px solid var(--primary-color); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Phân tích UbD</button>
+                            <button class="l2v4-tab-btn" onclick="switchL2V4Tab('l2-v4-notes')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Chú giải</button>
+                            <button class="l2v4-tab-btn" onclick="switchL2V4Tab('l2-v4-transcript')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Transcript</button>
+                            <button class="l2v4-tab-btn" onclick="switchL2V4Tab('l2-v4-takeaways')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Nội dung trọng tâm</button>
+                            <button class="l2v4-tab-btn" onclick="switchL2V4Tab('l2-v4-quiz')" style="background: none; border: none; padding: 0.8rem 1rem; color: var(--text-secondary); font-weight: 600; cursor: pointer; margin-bottom: -2px;">Bài tập đánh giá</button>
+                        </div>
+
+                        <!-- UbD Content -->
+                        <div id="l2-v4-ubd" class="l2v4-tab-content" style="display: block; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
+                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem;">
+                                <h4 style="margin-top: 0; color: #334155;"><i class="fas fa-map-signs" style="margin-right: 8px; color: #6366f1;"></i>Suy ngược UbD (Backward Design Mapping)</h4>
+                                <div style="margin-top: 1rem;">
+                                    <p><strong>Mục tiêu (CLO):</strong></p>
+                                    <p style="margin-left: 1rem; color: #475569;">WEB101x_o4: Sử dụng được các thẻ HTML cơ bản để định dạng danh sách.</p>
+                                    <p><strong>Bài tập (Task):</strong></p>
+                                    <p style="margin-left: 1rem; color: #475569;">Trắc nghiệm xác định đúng các thẻ tạo danh sách trong HTML.</p>
+                                    <p><strong>Phân loại Bloom:</strong></p>
+                                    <p style="margin-left: 1rem; color: #475569;"><span style="background: #e0e7ff; color: #4338ca; padding: 2px 8px; border-radius: 4px; font-weight: 600; font-size: 0.85rem;">HIỂU (UNDERSTAND)</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notes Content -->
+                        <div id="l2-v4-notes" class="l2v4-tab-content" style="display: none; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
+                            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 4px;">
+                                <h4 style="margin-top: 0; color: #b45309;"><i class="fas fa-sticky-note" style="margin-right: 8px;"></i>Chú giải của giáo viên</h4>
+                                <ul style="line-height: 1.8; color: #92400e; padding-left: 1rem; margin-bottom: 0;">
+                                    <li><strong>(0:00)</strong> Giải thích về danh sách
+                                        <ul style="margin-top: 0.5rem; list-style-type: circle;">
+                                            <li>Danh sách ( List ) là tập hợp các phần tử, được thể hiện thông qua sắp xếp các phần tử theo phương thẳng đứng.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>(1:10)</strong> Bổ sung các danh sách vào demo project</li>
+                                    <li><strong>(1:30)</strong> Thẻ ol (ordered list – danh sách theo thứ tự)
+                                        <ul style="margin-top: 0.5rem; list-style-type: circle;">
+                                            <li>Thẻ danh sách ol được sử dụng để tạo danh sách có thứ tự, nghĩa là các mục trong danh sách được đánh số hoặc đánh dấu bằng các ký tự có thứ tự như số hoặc chữ cái.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>(1:55)</strong> Thẻ li (list element – các phần tử trong danh sách)
+                                        <ul style="margin-top: 0.5rem; list-style-type: circle;">
+                                            <li>Thẻ li được sử dụng để tạo danh sách danh mục hoặc danh sách con trong một danh mục chính.</li>
+                                            <li>Thông thường thì thẻ li được sử dụng trong kết hợp với các thẻ ul hoặc ol để tạo ra các loại danh sách khác nhau.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>(3:00)</strong> Giới thiệu về child elements (phần tử con) và parents elements (phần tử cha)
+                                        <ul style="margin-top: 0.5rem; list-style-type: circle;">
+                                            <li>Trong HTML chúng ta gọi các phần tử chứa các phần tử khác là phần tử cha, phần tử nằm bên trong phần tử khác là phần tử con.</li>
+                                            <li>Trong trường hợp này, ol là phần tử cha, 3 phần tử li nằm bên trong là 3 phần tử con. Điều này rất có ý nghĩa cho việc tạo ra các bộ chọn và các thuộc tính CSS có tính kế thừa mà chúng ta sẽ tìm hiểu ở phần tiếp theo.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>(5:45)</strong> Thẻ ul (unordered list – danh sách không theo thứ tự)
+                                        <ul style="margin-top: 0.5rem; list-style-type: circle;">
+                                            <li>Thẻ danh sách ul được sử dụng để tạo danh sách các mục không có thứ tự cụ thể.</li>
+                                            <li>Các mục trong danh sách không được đánh số hoặc không có thứ tự quy định, và chúng sẽ xuất hiện trong danh sách mà không có sự sắp xếp cụ thể.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>(9:00)</strong> Vai trò của việc sử dụng các thẻ và tạo các danh sách trong html
+                                        <ul style="margin-top: 0.5rem; list-style-type: circle;">
+                                            <li>Mỗi phần tử lại có ý nghĩa khác nhau đây là yếu tố cần để cấu trúc nội dung trang web.</li>
+                                            <li>Việc tạo danh sách cũng giống với việc nhóm các phần tử liên quan thành một khối. Điều này cũng góp phần cấu trúc cho trang web rõ ràng hơn.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Transcript Content -->
+                        <div id="l2-v4-transcript" class="l2v4-tab-content" style="display: none; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
+                            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0; max-height: 600px; overflow-y: auto; color: #334155; line-height: 1.8;">
+                            <p style="margin-bottom: 1rem;">Narrator: Let's keep working with text.</p>
+                            <p style="margin-bottom: 1rem;">And in this lecture we will learn how to create lists</p>
+                            <p style="margin-bottom: 1rem;">with bullet points and also with numbers.</p>
+                            <p style="margin-bottom: 1rem;">And what I mean by list is basically</p>
+                            <p style="margin-bottom: 1rem;">like a list of bullet points</p>
+                            <p style="margin-bottom: 1rem;">like we have here and also like an ordered list</p>
+                            <p style="margin-bottom: 1rem;">with numbers like here with 1, 2, 3 ordered elements.</p>
+                            <p style="margin-bottom: 1rem;">Alright?</p>
+                            <p style="margin-bottom: 1rem;">So that is very easy to do in HTML.</p>
+                            <p style="margin-bottom: 1rem;">So let's see how.</p>
+                            <p style="margin-bottom: 1rem;">So starting with the numbered list.</p>
+                            <p style="margin-bottom: 1rem;">So this one here, it is here at the end</p>
+                            <p style="margin-bottom: 1rem;">of this section of our text.</p>
+                            <p style="margin-bottom: 1rem;">So, in the "What is HTML?" part.</p>
+                            <p style="margin-bottom: 1rem;">So we have this paragraph, then we have this paragraph</p>
+                            <p style="margin-bottom: 1rem;">and then we actually have another paragraph there</p>
+                            <p style="margin-bottom: 1rem;">that we missed.</p>
+                            <p style="margin-bottom: 1rem;">And then after that we have the list.</p>
+                            <p style="margin-bottom: 1rem;">So let's get all of this content.</p>
+                            <p style="margin-bottom: 1rem;">So these are the three list items</p>
+                            <p style="margin-bottom: 1rem;">and that is the missing paragraph.</p>
+                            <p style="margin-bottom: 1rem;">Okay, just paste all of that here.</p>
+                            <p style="margin-bottom: 1rem;">And now I will simply wrap this element inside of a P.</p>
+                            <p style="margin-bottom: 1rem;">And so there we have the paragraph.</p>
+                            <p style="margin-bottom: 1rem;">So we have everything nicely structured here.</p>
+                            <p style="margin-bottom: 1rem;">And now let's start the list.</p>
+                            <p style="margin-bottom: 1rem;">So the element to start a ordered list</p>
+                            <p style="margin-bottom: 1rem;">which is what a list with numbers is called,</p>
+                            <p style="margin-bottom: 1rem;">We use the OL element. So, like this.</p>
+                            <p style="margin-bottom: 1rem;">And so OL stands for ordered list.</p>
+                            <p style="margin-bottom: 1rem;">And we opened it, so of course</p>
+                            <p style="margin-bottom: 1rem;">we also need to close the element.</p>
+                            <p style="margin-bottom: 1rem;">Okay, now let's give us some space here</p>
+                            <p style="margin-bottom: 1rem;">because actually for each of the elements of the list</p>
+                            <p style="margin-bottom: 1rem;">we need to create an element inside of the ordered list.</p>
+                            <p style="margin-bottom: 1rem;">And so, for that we use the LI element</p>
+                            <p style="margin-bottom: 1rem;">which stands for list item.</p>
+                            <p style="margin-bottom: 1rem;">So list item,</p>
+                            <p style="margin-bottom: 1rem;">open it and close it.</p>
+                            <p style="margin-bottom: 1rem;">And then let's grab this content.</p>
+                            <p style="margin-bottom: 1rem;">So the opening tag, let's cut it actually.</p>
+                            <p style="margin-bottom: 1rem;">Okay, then I'm going to cut these two as well</p>
+                            <p style="margin-bottom: 1rem;">and paste them down here.</p>
+                            <p style="margin-bottom: 1rem;">And then simply wrap it inside some more LI elements.</p>
+                            <p style="margin-bottom: 1rem;">So again, LI stands for list item,</p>
+                            <p style="margin-bottom: 1rem;">while OL stands for ordered list.</p>
+                            <p style="margin-bottom: 1rem;">Here, I'm giving it some indentation using the tab key</p>
+                            <p style="margin-bottom: 1rem;">just so that they are visually all aligned</p>
+                            <p style="margin-bottom: 1rem;">as child elements of the ordered list.</p>
+                            <p style="margin-bottom: 1rem;">So, maybe you noticed how I'm using the terms</p>
+                            <p style="margin-bottom: 1rem;">child elements and parent elements.</p>
+                            <p style="margin-bottom: 1rem;">So, whenever we have an element inside of another,</p>
+                            <p style="margin-bottom: 1rem;">basically the container of another element is the parent.</p>
+                            <p style="margin-bottom: 1rem;">So in this case, that's the ordered list.</p>
+                            <p style="margin-bottom: 1rem;">And then the elements that are inside the parent</p>
+                            <p style="margin-bottom: 1rem;">are the child elements.</p>
+                            <p style="margin-bottom: 1rem;">Alright.</p>
+                            <p style="margin-bottom: 1rem;">But let's go back here and reload it.</p>
+                            <p style="margin-bottom: 1rem;">And indeed there is our ordered list.</p>
+                            <p style="margin-bottom: 1rem;">Nice. So the Google Chrome browser understands our code</p>
+                            <p style="margin-bottom: 1rem;">and knows that it should render it</p>
+                            <p style="margin-bottom: 1rem;">as a list of ordered numbers.</p>
+                            <p style="margin-bottom: 1rem;">So 1, 2, 3.</p>
+                            <p style="margin-bottom: 1rem;">And of course it then automatically applies these numbers</p>
+                            <p style="margin-bottom: 1rem;">without us having to do anything.</p>
+                            <p style="margin-bottom: 1rem;">And if we edit another element</p>
+                            <p style="margin-bottom: 1rem;">let's say we would even add it here at the beginning</p>
+                            <p style="margin-bottom: 1rem;">that would then become the first element.</p>
+                            <p style="margin-bottom: 1rem;">Oh, sorry.</p>
+                            <p style="margin-bottom: 1rem;">So that would then, as I was saying,</p>
+                            <p style="margin-bottom: 1rem;">become the first element.</p>
+                            <p style="margin-bottom: 1rem;">And indeed now we have four of them</p>
+                            <p style="margin-bottom: 1rem;">and this one is the first.</p>
+                            <p style="margin-bottom: 1rem;">This one we don't want.</p>
+                            <p style="margin-bottom: 1rem;">Let's get rid of it.</p>
+                            <p style="margin-bottom: 1rem;">Nice. So that is one of the lists.</p>
+                            <p style="margin-bottom: 1rem;">And then the other one is this one here in the</p>
+                            <p style="margin-bottom: 1rem;">"Why should you learn HTML?" part.</p>
+                            <p style="margin-bottom: 1rem;">And again, there is, uh, some other content here.</p>
+                            <p style="margin-bottom: 1rem;">So let's go ahead and grab all of this.</p>
+                            <p style="margin-bottom: 1rem;">So from this content file here.</p>
+                            <p style="margin-bottom: 1rem;">So this is the heading and now we need all of this.</p>
+                            <p style="margin-bottom: 1rem;">Copy and paste.</p>
+                            <p style="margin-bottom: 1rem;">And so once again</p>
+                            <p style="margin-bottom: 1rem;">I will start by wrapping these into paragraphs.</p>
+                            <p style="margin-bottom: 1rem;">And so maybe you are starting to see</p>
+                            <p style="margin-bottom: 1rem;">that we are really creating a nice</p>
+                            <p style="margin-bottom: 1rem;">and tidy structure where each piece</p>
+                            <p style="margin-bottom: 1rem;">of content is inside of some element.</p>
+                            <p style="margin-bottom: 1rem;">So we don't have like any text floating around just inside</p>
+                            <p style="margin-bottom: 1rem;">of the body, uh, without being in an element, right?</p>
+                            <p style="margin-bottom: 1rem;">We always are creating a nice structure where</p>
+                            <p style="margin-bottom: 1rem;">each element has a certain meaning.</p>
+                            <p style="margin-bottom: 1rem;">So for example, all of these are of course paragraphs</p>
+                            <p style="margin-bottom: 1rem;">and that's why we use the P element.</p>
+                            <p style="margin-bottom: 1rem;">And this piece of content here is a list.</p>
+                            <p style="margin-bottom: 1rem;">And that's why we use the ordered list element.</p>
+                            <p style="margin-bottom: 1rem;">And so that is essentially to assign some meaning</p>
+                            <p style="margin-bottom: 1rem;">to the content and to structure it in a logical way.</p>
+                            <p style="margin-bottom: 1rem;">And so this then allows web browsers to display it</p>
+                            <p style="margin-bottom: 1rem;">in a way that makes sense.</p>
+                            <p style="margin-bottom: 1rem;">But anyway, now we have this content here.</p>
+                            <p style="margin-bottom: 1rem;">What you want in this kind of list, like bullet points here.</p>
+                            <p style="margin-bottom: 1rem;">And so the element that we use for that is UL.</p>
+                            <p style="margin-bottom: 1rem;">And UL, maybe you can guess, stands for unordered list.</p>
+                            <p style="margin-bottom: 1rem;">Alright, let's close it down here.</p>
+                            <p style="margin-bottom: 1rem;">UL.</p>
+                            <p style="margin-bottom: 1rem;">And so an ordered list with the numbers is OL, and the one</p>
+                            <p style="margin-bottom: 1rem;">without numbers, which we say is unordered</p>
+                            <p style="margin-bottom: 1rem;">because the order of the elements does not matter.</p>
+                            <p style="margin-bottom: 1rem;">So that is then called UL, which stands for unordered list.</p>
+                            <p style="margin-bottom: 1rem;">But then inside of the list itself, we still have to</p>
+                            <p style="margin-bottom: 1rem;">use the LI element for the individual items.</p>
+                            <p style="margin-bottom: 1rem;">So just like before, we need to wrap all</p>
+                            <p style="margin-bottom: 1rem;">of these different pieces of content into an LI element.</p>
+                            <p style="margin-bottom: 1rem;">So we already did that before, so I'm sure you know how</p>
+                            <p style="margin-bottom: 1rem;">to do it, and maybe you saw it coming that this is</p>
+                            <p style="margin-bottom: 1rem;">another very small coding challenge for you.</p>
+                            <p style="margin-bottom: 1rem;">So pause the video now and do exactly the same thing</p>
+                            <p style="margin-bottom: 1rem;">that we did up here.</p>
+                            <p style="margin-bottom: 1rem;">So wrap each of these items in an actual LI element.</p>
+                            <p style="margin-bottom: 1rem;">And so like this, you can keep practicing</p>
+                            <p style="margin-bottom: 1rem;">writing some HTML on your own.</p>
+                            <p style="margin-bottom: 1rem;">Okay, So I hope that was a simple challenge.</p>
+                            <p style="margin-bottom: 1rem;">And so let's quickly do it here.</p>
+                            <p style="margin-bottom: 1rem;">Alright.</p>
+                            <p style="margin-bottom: 1rem;">So this one here actually has multiple lines,</p>
+                            <p style="margin-bottom: 1rem;">so it ends here.</p>
+                            <p style="margin-bottom: 1rem;">And you see that the formatting here is completely wrong</p>
+                            <p style="margin-bottom: 1rem;">but I'm not worrying about that because</p>
+                            <p style="margin-bottom: 1rem;">for that we have the helper tool of prettier, right?</p>
+                            <p style="margin-bottom: 1rem;">Prettier takes care of all our formatting</p>
+                            <p style="margin-bottom: 1rem;">but hopefully you see that without that formatting,</p>
+                            <p style="margin-bottom: 1rem;">this looks like a complete mess, right?</p>
+                            <p style="margin-bottom: 1rem;">It's very hard to understand.</p>
+                            <p style="margin-bottom: 1rem;">So for example, this element here is not a child element</p>
+                            <p style="margin-bottom: 1rem;">of P, so it should be aligned here</p>
+                            <p style="margin-bottom: 1rem;">and we could do that manually, of course</p>
+                            <p style="margin-bottom: 1rem;">simply by deleting this space.</p>
+                            <p style="margin-bottom: 1rem;">But we can also just leave it to prettier</p>
+                            <p style="margin-bottom: 1rem;">once we save the file.</p>
+                            <p style="margin-bottom: 1rem;">Sorry.</p>
+                            <p style="margin-bottom: 1rem;">And here I'm missing the closing slash.</p>
+                            <p style="margin-bottom: 1rem;">And now as I was saying, as I save the file</p>
+                            <p style="margin-bottom: 1rem;">then prettier does its magic</p>
+                            <p style="margin-bottom: 1rem;">and nicely formatted here our elements.</p>
+                            <p style="margin-bottom: 1rem;">Now, we also have this empty paragraph here for some reason.</p>
+                            <p style="margin-bottom: 1rem;">So maybe I did some mistake here earlier.</p>
+                            <p style="margin-bottom: 1rem;">So let's just delete it and save it again.</p>
+                            <p style="margin-bottom: 1rem;">And now as we come here to our page</p>
+                            <p style="margin-bottom: 1rem;">then indeed we have our nice unordered list down here.</p>
+                            <p style="margin-bottom: 1rem;">Great.</p>
+                            <p style="margin-bottom: 1rem;">So creating lists is another important part of writing HTML.</p>
+                            <p style="margin-bottom: 1rem;">We use this all the time.</p>
+                            <p style="margin-bottom: 1rem;">And so I hope that you had fun</p>
+                            <p style="margin-bottom: 1rem;">with this lecture because it was quite an important one.</p>
+                            <p style="margin-bottom: 1rem;">So before you move on</p>
+                            <p style="margin-bottom: 1rem;">please make sure to review what we just did here.</p>
+                            <p style="margin-bottom: 1rem;">And also think a little bit</p>
+                            <p style="margin-bottom: 1rem;">about some of the things I said earlier,</p>
+                            <p style="margin-bottom: 1rem;">such as the fact that each element has a different meaning,</p>
+                            <p style="margin-bottom: 1rem;">and also that we need to use these elements</p>
+                            <p style="margin-bottom: 1rem;">to structure our content.</p>
+                            <p style="margin-bottom: 1rem;">So we cannot simply just dump all of our text</p>
+                            <p style="margin-bottom: 1rem;">here into the body text and call it a day.</p>
+                            <p style="margin-bottom: 1rem;">If we did that there would be no structure</p>
+                            <p style="margin-bottom: 1rem;">and no logic at all.</p>
+                            <p style="margin-bottom: 1rem;">So I just deleted some empty paragraph here</p>
+                            <p style="margin-bottom: 1rem;">but I just wanted to show you what happens</p>
+                            <p style="margin-bottom: 1rem;">if I select all of this.</p>
+                            <p style="margin-bottom: 1rem;">So copy paste here basically.</p>
+                            <p style="margin-bottom: 1rem;">So if I take it and just paste it down here.</p>
+                            <p style="margin-bottom: 1rem;">So give it a save.</p>
+                            <p style="margin-bottom: 1rem;">And while you see that, it's now all one big blob of text.</p>
+                            <p style="margin-bottom: 1rem;">And HTML doesn't really care about any white space</p>
+                            <p style="margin-bottom: 1rem;">so any of these line breaks here</p>
+                            <p style="margin-bottom: 1rem;">they're all irrelevant to HTML.</p>
+                            <p style="margin-bottom: 1rem;">And so if we try to load this,</p>
+                            <p style="margin-bottom: 1rem;">you see that there is no structure at all.</p>
+                            <p style="margin-bottom: 1rem;">So everything is just one huge line of text.</p>
+                            <p style="margin-bottom: 1rem;">And yeah, that's it. There's no structure.</p>
+                            <p style="margin-bottom: 1rem;">There is no meaning, there's nothing, basically.</p>
+                            <p style="margin-bottom: 1rem;">And so, I hope that this small example showed you</p>
+                            <p style="margin-bottom: 1rem;">the importance of basically wrapping all pieces</p>
+                            <p style="margin-bottom: 1rem;">of content inside of an element that actually</p>
+                            <p style="margin-bottom: 1rem;">gives that content some meaning.</p>
+                            <p style="margin-bottom: 1rem;">Okay?</p>
+                            <p style="margin-bottom: 1rem;">But with that, I'm leaving you and</p>
+                            <p style="margin-bottom: 1rem;">I see you soon in the next video.</p>
+                            </div>
+                        </div>
+
+                        <!-- Takeaways Content -->
+                        <div id="l2-v4-takeaways" class="l2v4-tab-content" style="display: none; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
+                            <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1.5rem; border-radius: 4px;">
+                                <h4 style="margin-top: 0; color: #166534;"><i class="fas fa-lightbulb" style="margin-right: 8px;"></i>Nội dung trọng tâm</h4>
+                                <ul style="line-height: 1.8; color: #15803d; padding-left: 1rem; margin-bottom: 0;">
+                                    <li><strong>Danh sách có thứ tự (Ordered List - &lt;ol&gt;):</strong> Dùng để tạo danh sách đánh số hoặc đánh dấu theo một trật tự cụ thể.</li>
+                                    <li><strong>Danh sách không thứ tự (Unordered List - &lt;ul&gt;):</strong> Dùng để tạo danh sách bằng dấu chấm tròn, thứ tự các mục không quan trọng.</li>
+                                    <li><strong>Phần tử danh sách (List Item - &lt;li&gt;):</strong> Là các mục con bắt buộc phải nằm bên trong thẻ <code>&lt;ol&gt;</code> hoặc <code>&lt;ul&gt;</code>.</li>
+                                    <li><strong>Mối quan hệ Cha - Con:</strong> Thẻ <code>&lt;ol&gt;</code> và <code>&lt;ul&gt;</code> đóng vai trò là phần tử cha (parent element), còn các thẻ <code>&lt;li&gt;</code> bên trong là phần tử con (child elements).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Content -->
+                        <div id="l2-v4-quiz" class="l2v4-tab-content" style="display: none; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
+                            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 2rem;">
+                                <h3 style="margin-top: 0; color: #1e3a8a; margin-bottom: 1.5rem;"><i class="fas fa-question-circle" style="margin-right: 8px;"></i>Bài tập đánh giá</h3>
+                                
+                                <div class="quiz-container" id="quiz-l2-v4">
+                                    <p style="font-weight: 600; color: #1e40af; margin-bottom: 1rem;">Câu hỏi: Để tạo một danh sách có các mục được đánh số thứ tự (1, 2, 3...), bạn cần sử dụng cặp thẻ nào làm phần tử cha?</p>
+                                    <div class="options-list" style="display: flex; flex-direction: column; gap: 0.8rem;">
+                                        <label class="option-label" style="display: flex; align-items: center; padding: 1rem; background: white; border: 1px solid #d1d5db; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                                            <input type="radio" name="q-l2-v4" value="a" style="margin-right: 1rem; transform: scale(1.2);">
+                                            <span>A. <code>&lt;ul&gt;</code></span>
+                                        </label>
+                                        <label class="option-label" style="display: flex; align-items: center; padding: 1rem; background: white; border: 1px solid #d1d5db; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                                            <input type="radio" name="q-l2-v4" value="b" style="margin-right: 1rem; transform: scale(1.2);">
+                                            <span>B. <code>&lt;li&gt;</code></span>
+                                        </label>
+                                        <label class="option-label" style="display: flex; align-items: center; padding: 1rem; background: white; border: 1px solid #d1d5db; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                                            <input type="radio" name="q-l2-v4" value="c" style="margin-right: 1rem; transform: scale(1.2);">
+                                            <span>C. <code>&lt;ol&gt;</code></span>
+                                        </label>
+                                        <label class="option-label" style="display: flex; align-items: center; padding: 1rem; background: white; border: 1px solid #d1d5db; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                                            <input type="radio" name="q-l2-v4" value="d" style="margin-right: 1rem; transform: scale(1.2);">
+                                            <span>D. <code>&lt;list&gt;</code></span>
+                                        </label>
+                                    </div>
+                                    <button onclick="checkQuiz('l2-v4')" style="margin-top: 1.5rem; background: #3b82f6; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: background 0.2s;">
+                                        Kiểm tra đáp án
+                                    </button>
+                                    <div id="quiz-result-l2-v4" style="margin-top: 1rem; font-weight: 600; display: none; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End content-l2-v4 -->
+
                     <div id="content-l2-lab7" class="main-video-content" style="display: none; animation: fadeIn 0.3s ease;">
                         <h2 style="margin-top: 0; color: #15803d; font-size: 1.6rem;"><i class="fas fa-laptop-code" style="margin-right: 10px;"></i>Lab 2.7: Create a Bulleted Unordered List</h2>
                         

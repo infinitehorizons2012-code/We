@@ -1717,6 +1717,15 @@
                         <li id="menu-l2-lab8" onclick="switchMainVideo('l2-lab8')" style="padding: 0.8rem; color: var(--text-secondary); cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent; margin-bottom: 0.5rem;"><i class="fas fa-laptop-code" id="icon-l2-lab8" style="color: inherit; margin-right: 8px;"></i> <span style="font-size: 0.7rem; background: #dcfce7; color: #15803d; padding: 2px 5px; border-radius: 4px; margin-right: 4px; font-weight: bold;">LAB</span> 2.8: Create an Ordered List
     <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; text-align: right;"><i class="far fa-clock"></i> 5 phút</div>
 </li>
+                        <li id="menu-l2-quiz2" class="video-menu-item" style="padding: 1rem 1.5rem; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;" onclick="switchMainVideo('l2-quiz2')" onmouseover="this.style.background='#f1f5f9'" onmouseout="if(this.style.backgroundColor !== 'rgb(240, 24df4, 248)' && this.style.backgroundColor !== '#f0f4f8') this.style.background='transparent'">
+                            <div style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span id="icon-l2-quiz2" style="background: #fdf2f8; color: #be185d; font-size: 0.75rem; font-weight: bold; padding: 2px 6px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; width: 40px;">QUIZ</span>
+                                    <span style="font-weight: 500; color: #334155;">2 (Luyện tập)</span>
+                                </div>
+                                <span style="font-size: 0.8rem; color: #64748b;">20 phút</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
@@ -2965,6 +2974,80 @@
                             </a>
                         </div>
                     </div> <!-- End content-l2-lab8 -->
+                    <!-- Content Quiz 2 -->
+                    <div id="content-l2-quiz2" class="main-video-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;"><i class="fas fa-question-circle" style="margin-right: 10px;"></i>Luyện tập: Quiz 2</h2>
+                        
+                        <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 4px; margin-bottom: 2rem;">
+                            <h4 style="margin-top: 0; color: #b45309;"><i class="fas fa-info-circle" style="margin-right: 8px;"></i>Thông báo</h4>
+                            <p style="margin-bottom: 0.5rem; color: #92400e;">Đây là môi trường luyện tập mô phỏng để bạn làm quen và nhận feedback ngay lập tức. Để được tính điểm vào hệ thống, bạn <strong>bắt buộc phải làm bài thật</strong> tại link sau:</p>
+                            <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+WEB101x_2.2-A_VN+0822.CCDN/courseware/3a8c750402a24420904c42983322073a/0cfc60c303294dbe985add890ad0c8b4/?activate_block_id=block-v1%3AFUNiX%2BWEB101x_2.2-A_VN%2B0822.CCDN%2Btype%40sequential%2Bblock%400cfc60c303294dbe985add890ad0c8b4" target="_blank" style="display: inline-block; margin-top: 0.5rem; background: #f59e0b; color: white; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: bold;"><i class="fas fa-external-link-alt" style="margin-right: 8px;"></i>Đến trang nộp bài FUNiX</a>
+                        </div>
+
+                        <div style="background: #ffffff; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); color: #334155; line-height: 1.7;">
+                            
+                            <!-- Q1 -->
+                            <div class="quiz-question" id="quiz2_q1" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 1rem;">Câu 1. HTML là viết tắt của?</div>
+                                <div class="quiz-options">
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q1" value="A" onclick="checkAnswer('quiz2_q1', 'A')"> HyperText Markup Language</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q1" value="B" onclick="checkAnswer('quiz2_q1', 'B')"> Height Text Markup Language</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q1" value="C" onclick="checkAnswer('quiz2_q1', 'C')"> Hyper Tabular Markup Language</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q1" value="D" onclick="checkAnswer('quiz2_q1', 'D')"> Không phải các đáp án trên</label>
+                                </div>
+                                <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                            </div>
+
+                            <!-- Q2 -->
+                            <div class="quiz-question" id="quiz2_q2" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 1rem;">Câu 2. Để xác định tài liệu đó là tài liệu HTML5, chúng ta sử dụng thẻ nào?</div>
+                                <div class="quiz-options">
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q2" value="A" onclick="checkAnswer('quiz2_q2', 'A')"> &lt; html5 &gt;</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q2" value="B" onclick="checkAnswer('quiz2_q2', 'B')"> &lt;!DOCTYPE html&gt;</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q2" value="C" onclick="checkAnswer('quiz2_q2', 'C')"> &lt; html version 5 &gt;</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q2" value="D" onclick="checkAnswer('quiz2_q2', 'D')"> &lt; html v5.x &gt;</label>
+                                </div>
+                                <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                            </div>
+
+                            <!-- Q3 -->
+                            <div class="quiz-question" id="quiz2_q3" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 1rem;">Câu 3. Ghi chú trong HTML bắt đầu bằng &lt;!-- và kết thúc bằng --&gt;</div>
+                                <div class="quiz-options">
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q3" value="A" onclick="checkAnswer('quiz2_q3', 'A')"> Đúng</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q3" value="B" onclick="checkAnswer('quiz2_q3', 'B')"> Sai</label>
+                                </div>
+                                <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                            </div>
+
+                            <!-- Q4 -->
+                            <div class="quiz-question" id="quiz2_q4" style="margin-bottom: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 1rem;">Câu 4. Các cấp độ khác nhau của thẻ tiêu đề trong HTML là gì?</div>
+                                <div class="quiz-options">
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q4" value="A" onclick="checkAnswer('quiz2_q4', 'A')"> h1 - h5</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q4" value="B" onclick="checkAnswer('quiz2_q4', 'B')"> h1 - h6</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q4" value="C" onclick="checkAnswer('quiz2_q4', 'C')"> h0 - h5</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q4" value="D" onclick="checkAnswer('quiz2_q4', 'D')"> h0 - h6</label>
+                                </div>
+                                <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                            </div>
+
+                            <!-- Q5 -->
+                            <div class="quiz-question" id="quiz2_q5" style="margin-bottom: 0; background: #f8fafc; padding: 1.5rem; border-radius: 6px;">
+                                <div style="font-weight: 600; margin-bottom: 1rem;">Câu 5. Để định dạng văn bản trong HTML, chúng ta sử dụng thẻ nào?</div>
+                                <div class="quiz-options">
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q5" value="A" onclick="checkAnswer('quiz2_q5', 'A')"> em</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q5" value="B" onclick="checkAnswer('quiz2_q5', 'B')"> b</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q5" value="C" onclick="checkAnswer('quiz2_q5', 'C')"> i</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q5" value="D" onclick="checkAnswer('quiz2_q5', 'D')"> strong</label>
+                                    <label class="quiz-option"><input type="radio" name="quiz2_q5" value="E" onclick="checkAnswer('quiz2_q5', 'E')"> Tất cả các đáp án trên</label>
+                                </div>
+                                <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                            </div>
+
+                        </div>
+                    </div> <!-- End content-l2-quiz2 -->
+
 
 
 
@@ -3011,7 +3094,13 @@
             quiz1_q3: { correct: 'C', explanation: 'Thẻ &lt;title&gt; nằm trong phần &lt;head&gt; được dùng để hiển thị tiêu đề trên thanh tab của trình duyệt.' },
             quiz1_q4: { correct: 'A', explanation: 'Mọi nội dung có thể nhìn thấy bằng mắt trên trang web (văn bản, hình ảnh) đều bắt buộc phải nằm trong thẻ &lt;body&gt;.' },
             quiz1_q5: { correct: 'D', explanation: 'File HTML thực chất chỉ là một file văn bản trơn (plain text) được đổi đuôi thành .html. Vì vậy, bất cứ công cụ soạn thảo văn bản nào (như Notepad) cũng tạo được, nhưng dùng VS Code sẽ hỗ trợ lập trình chuyên nghiệp nhất.' }
-        };
+        
+            quiz2_q1: { correct: 'A', explanation: 'HTML là viết tắt của HyperText Markup Language (Ngôn ngữ đánh dấu siêu văn bản).' },
+            quiz2_q2: { correct: 'B', explanation: 'Thẻ &lt;!DOCTYPE html&gt; là khai báo chuẩn bắt buộc ở dòng đầu tiên của mọi tài liệu HTML5 để báo cho trình duyệt biết phiên bản HTML đang sử dụng.' },
+            quiz2_q3: { correct: 'A', explanation: 'Trong HTML, bất cứ nội dung nào nằm giữa &lt;!-- và --&gt; sẽ được coi là ghi chú và bị trình duyệt bỏ qua không hiển thị lên màn hình.' },
+            quiz2_q4: { correct: 'B', explanation: 'HTML cung cấp 6 cấp độ thẻ tiêu đề, từ lớn nhất là &lt;h1&gt; cho đến nhỏ nhất là &lt;h6&gt;. Không có thẻ h0.' },
+            quiz2_q5: { correct: 'E', explanation: 'Tất cả các thẻ trên đều dùng để định dạng văn bản. &lt;b&gt; và &lt;strong&gt; dùng để in đậm, &lt;i&gt; và &lt;em&gt; dùng để in nghiêng.' },
+};
 
         function switchL2V2Tab(tabId) {
             document.querySelectorAll('.l2v2-tab-btn').forEach(btn => {

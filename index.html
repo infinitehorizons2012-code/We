@@ -2833,33 +2833,40 @@
 
                         <!-- Quiz Content -->
                         <div id="l2-v4-quiz" class="l2v4-tab-content" style="display: none; margin-top: 1.5rem; animation: fadeIn 0.3s ease;">
-                            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 2rem;">
-                                <h3 style="margin-top: 0; color: #1e3a8a; margin-bottom: 1.5rem;"><i class="fas fa-question-circle" style="margin-right: 8px;"></i>Bài tập đánh giá</h3>
+                            <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                                <h3 style="margin-top: 0; color: var(--primary-color); border-bottom: 2px solid #e0e7ff; padding-bottom: 0.5rem; display: inline-block;"><i class="fas fa-tasks" style="margin-right: 8px;"></i>Bài tập đánh giá</h3>
                                 
-                                <div class="quiz-container" id="quiz-l2-v4">
-                                    <p style="font-weight: 600; color: #1e40af; margin-bottom: 1rem;">Câu hỏi: Để tạo một danh sách có các mục được đánh số thứ tự (1, 2, 3...), bạn cần sử dụng cặp thẻ nào làm phần tử cha?</p>
-                                    <div class="options-list" style="display: flex; flex-direction: column; gap: 0.8rem;">
-                                        <label class="option-label" style="display: flex; align-items: center; padding: 1rem; background: white; border: 1px solid #d1d5db; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
-                                            <input type="radio" name="q-l2-v4" value="a" style="margin-right: 1rem; transform: scale(1.2);">
-                                            <span>A. <code>&lt;ul&gt;</code></span>
-                                        </label>
-                                        <label class="option-label" style="display: flex; align-items: center; padding: 1rem; background: white; border: 1px solid #d1d5db; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
-                                            <input type="radio" name="q-l2-v4" value="b" style="margin-right: 1rem; transform: scale(1.2);">
-                                            <span>B. <code>&lt;li&gt;</code></span>
-                                        </label>
-                                        <label class="option-label" style="display: flex; align-items: center; padding: 1rem; background: white; border: 1px solid #d1d5db; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
-                                            <input type="radio" name="q-l2-v4" value="c" style="margin-right: 1rem; transform: scale(1.2);">
-                                            <span>C. <code>&lt;ol&gt;</code></span>
-                                        </label>
-                                        <label class="option-label" style="display: flex; align-items: center; padding: 1rem; background: white; border: 1px solid #d1d5db; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
-                                            <input type="radio" name="q-l2-v4" value="d" style="margin-right: 1rem; transform: scale(1.2);">
-                                            <span>D. <code>&lt;list&gt;</code></span>
-                                        </label>
+                                <div class="quiz-question" id="l2_v4_q1" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+                                    <div style="font-weight: 600; margin-bottom: 1rem; color: #1e293b;">Câu 1. Để tạo một danh sách có các mục được đánh số thứ tự (1, 2, 3...), bạn cần sử dụng cặp thẻ nào làm phần tử cha?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q1" value="A" onclick="checkAnswer('l2_v4_q1', 'A')"> A. &lt;ul&gt;</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q1" value="B" onclick="checkAnswer('l2_v4_q1', 'B')"> B. &lt;li&gt;</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q1" value="C" onclick="checkAnswer('l2_v4_q1', 'C')"> C. &lt;ol&gt;</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q1" value="D" onclick="checkAnswer('l2_v4_q1', 'D')"> D. &lt;list&gt;</label>
                                     </div>
-                                    <button onclick="checkQuiz('l2-v4')" style="margin-top: 1.5rem; background: #3b82f6; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: background 0.2s;">
-                                        Kiểm tra đáp án
-                                    </button>
-                                    <div id="quiz-result-l2-v4" style="margin-top: 1rem; font-weight: 600; display: none; padding: 1rem; border-radius: 6px;"></div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+
+                                <div class="quiz-question" id="l2_v4_q2" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+                                    <div style="font-weight: 600; margin-bottom: 1rem; color: #1e293b;">Câu 2. Thẻ nào bắt buộc phải đóng vai trò là phần tử con (child element) bên trong danh sách &lt;ol&gt; hoặc &lt;ul&gt;?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q2" value="A" onclick="checkAnswer('l2_v4_q2', 'A')"> A. &lt;item&gt;</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q2" value="B" onclick="checkAnswer('l2_v4_q2', 'B')"> B. &lt;li&gt;</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q2" value="C" onclick="checkAnswer('l2_v4_q2', 'C')"> C. &lt;p&gt;</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q2" value="D" onclick="checkAnswer('l2_v4_q2', 'D')"> D. &lt;child&gt;</label>
+                                    </div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
+                                </div>
+                                
+                                <div class="quiz-question" id="l2_v4_q3" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+                                    <div style="font-weight: 600; margin-bottom: 1rem; color: #1e293b;">Câu 3. Đặc điểm nào mô tả đúng nhất về thẻ &lt;ul&gt;?</div>
+                                    <div class="quiz-options">
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q3" value="A" onclick="checkAnswer('l2_v4_q3', 'A')"> A. Tự động đánh số thứ tự từ 1, 2, 3 cho các mục.</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q3" value="B" onclick="checkAnswer('l2_v4_q3', 'B')"> B. Chỉ chứa văn bản mà không cho phép chứa các phần tử khác.</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q3" value="C" onclick="checkAnswer('l2_v4_q3', 'C')"> C. Tạo danh sách có các mục được đánh dấu bằng dấu chấm tròn (bullet points), không có tính thứ tự.</label>
+                                        <label class="quiz-option"><input type="radio" name="l2_v4_q3" value="D" onclick="checkAnswer('l2_v4_q3', 'D')"> D. Dùng để tạo các đường kẻ dọc ngăn cách văn bản.</label>
+                                    </div>
+                                    <div class="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 6px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -2937,9 +2944,10 @@
         
         
         
-        const quizData = {
-            'l2-v4': { correct: 'c', explanation: 'Thẻ &lt;ol&gt; (ordered list) được dùng để tạo các danh sách được đánh số.' },
-            l2_v1_q1: { correct: 'B', explanation: 'HTML không phải là ngôn ngữ lập trình vì nó không có tư duy logic (if/else, for). Nó là ngôn ngữ đánh dấu siêu văn bản (Markup Language) dùng để tạo khung xương và cấu trúc cho web.' },
+        const quizData = {            l2_v1_q1: { correct: 'B', explanation: 'HTML không phải là ngôn ngữ lập trình vì nó không có tư duy logic (if/else, for). Nó là ngôn ngữ đánh dấu siêu văn bản (Markup Language) dùng để tạo khung xương và cấu trúc cho web.' },
+            l2_v4_q1: { correct: 'C', explanation: 'Thẻ &lt;ol&gt; (ordered list) dùng để tạo danh sách có thứ tự được đánh số hoặc chữ cái.' },
+            l2_v4_q2: { correct: 'B', explanation: 'Thẻ &lt;li&gt; (list item) luôn luôn được sử dụng làm phần tử con bên trong thẻ &lt;ol&gt; hoặc &lt;ul&gt; để đại diện cho từng mục trong danh sách.' },
+            l2_v4_q3: { correct: 'C', explanation: 'Thẻ &lt;ul&gt; (unordered list) dùng để tạo danh sách không có thứ tự, theo mặc định các mục sẽ được đánh dấu bằng các chấm tròn (bullet points).' },
             l2_v1_q2: { correct: 'B', explanation: 'Cấu trúc chuẩn của một Element có nội dung bắt buộc phải gồm thẻ mở &lt;p&gt; và thẻ đóng có dấu gạch chéo &lt;/p&gt;.' },
             l2_v2_q1: { correct: 'C', explanation: 'Thẻ &lt;body&gt; (phần thân) chứa tất cả các phần tử sẽ được hiển thị ra màn hình cho người dùng xem.' },
             l2_v2_q2: { correct: 'B', explanation: 'Khai báo &lt;!DOCTYPE html&gt; là tiêu chuẩn bắt buộc của HTML5, giúp trình duyệt không bị nhầm lẫn với các phiên bản HTML cũ.' },

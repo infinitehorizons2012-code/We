@@ -3165,7 +3165,7 @@
             activeItem.style.background = 'rgba(99, 102, 241, 0.1)';
             activeItem.style.borderLeft = '3px solid var(--primary-color)';
             activeItem.style.color = 'var(--text-primary)';
-            activeItem.querySelector('i').style.color = 'var(--primary-color)';
+            let activeIcon = activeItem.querySelector('i'); if (activeIcon) activeIcon.style.color = 'var(--primary-color)';
             
             // Switch content
             document.querySelectorAll('.main-video-content').forEach(content => {

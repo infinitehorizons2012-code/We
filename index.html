@@ -608,6 +608,7 @@
         <button class="tab-btn" onclick="switchTab('analysis')">Phân Tích UbD</button>
         <button class="tab-btn" onclick="switchTab('lesson1')">Bài 1: Giới thiệu</button>
             <button class="tab-btn" onclick="switchTab('lesson2')">Bài 2: Giới thiệu về HTML</button>
+            <button class="tab-btn" onclick="switchTab('lesson3')">Bài 3: Các thẻ HTML phổ biến</button>
         </nav>
 
         <div id="course-web101x" class="tab-content active">
@@ -3328,8 +3329,36 @@
                         </div>
                     </div> <!-- End content-l2-exercise -->
 
-                    <!-- Content Video L3-V1 -->
-                    <div id="content-l3-v1" class="main-video-content" style="display: none; animation: fadeIn 0.3s ease;">
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div id="lesson3" class="tab-content" style="display: none;">
+            <div class="course-detail-container" style="max-width: 100%; display: flex; gap: 2rem; background: transparent; padding: 0; box-shadow: none; border: none;">
+
+                <!-- Sidebar Videos -->
+                <div style="flex: 0 0 250px; background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 1rem;">
+                    <h3 style="margin-top: 0; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); font-size: 1.1rem;">Nội dung</h3>
+                    <ul class="video-menu" style="list-style: none; padding: 0; margin: 0;">
+                        <li id="menu-l3-v1" class="video-menu-item" style="padding: 0.8rem; background: rgba(99, 102, 241, 0.1); border-radius: 6px; border-left: 3px solid var(--primary-color); color: var(--text-primary); font-weight: 500; cursor: pointer; margin-bottom: 0.5rem; transition: background 0.2s;" onclick="switchMainVideo('l3-v1')" onmouseover="this.style.background='#f1f5f9'" onmouseout="if(this.style.backgroundColor !== 'rgb(240, 24df4, 248)' && this.style.backgroundColor !== '#f0f4f8') this.style.background='transparent'">
+                            <div style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <i class="fas fa-play-circle" id="icon-l3-v1" style="color: var(--primary-color);"></i>
+                                    <span style="font-weight: 500; color: #334155;">1: Thẻ hình ảnh & Thuộc tính</span>
+                                </div>
+                            </div>
+                            <div style="font-size: 0.75rem; color: #64748b; margin-top: 6px; text-align: right; font-weight: normal;"><i class="far fa-clock"></i> 13 phút</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Video Content L3-V1 -->
+                <div style="flex: 1; background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 2rem; position: relative;">
+                    <div id="content-l3-v1" class="main-video-content" style="display: block; animation: fadeIn 0.3s ease;">
                         <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;"><i class="fas fa-play-circle" style="margin-right: 10px;"></i>Video 1: Thẻ hình ảnh, thuộc tính và Meta Data</h2>
                         
                         <!-- Main Video Container -->
@@ -3663,7 +3692,7 @@
                                     <div class="vi-text">Và văn bản thay thế, hãy nói rằng đây là ảnh chân dung (headshot) của Laura Jones, chứ không phải Jonas.</div>
                                     
                                     <div class="en-text">And a height. And here again, we could now hit enter or return to auto complete this. But I actually want you to write these attributes by yourself by hand so that they get into your head.</div>
-                                    <div class="vi-text">Và thuộc tính height. Ở đây một lần nữa, chúng ta có thể nhấn enter để tự động hoàn thành. Nhưng tôi thực sự muốn bạn tự tay viết các thuộc tính này để chúng in sâu vào trí nhớ của bạn.</div>
+                                    <div class="vi-text">Và thuộc tính height. Ở đây một lần nữa, chúng bắt có thể nhấn enter để tự động hoàn thành. Nhưng tôi thực sự muốn bạn tự tay viết các thuộc tính này để chúng in sâu vào trí nhớ của bạn.</div>
                                     
                                     <div class="en-text">So that's really important. So height and a width of 50. And that's it.</div>
                                     <div class="vi-text">Điều đó thực sự rất quan trọng. Chiều cao và chiều rộng là 50. Chỉ có vậy thôi.</div>
@@ -3807,15 +3836,10 @@
                             </div>
                         </div>
                     </div> <!-- End content-l3-v1 -->
-
-
-
-
-
-
                 </div>
             </div>
         </div>
+
 
     <script>
         function toggleAllDetails(state) {
@@ -4232,13 +4256,3 @@
 </html>
 
 
-                        <li id="menu-l3-v1" class="video-menu-item" style="padding: 1rem 1.5rem; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;" onclick="switchMainVideo('l3-v1')" onmouseover="this.style.background='#f1f5f9'" onmouseout="if(this.style.backgroundColor !== 'rgb(240, 24df4, 248)' && this.style.backgroundColor !== '#f0f4f8') this.style.background='transparent'">
-                            <div style="display: flex; align-items: center; justify-content: space-between;">
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <span id="icon-l3-v1" style="background: #e0e7ff; color: #4338ca; font-size: 0.75rem; font-weight: bold; padding: 2px 6px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; width: 40px;"><i class="fas fa-play"></i></span>
-                                    <span style="font-weight: 500; color: #334155;">1: Thẻ hình ảnh & Thuộc tính</span>
-                                </div>
-                                <span style="font-size: 0.8rem; color: #64748b;">13 phút</span>
-                            </div>
-                        </li>
-                    

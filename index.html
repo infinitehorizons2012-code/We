@@ -641,7 +641,7 @@
                         <li>Giới thiệu phần 1</li>
                         <li>Bài 1. Giới thiệu về lập trình web <span style="font-size: 0.8rem; background: #e0e7ff; color: #4338ca; padding: 2px 6px; border-radius: 4px; margin-left: 8px;"><i class="fas fa-play-circle"></i> Video (3)</span> <span style="font-size: 0.8rem; background: #dcfce7; color: #15803d; padding: 2px 6px; border-radius: 4px; margin-left: 4px;"><i class="fas fa-laptop-code"></i> Lab (1)</span> <span class="quiz-tag" style="margin-left: 4px;">Quiz 1 📝</span></li>
                         <li>Bài 2. Giới thiệu về HTML <span style="font-size: 0.8rem; background: #e0e7ff; color: #4338ca; padding: 2px 6px; border-radius: 4px; margin-left: 8px;"><i class="fas fa-play-circle"></i> Video (4)</span> <span style="font-size: 0.8rem; background: #dcfce7; color: #15803d; padding: 2px 6px; border-radius: 4px; margin-left: 4px;"><i class="fas fa-laptop-code"></i> Lab (8)</span> <span class="quiz-tag" style="margin-left: 4px;">Quiz 2 📝</span> <span style="font-size: 0.8rem; background: #f3e8ff; color: #7e22ce; padding: 2px 6px; border-radius: 4px; margin-left: 4px;"><i class="fas fa-dumbbell"></i> Exercise</span></li>
-                        <li>Bài 3. Các thẻ HTML phổ biến <span class="quiz-tag">Quiz 📝</span></li>
+                        <li>Bài 3. Các thẻ HTML phổ biến <span style="font-size: 0.8rem; background: #e0e7ff; color: #4338ca; padding: 2px 6px; border-radius: 4px; margin-left: 8px;"><i class="fas fa-play-circle"></i> Video (1)</span> <span class="quiz-tag" style="margin-left: 4px;">Quiz 📝</span></li>
                         <li class="special-item">Tổng kết phần 1</li>
                         <li>Chia sẻ của học viên về nội dung phần 1</li>
                         <li>Slide tổng kết: Lập trình web với HTML</li>
@@ -3328,6 +3328,487 @@
                         </div>
                     </div> <!-- End content-l2-exercise -->
 
+                    <!-- Content Video L3-V1 -->
+                    <div id="content-l3-v1" class="main-video-content" style="display: none; animation: fadeIn 0.3s ease;">
+                        <h2 style="margin-top: 0; color: var(--primary-color); font-size: 1.6rem;"><i class="fas fa-play-circle" style="margin-right: 10px;"></i>Video 1: Thẻ hình ảnh, thuộc tính và Meta Data</h2>
+                        
+                        <!-- Main Video Container -->
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+                            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                title="Video Bài giảng" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                        </div>
+
+                        <!-- 5 Tabs Navigation -->
+                        <div class="video-tabs" style="display: flex; gap: 10px; border-bottom: 2px solid var(--border-color); margin-bottom: 2rem;">
+                            <button class="video-tab-btn active" onclick="switchVideoTab(this, 'ubd-l3-v1')" style="padding: 10px 20px; border: none; background: none; font-weight: 600; color: var(--primary-color); border-bottom: 3px solid var(--primary-color); cursor: pointer; transition: all 0.2s;">Phân tích UbD</button>
+                            <button class="video-tab-btn" onclick="switchVideoTab(this, 'notes-l3-v1')" style="padding: 10px 20px; border: none; background: none; font-weight: 600; color: var(--text-secondary); border-bottom: 3px solid transparent; cursor: pointer; transition: all 0.2s;">Chú giải</button>
+                            <button class="video-tab-btn" onclick="switchVideoTab(this, 'transcript-l3-v1')" style="padding: 10px 20px; border: none; background: none; font-weight: 600; color: var(--text-secondary); border-bottom: 3px solid transparent; cursor: pointer; transition: all 0.2s;">Transcript</button>
+                            <button class="video-tab-btn" onclick="switchVideoTab(this, 'takeaways-l3-v1')" style="padding: 10px 20px; border: none; background: none; font-weight: 600; color: var(--text-secondary); border-bottom: 3px solid transparent; cursor: pointer; transition: all 0.2s;">Nội dung trọng tâm</button>
+                            <button class="video-tab-btn" onclick="switchVideoTab(this, 'quiz-l3-v1')" style="padding: 10px 20px; border: none; background: none; font-weight: 600; color: var(--text-secondary); border-bottom: 3px solid transparent; cursor: pointer; transition: all 0.2s;">Bài tập đánh giá</button>
+                        </div>
+
+                        <!-- Tab 1: UbD -->
+                        <div id="ubd-l3-v1" class="video-tab-content active-tab" style="animation: fadeIn 0.3s ease;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                                <!-- Learning Plan -->
+                                <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                                    <h3 style="margin-top: 0; color: #0f172a; font-size: 1.1rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-bottom: 1rem;"><i class="fas fa-stream" style="color: #3b82f6; margin-right: 8px;"></i>Kế hoạch bài học (Learning Plan)</h3>
+                                    <ul style="list-style-type: none; padding-left: 0; margin: 0; color: #475569; line-height: 1.6;">
+                                        <li style="margin-bottom: 8px; display: flex; align-items: baseline;"><span style="color: #3b82f6; margin-right: 8px; font-size: 0.8rem;">(0:00)</span> Giới thiệu</li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: baseline;"><span style="color: #3b82f6; margin-right: 8px; font-size: 0.8rem;">(0:30)</span> Đưa ảnh vào demo project</li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: baseline;"><span style="color: #3b82f6; margin-right: 8px; font-size: 0.8rem;">(0:45)</span> Hiển thị ảnh trên công cụ viết mã VS Code</li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: baseline;"><span style="color: #3b82f6; margin-right: 8px; font-size: 0.8rem;">(1:40)</span> Thẻ img không cần closing tag</li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: baseline;"><span style="color: #3b82f6; margin-right: 8px; font-size: 0.8rem;">(2:30)</span> Định nghĩa thuộc tính</li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: baseline;"><span style="color: #3b82f6; margin-right: 8px; font-size: 0.8rem;">(2:40)</span> Thuộc tính src</li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: baseline;"><span style="color: #3b82f6; margin-right: 8px; font-size: 0.8rem;">(4:20)</span> Thuộc tính alt</li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: baseline;"><span style="color: #3b82f6; margin-right: 8px; font-size: 0.8rem;">(6:10)</span> Thuộc tính width và height</li>
+                                        <li style="margin-bottom: 8px; display: flex; align-items: baseline;"><span style="color: #3b82f6; margin-right: 8px; font-size: 0.8rem;">(10:20)</span> Thuộc tính trong thẻ khác: lang, charset</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Cognitive Traps -->
+                                <div style="background: #fff1f2; padding: 1.5rem; border-radius: 8px; border: 1px solid #fecdd3; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                                    <h3 style="margin-top: 0; color: #9f1239; font-size: 1.1rem; border-bottom: 2px solid #fda4af; padding-bottom: 0.5rem; margin-bottom: 1rem;"><i class="fas fa-exclamation-triangle" style="color: #e11d48; margin-right: 8px;"></i>Bẫy nhận thức (Cognitive Traps)</h3>
+                                    <ul style="padding-left: 1.2rem; margin: 0; color: #881337; line-height: 1.6;">
+                                        <li style="margin-bottom: 12px;"><strong>Sai lầm:</strong> Viết thẻ đóng <code>&lt;/img&gt;</code>.<br><span style="color: #059669;"><i class="fas fa-check-circle"></i> <strong>Khắc phục:</strong> Thẻ <code>&lt;img&gt;</code> là thẻ rỗng (empty element), không có nội dung nên không cần thẻ đóng.</span></li>
+                                        <li style="margin-bottom: 12px;"><strong>Sai lầm:</strong> Bỏ quên thuộc tính <code>alt</code>.<br><span style="color: #059669;"><i class="fas fa-check-circle"></i> <strong>Khắc phục:</strong> <code>alt</code> cực kỳ quan trọng cho SEO và người khiếm thị, luôn phải khai báo.</span></li>
+                                        <li style="margin-bottom: 12px;"><strong>Sai lầm:</strong> Điền cả <code>width</code> và <code>height</code> làm méo ảnh.<br><span style="color: #059669;"><i class="fas fa-check-circle"></i> <strong>Khắc phục:</strong> Chỉ nên thiết lập một trong hai, trình duyệt sẽ tự động tính toán thuộc tính còn lại để giữ tỷ lệ gốc.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Backward Design Mapping Table -->
+                            <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px; border: 1px solid #bae6fd; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                                <h3 style="margin-top: 0; color: #0369a1; font-size: 1.1rem; border-bottom: 2px solid #7dd3fc; padding-bottom: 0.5rem; margin-bottom: 1rem;"><i class="fas fa-project-diagram" style="color: #0284c7; margin-right: 8px;"></i>Suy ngược UbD (Backward Design Mapping)</h3>
+                                
+                                <div style="overflow-x: auto;">
+                                    <table style="width: 100%; border-collapse: collapse; text-align: left; background: #ffffff; border-radius: 8px; overflow: hidden;">
+                                        <tr style="background: #e0f2fe; color: #0369a1;">
+                                            <th style="padding: 12px 16px; border-bottom: 1px solid #bae6fd;">Mục tiêu (CLO)</th>
+                                            <th style="padding: 12px 16px; border-bottom: 1px solid #bae6fd;">Nhiệm vụ đánh giá</th>
+                                            <th style="padding: 12px 16px; border-bottom: 1px solid #bae6fd;">Trải nghiệm học tập</th>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top;">
+                                                <strong>WEB101x_o3:</strong> Hiểu được khái niệm về HTML, cách viết các đoạn mã HTML.<br><br>
+                                                <span style="background: #dbeafe; color: #1e40af; font-size: 0.75rem; padding: 2px 8px; border-radius: 12px;">HTML Element Structure</span>
+                                            </td>
+                                            <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top;">
+                                                Trắc nghiệm xác định đúng cấu trúc của phần tử HTML rỗng (empty elements), các thuộc tính (src, alt, width, height) và meta tags.
+                                            </td>
+                                            <td style="padding: 12px 16px; border-bottom: 1px solid #e2e8f0; vertical-align: top;">
+                                                Thực hành chèn ảnh, điều chỉnh kích thước ảnh, thêm thuộc tính alt và quan sát kết quả trên trình duyệt.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2: Chú giải -->
+                        <div id="notes-l3-v1" class="video-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #ffffff; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); color: #334155; line-height: 1.7;">
+                                <h3 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;"><i class="fas fa-book-open" style="margin-right: 10px; color: #8b5cf6;"></i>Chú giải bài học</h3>
+                                
+                                <p style="font-weight: bold; color: #6d28d9; margin-top: 1.5rem;">(0:30) Đưa ảnh vào demo project & hiển thị trên VS Code</p>
+                                <p>VS Code có khả năng hiển thị các tệp hình ảnh trực tiếp trong trình soạn thảo mà không gặp vấn đề gì.</p>
+                                
+                                <p style="font-weight: bold; color: #6d28d9; margin-top: 1.5rem;">(1:40) Thẻ img không cần closing tag</p>
+                                <div style="background: #f8fafc; border-left: 4px solid #3b82f6; padding: 1rem; margin-top: 0.5rem; border-radius: 0 4px 4px 0;">
+                                    Thẻ <code>&lt;img&gt;</code> là một <strong>empty element</strong> (phần tử rỗng) do không chứa text hay các thẻ con bên trong. Vì vậy nó không cần thẻ đóng. 
+                                </div>
+
+                                <p style="font-weight: bold; color: #6d28d9; margin-top: 1.5rem;">(2:30) Định nghĩa thuộc tính (Attributes)</p>
+                                <ul style="margin-top: 0.5rem;">
+                                    <li>Thuộc tính về cơ bản là các phần dữ liệu dùng để mô tả các phần tử.</li>
+                                    <li>Thuộc tính là khác nhau ở mỗi phần tử.</li>
+                                </ul>
+
+                                <p style="font-weight: bold; color: #6d28d9; margin-top: 1.5rem;">(2:40) Thuộc tính src (Source)</p>
+                                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">
+                                    Đại diện cho nguồn của hình ảnh. Đây là thuộc tính quan trọng và bắt buộc cho thẻ img.<br>
+                                    Quyết định hình ảnh nào sẽ hiển thị trên trang web và phải trỏ đến một nguồn hình ảnh hợp lệ.
+                                </div>
+
+                                <p style="font-weight: bold; color: #6d28d9; margin-top: 1.5rem;">(4:20) Thuộc tính alt (Alternative Text)</p>
+                                <p>Là thuộc tính dự phòng để cung cấp mô tả cho hình ảnh, có tác dụng khi hình ảnh không thể hiển thị, hoặc dùng cho trình đọc màn hình của người dùng khiếm thị, hoặc phục vụ công cụ tìm kiếm (SEO).</p>
+
+                                <p style="font-weight: bold; color: #6d28d9; margin-top: 1.5rem;">(6:10) Thuộc tính width và height</p>
+                                <ul style="margin-top: 0.5rem;">
+                                    <li>Dùng để xác định kích thước của hình ảnh hiển thị, đơn vị pixel (px) hoặc phần trăm (%).</li>
+                                    <li>Khi chỉ đặt một giá trị (hoặc width hoặc height), giá trị còn lại sẽ được tự động tính toán để duy trì tỷ lệ gốc (aspect ratio) của hình ảnh, tránh bị méo.</li>
+                                </ul>
+
+                                <p style="font-weight: bold; color: #6d28d9; margin-top: 1.5rem;">(10:20) Thuộc tính trong các thẻ khác: lang trong html, charset trong meta</p>
+                                <ul style="margin-top: 0.5rem;">
+                                    <li><strong>lang:</strong> Xác định ngôn ngữ của toàn bộ trang web (ví dụ <code>&lt;html lang="en"&gt;</code>).</li>
+                                    <li><strong>charset:</strong> Xác định bộ mã ký tự. Thường dùng <code>&lt;meta charset="UTF-8"&gt;</code> - bộ ký tự Unicode phổ biến hỗ trợ hầu hết các ngôn ngữ trên toàn thế giới.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Tab 3: Transcript -->
+                        <div id="transcript-l3-v1" class="video-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #ffffff; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); color: #334155; height: 500px; overflow-y: auto;">
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem; margin-bottom: 1rem; font-weight: bold; position: sticky; top: 0; background: #ffffff; z-index: 10;">
+                                    <div style="color: #1e293b;">English Transcript</div>
+                                    <div style="color: #047857;">Bản dịch Tiếng Việt</div>
+                                </div>
+                                <div class="transcript-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; font-size: 0.95rem; line-height: 1.7;">
+                                    <div class="en-text">One thing that our blog post is still missing right now is some images.</div>
+                                    <div class="vi-text">Một điều mà bài blog của chúng ta vẫn còn thiếu lúc này là một vài hình ảnh.</div>
+                                    
+                                    <div class="en-text">And so let's now learn how to use the HTML image element.</div>
+                                    <div class="vi-text">Và vì vậy, bây giờ chúng ta hãy cùng tìm hiểu cách sử dụng phần tử hình ảnh trong HTML.</div>
+                                    
+                                    <div class="en-text">So if we check out the demo page, then we notice that here we have two kind of important images.</div>
+                                    <div class="vi-text">Nếu chúng ta xem trang demo, chúng ta sẽ nhận thấy ở đây có hai hình ảnh khá quan trọng.</div>
+                                    
+                                    <div class="en-text">So we have this big image here which kind of illustrates the blog post.</div>
+                                    <div class="vi-text">Chúng ta có một hình ảnh lớn ở đây để minh họa cho bài blog.</div>
+                                    
+                                    <div class="en-text">And then we also have this photo here of the author.</div>
+                                    <div class="vi-text">Và sau đó chúng ta cũng có một bức ảnh của tác giả ở đây.</div>
+                                    
+                                    <div class="en-text">And so let's now start by incorporating this image here into our block.</div>
+                                    <div class="vi-text">Và bây giờ hãy bắt đầu bằng việc đưa hình ảnh này vào khối nội dung của chúng ta.</div>
+                                    
+                                    <div class="en-text">So the images are of course in our project folder.</div>
+                                    <div class="vi-text">Các hình ảnh tất nhiên đang nằm trong thư mục dự án của chúng ta.</div>
+                                    
+                                    <div class="en-text">So they came with the starter files, and the one that we are going to include here is this post image.</div>
+                                    <div class="vi-text">Chúng có sẵn trong các tệp khởi đầu (starter files), và hình ảnh chúng ta sẽ chèn vào đây là hình ảnh bài viết này (post image).</div>
+                                    
+                                    <div class="en-text">So you see when you double click, so when you open this file then VS Code is actually able to display image files without any problems.</div>
+                                    <div class="vi-text">Bạn thấy khi bạn nhấp đúp chuột, tức là khi mở tệp này thì VS Code thực sự có khả năng hiển thị các tệp hình ảnh mà không gặp vấn đề gì.</div>
+                                    
+                                    <div class="en-text">So we want this image right here after this author.</div>
+                                    <div class="vi-text">Chúng ta muốn hình ảnh này nằm ngay ở đây, sau thông tin tác giả.</div>
+                                    
+                                    <div class="en-text">So basically the image serves as a barrier between the beginning of the article and the rest of the page.</div>
+                                    <div class="vi-text">Về cơ bản, hình ảnh đóng vai trò như một vách ngăn giữa phần mở đầu của bài viết và phần còn lại của trang.</div>
+                                    
+                                    <div class="en-text">Now, I think that here, actually this title here, so this h2 element should be before the author.</div>
+                                    <div class="vi-text">Bây giờ, tôi nghĩ rằng ở đây, thực ra tiêu đề này, tức là phần tử h2 này nên nằm trước thông tin tác giả.</div>
+                                    
+                                    <div class="en-text">Let's move that down here. Right.</div>
+                                    <div class="vi-text">Hãy di chuyển nó xuống dưới đây. Đúng rồi.</div>
+                                    
+                                    <div class="en-text">So first of course, like we have it here, needs to come the actual title, so the heading element, and only then the author and then this image here.</div>
+                                    <div class="vi-text">Đầu tiên tất nhiên, như chúng ta có ở đây, phải là tiêu đề thực sự (phần tử heading), và sau đó mới đến tác giả và rồi đến hình ảnh này.</div>
+                                    
+                                    <div class="en-text">Okay, but anyway, let's now include the img element.</div>
+                                    <div class="vi-text">Ok, nhưng dù sao thì, bây giờ hãy chèn phần tử img vào.</div>
+                                    
+                                    <div class="en-text">So again, right here after this paragraph, we want to include this image.</div>
+                                    <div class="vi-text">Một lần nữa, ngay ở đây sau đoạn văn này, chúng ta muốn chèn hình ảnh này.</div>
+                                    
+                                    <div class="en-text">So just like any other element, we start by writing it like this.</div>
+                                    <div class="vi-text">Vì vậy, giống như bất kỳ phần tử nào khác, chúng ta bắt đầu bằng cách viết nó như thế này.</div>
+                                    
+                                    <div class="en-text">But now remember how I actually told you in the first lecture of the section.</div>
+                                    <div class="vi-text">Nhưng bây giờ hãy nhớ lại những gì tôi đã thực sự nói với bạn trong bài giảng đầu tiên của phần này.</div>
+                                    
+                                    <div class="en-text">That the img element is a special element, and that's because it doesn't have any content, and therefore it also doesn't have a closing tack.</div>
+                                    <div class="vi-text">Rằng phần tử img là một phần tử đặc biệt, và đó là vì nó không có bất kỳ nội dung nào, và do đó nó cũng không có thẻ đóng (closing tag).</div>
+                                    
+                                    <div class="en-text">Instead what we do, is to simply add this slash here at the very end of the element.</div>
+                                    <div class="vi-text">Thay vào đó, những gì chúng ta làm đơn giản là thêm dấu gạch chéo này ở ngay phần cuối của phần tử.</div>
+                                    
+                                    <div class="en-text">Now you might wonder if we don't specify any content here for this image element, then how will HTML know which element it should display?</div>
+                                    <div class="vi-text">Bây giờ bạn có thể tự hỏi nếu chúng ta không chỉ định bất kỳ nội dung nào ở đây cho phần tử hình ảnh này, thì làm sao HTML biết nó nên hiển thị cái gì?</div>
+                                    
+                                    <div class="en-text">And that is an excellent question, which brings us to something new in HTML, which are attributes.</div>
+                                    <div class="vi-text">Và đó là một câu hỏi xuất sắc, nó đưa chúng ta đến một khái niệm mới trong HTML, đó là các thuộc tính (attributes).</div>
+                                    
+                                    <div class="en-text">So attributes are basically pieces of data which we can use to describe elements.</div>
+                                    <div class="vi-text">Thuộc tính về cơ bản là các phần dữ liệu mà chúng ta có thể sử dụng để mô tả các phần tử.</div>
+                                    
+                                    <div class="en-text">So there are lots of different attributes in HTML, and one of them is the source attribute.</div>
+                                    <div class="vi-text">Có rất nhiều thuộc tính khác nhau trong HTML, và một trong số đó là thuộc tính source (nguồn).</div>
+                                    
+                                    <div class="en-text">And so that's the one we are interested in right now. So source goes like this, src, and then an equal.</div>
+                                    <div class="vi-text">Và đó là thuộc tính chúng ta quan tâm lúc này. Thuộc tính source được viết như thế này: src, và sau đó là dấu bằng.</div>
+                                    
+                                    <div class="en-text">And then we need double quotes, like this. And then here we can simply specify the name of the image.</div>
+                                    <div class="vi-text">Và sau đó chúng ta cần dấu ngoặc kép, như thế này. Và sau đó ở đây chúng ta có thể đơn giản chỉ định tên của hình ảnh.</div>
+                                    
+                                    <div class="en-text">So remember that it's post-img.jpg. And so we just write post- img, and we could even allow VS Code to auto complete that code for us.</div>
+                                    <div class="vi-text">Hãy nhớ rằng nó là post-img.jpg. Và vì vậy chúng ta chỉ cần viết post- img, và chúng ta thậm chí có thể để VS Code tự động hoàn thành đoạn mã đó cho chúng ta.</div>
+                                    
+                                    <div class="en-text">Like by clicking here or going down. And actually that didn't work, but if we just hit enter here, then that would work just fine.</div>
+                                    <div class="vi-text">Giống như bằng cách nhấp vào đây hoặc kéo xuống. Và thực ra điều đó không hoạt động, nhưng nếu chúng ta chỉ cần nhấn enter ở đây, thì nó sẽ hoạt động tốt.</div>
+                                    
+                                    <div class="en-text">So again, we can write it manually or just use VS Codes auto complete functionality.</div>
+                                    <div class="vi-text">Một lần nữa, chúng ta có thể viết nó theo cách thủ công hoặc chỉ cần sử dụng chức năng tự động hoàn thành của VS Code.</div>
+                                    
+                                    <div class="en-text">And that's actually it. That's the very basics that we need in order to display an image.</div>
+                                    <div class="vi-text">Và thực sự chỉ có vậy thôi. Đó là những điều rất cơ bản mà chúng ta cần để hiển thị một hình ảnh.</div>
+                                    
+                                    <div class="en-text">So if we reload this now, you will see that indeed here it is. Great.</div>
+                                    <div class="vi-text">Vì vậy, nếu chúng ta tải lại trang bây giờ, bạn sẽ thấy rằng hình ảnh đã ở đây rồi. Tuyệt vời.</div>
+                                    
+                                    <div class="en-text">So again, let's just quickly recap. We did not specify the image using some content in this element.</div>
+                                    <div class="vi-text">Một lần nữa, hãy tóm tắt nhanh. Chúng ta không chỉ định hình ảnh bằng cách sử dụng một số nội dung bên trong phần tử này.</div>
+                                    
+                                    <div class="en-text">Instead, what we needed to do was to specify an attribute. And in this case, it's the source attribute.</div>
+                                    <div class="vi-text">Thay vào đó, những gì chúng ta cần làm là chỉ định một thuộc tính. Và trong trường hợp này, nó là thuộc tính source.</div>
+                                    
+                                    <div class="en-text">And remember that an attribute is basically like a piece of data. So piece of information describing this element.</div>
+                                    <div class="vi-text">Và hãy nhớ rằng một thuộc tính về cơ bản giống như một mảnh dữ liệu. Là một phần thông tin mô tả phần tử này.</div>
+                                    
+                                    <div class="en-text">So here we are describing the source from which the browser should basically read the image. All right.</div>
+                                    <div class="vi-text">Vì vậy, ở đây chúng ta đang mô tả nguồn mà từ đó trình duyệt về cơ bản sẽ đọc hình ảnh. Được rồi.</div>
+                                    
+                                    <div class="en-text">Now besides the source attribute there are other attributes that we can specify for images. And one that we should never skip is the alt attribute.</div>
+                                    <div class="vi-text">Bây giờ bên cạnh thuộc tính source, có những thuộc tính khác mà chúng ta có thể chỉ định cho hình ảnh. Và một thuộc tính mà chúng ta không bao giờ nên bỏ qua là thuộc tính alt.</div>
+                                    
+                                    <div class="en-text">So we write it like this and alt stands for alternative text.</div>
+                                    <div class="vi-text">Vì vậy, chúng ta viết nó như thế này và alt là viết tắt của alternative text (văn bản thay thế).</div>
+                                    
+                                    <div class="en-text">So basically what we need to specify here is some text that should describe what the image is about.</div>
+                                    <div class="vi-text">Về cơ bản những gì chúng ta cần chỉ định ở đây là một số văn bản để mô tả hình ảnh nói về cái gì.</div>
+                                    
+                                    <div class="en-text">And this is very important for various reasons. One of them is that it will allow search engines such as Google Chrome, to actually know what is in the image because without this description search engines don't really have a know of knowing what the image is actually about.</div>
+                                    <div class="vi-text">Và điều này rất quan trọng vì nhiều lý do. Một trong số đó là nó sẽ cho phép các công cụ tìm kiếm như Google biết thực sự trong hình ảnh có gì, vì nếu không có mô tả này, các công cụ tìm kiếm thực sự không có cách nào biết hình ảnh thực sự nói về cái gì.</div>
+                                    
+                                    <div class="en-text">And second and probably even more important is that by specifying the description of the image we can also allow blind people to use a website.</div>
+                                    <div class="vi-text">Và thứ hai và có lẽ còn quan trọng hơn là bằng cách chỉ định mô tả của hình ảnh, chúng ta cũng có thể cho phép những người mù (khiếm thị) sử dụng trang web.</div>
+                                    
+                                    <div class="en-text">So users who use a screen reader will not see the image but instead they will have the screen reader read the alternative text, so the description to them.</div>
+                                    <div class="vi-text">Người dùng sử dụng trình đọc màn hình sẽ không nhìn thấy hình ảnh nhưng thay vào đó, họ sẽ có trình đọc màn hình đọc văn bản thay thế, tức là mô tả cho họ.</div>
+                                    
+                                    <div class="en-text">So never skip this attribute. It's very important to always write a good description.</div>
+                                    <div class="vi-text">Vì vậy, đừng bao giờ bỏ qua thuộc tính này. Việc luôn viết một mô tả tốt là rất quan trọng.</div>
+                                    
+                                    <div class="en-text">So here, let's say that this image here is HTML code on a screen. Okay?</div>
+                                    <div class="vi-text">Vì vậy, ở đây, giả sử rằng hình ảnh này là mã HTML trên màn hình. Ok?</div>
+                                    
+                                    <div class="en-text">Now this will not visually change actually what we see here. So let's reload unless the image for some reason can not be found.</div>
+                                    <div class="vi-text">Bây giờ điều này thực sự sẽ không làm thay đổi trực quan những gì chúng ta thấy ở đây. Hãy tải lại trừ khi hình ảnh vì lý do nào đó không thể được tìm thấy.</div>
+                                    
+                                    <div class="en-text">So let's say that we forgot the G here, for example. And so now this image path is completely wrong.</div>
+                                    <div class="vi-text">Giả sử rằng chúng ta quên chữ G ở đây chẳng hạn. Và bây giờ đường dẫn hình ảnh này hoàn toàn sai.</div>
+                                    
+                                    <div class="en-text">So if we now reload, then the browser will not be able to find the image. But instead what it will do is to then print our description here.</div>
+                                    <div class="vi-text">Vì vậy, nếu bây giờ chúng ta tải lại, trình duyệt sẽ không thể tìm thấy hình ảnh. Nhưng thay vào đó những gì nó sẽ làm là in mô tả của chúng ta ra ở đây.</div>
+                                    
+                                    <div class="en-text">So that's the HTML code on a screen that we gave it here. Okay?</div>
+                                    <div class="vi-text">Đó là "mã HTML trên màn hình" mà chúng ta đã đặt cho nó. Ok?</div>
+                                    
+                                    <div class="en-text">So that is actually another use case of the alt text. Let's put it back.</div>
+                                    <div class="vi-text">Đó thực sự là một trường hợp sử dụng khác của văn bản alt. Hãy đặt nó trở lại.</div>
+                                    
+                                    <div class="en-text">And we are actually still not done. So we can specify some more attributes here which are quite important in this case.</div>
+                                    <div class="vi-text">Và chúng ta thực sự vẫn chưa xong. Chúng ta có thể chỉ định thêm một số thuộc tính ở đây khá quan trọng trong trường hợp này.</div>
+                                    
+                                    <div class="en-text">So the ones that I mean are the image width and the image height.</div>
+                                    <div class="vi-text">Vì vậy, những thuộc tính mà tôi đang muốn nói đến là chiều rộng hình ảnh (width) và chiều cao hình ảnh (height).</div>
+                                    
+                                    <div class="en-text">So right now this image here is a little bit too big. And so let's specify it's width to 500 pixels.</div>
+                                    <div class="vi-text">Hiện tại hình ảnh này hơi quá lớn. Vì vậy, hãy chỉ định chiều rộng của nó là 500 pixel.</div>
+                                    
+                                    <div class="en-text">And don't worry yet about what these 500 pixels mean or exactly what a pixel is. We will talk more about that once we reach the CSS section.</div>
+                                    <div class="vi-text">Và đừng vội lo lắng về 500 pixel này có nghĩa là gì hoặc chính xác pixel là gì. Chúng ta sẽ nói thêm về điều đó khi chúng ta đến phần CSS.</div>
+                                    
+                                    <div class="en-text">But for now, let's just write width and set it to 500, and then let's see.</div>
+                                    <div class="vi-text">Nhưng bây giờ, hãy viết width và thiết lập nó bằng 500, và sau đó cùng xem.</div>
+                                    
+                                    <div class="en-text">Okay, so now it's scaled the image to a width of 500, and it automatically also maintains the aspect ratio of the of the image.</div>
+                                    <div class="vi-text">Ok, bây giờ nó đã thu nhỏ hình ảnh về chiều rộng 500, và nó cũng tự động duy trì tỷ lệ khung hình (aspect ratio) của hình ảnh.</div>
+                                    
+                                    <div class="en-text">All right, but we can also specify that. So besides the width we can also specify the height, which should be 200.</div>
+                                    <div class="vi-text">Được rồi, nhưng chúng ta cũng có thể tự chỉ định nó. Bên cạnh width, chúng ta cũng có thể chỉ định height, sẽ là 200.</div>
+                                    
+                                    <div class="en-text">And I know that because I know the the image dimensions. So if we open this up again, you see here that the original image is a thousand by 400.</div>
+                                    <div class="vi-text">Tôi biết điều đó vì tôi biết kích thước của hình ảnh. Nếu chúng ta mở cái này lên lại, bạn thấy ở đây hình ảnh gốc có kích thước là 1000 x 400.</div>
+                                    
+                                    <div class="en-text">And so if I specified the width as 500, which is just half of a thousand, then the height must also be half of 400 here. So that would be 200.</div>
+                                    <div class="vi-text">Và do đó, nếu tôi chỉ định chiều rộng là 500, chỉ bằng một nửa của một nghìn, thì chiều cao cũng phải bằng một nửa của 400. Tức là 200.</div>
+                                    
+                                    <div class="en-text">Okay. So that should now look the same and it does. But of course if I wanted, I could make it a square, for example.</div>
+                                    <div class="vi-text">Ok. Vậy bây giờ trông nó sẽ vẫn như cũ và đúng là như vậy. Nhưng tất nhiên nếu muốn, tôi có thể biến nó thành một hình vuông chẳng hạn.</div>
+                                    
+                                    <div class="en-text">Which would then completely distort the image just as we see here. Of course, we don't want that. So put it back and here we go. Great.</div>
+                                    <div class="vi-text">Điều đó sau đó sẽ làm biến dạng hoàn toàn hình ảnh giống như chúng ta thấy ở đây. Tất nhiên, chúng ta không muốn điều đó. Hãy chỉnh lại như cũ và xong rồi. Tuyệt.</div>
+                                    
+                                    <div class="en-text">So this is how we include images into an HTML document. And this one here was only the first one that we wanted.</div>
+                                    <div class="vi-text">Vì vậy, đây là cách chúng ta đưa hình ảnh vào tài liệu HTML. Và bức ảnh này chỉ là hình ảnh đầu tiên mà chúng ta muốn.</div>
+                                    
+                                    <div class="en-text">The other image is this author image right here above this author paragraph right here.</div>
+                                    <div class="vi-text">Hình ảnh khác là hình ảnh tác giả ngay phía trên đoạn văn tác giả ở ngay đây.</div>
+                                    
+                                    <div class="en-text">So the image that we want now is this one, Laura Jones. And we want it with a height and a width of 50 pixels.</div>
+                                    <div class="vi-text">Hình ảnh mà chúng ta muốn bây giờ là bức này, Laura Jones. Và chúng ta muốn nó có chiều cao và chiều rộng là 50 pixel.</div>
+                                    
+                                    <div class="en-text">Okay, so I have another challenge for you. And what I want you to do this time, is to include this image that I just showed you on your own right here in this place.</div>
+                                    <div class="vi-text">Được rồi, tôi có một thử thách khác dành cho bạn. Điều tôi muốn bạn làm lần này là tự mình đưa hình ảnh mà tôi vừa cho bạn xem vào ngay vị trí này.</div>
+                                    
+                                    <div class="en-text">So take a minute and post a video and include this image with 50 by 50 pixels, and then I'll be back here in a minute with the solution.</div>
+                                    <div class="vi-text">Hãy dành một phút và tạm dừng video rồi chèn hình ảnh này với kích thước 50 x 50 pixel, và tôi sẽ quay lại đây trong một phút với giải pháp.</div>
+                                    
+                                    <div class="en-text">All right. So hopefully you got some more practice there.</div>
+                                    <div class="vi-text">Được rồi. Hy vọng bạn đã có thêm chút thực hành.</div>
+                                    
+                                    <div class="en-text">So img and I will immediately start writing the attributes, and I will then in the end, close the element.</div>
+                                    <div class="vi-text">Bắt đầu bằng img và tôi sẽ ngay lập tức bắt đầu viết các thuộc tính, và sau cùng tôi sẽ đóng phần tử.</div>
+                                    
+                                    <div class="en-text">So here we want Laura Jones, and now I will just hit enter or return to auto complete the file name here.</div>
+                                    <div class="vi-text">Vì vậy, ở đây chúng ta muốn tệp Laura Jones, và bây giờ tôi sẽ chỉ cần nhấn enter để tự động hoàn thành tên tệp ở đây.</div>
+                                    
+                                    <div class="en-text">And then the old text, let's say that this is a headshot of Laura Jones, and not Jonas.</div>
+                                    <div class="vi-text">Và văn bản thay thế, hãy nói rằng đây là ảnh chân dung (headshot) của Laura Jones, chứ không phải Jonas.</div>
+                                    
+                                    <div class="en-text">And a height. And here again, we could now hit enter or return to auto complete this. But I actually want you to write these attributes by yourself by hand so that they get into your head.</div>
+                                    <div class="vi-text">Và thuộc tính height. Ở đây một lần nữa, chúng ta có thể nhấn enter để tự động hoàn thành. Nhưng tôi thực sự muốn bạn tự tay viết các thuộc tính này để chúng in sâu vào trí nhớ của bạn.</div>
+                                    
+                                    <div class="en-text">So that's really important. So height and a width of 50. And that's it.</div>
+                                    <div class="vi-text">Điều đó thực sự rất quan trọng. Chiều cao và chiều rộng là 50. Chỉ có vậy thôi.</div>
+                                    
+                                    <div class="en-text">So let's close the element, give it a safe, and then Prettier does this nice job of putting each of these attributes here in one line, which makes it really easy to see.</div>
+                                    <div class="vi-text">Hãy đóng phần tử, lưu lại, và rồi Prettier sẽ làm một việc rất hay là đặt mỗi thuộc tính này nằm trên một dòng riêng, khiến nó thực sự dễ nhìn.</div>
+                                    
+                                    <div class="en-text">Actually, let's close down our side bar here. And let's see. And here we go. So here is that picture of Laura Jones now.</div>
+                                    <div class="vi-text">Thực ra, hãy đóng thanh bên (sidebar) của chúng ta ở đây lại. Và cùng xem. Đây rồi. Bức ảnh của Laura Jones đã ở đây.</div>
+                                    
+                                    <div class="en-text">Okay, well done. Nice progress. So now we know how images work and how attributes work as well.</div>
+                                    <div class="vi-text">Tuyệt vời, làm tốt lắm. Tiến bộ đáng khen ngợi. Bây giờ chúng ta đã biết cách hình ảnh hoạt động và cách các thuộc tính hoạt động.</div>
+                                    
+                                    <div class="en-text">And actually we can specify attributes also on some other elements in HTML. And one where this is very important is actually the HTML element itself.</div>
+                                    <div class="vi-text">Và thực tế chúng ta cũng có thể chỉ định thuộc tính trên một số phần tử khác trong HTML. Và một phần tử mà điều này rất quan trọng thực ra lại chính là phần tử HTML.</div>
+                                    
+                                    <div class="en-text">So here in this HTML element, we should specify the language that we use for this webpage.</div>
+                                    <div class="vi-text">Vì vậy, ở đây trong phần tử HTML này, chúng ta nên chỉ định ngôn ngữ mà chúng ta sử dụng cho trang web này.</div>
+                                    
+                                    <div class="en-text">So for this document, and we can do that by saying lang. So specifying the lang attribute.</div>
+                                    <div class="vi-text">Đối với tài liệu này, chúng ta có thể làm điều đó bằng cách sử dụng thuộc tính lang.</div>
+                                    
+                                    <div class="en-text">And then in this case, since it is English, we can set it to en. But for other languages there are other codes.</div>
+                                    <div class="vi-text">Và trong trường hợp này, vì đây là tiếng Anh, chúng ta có thể đặt nó là en. Nhưng đối với các ngôn ngữ khác, có các mã khác.</div>
+                                    
+                                    <div class="en-text">For example, for German is probably de, or for Portuguese it should be pt. And if you have any other language, you can just easily find out the code by Googling.</div>
+                                    <div class="vi-text">Ví dụ, tiếng Đức có thể là de, hoặc tiếng Bồ Đào Nha nên là pt. Và nếu bạn có bất kỳ ngôn ngữ nào khác, bạn có thể dễ dàng tìm ra mã bằng cách Google.</div>
+                                    
+                                    <div class="en-text">Another thing that we can, and actually should do, which needs attributes, is to specify the character set that is used in the document.</div>
+                                    <div class="vi-text">Một điều nữa mà chúng ta có thể, và thực sự nên làm, liên quan đến thuộc tính, là chỉ định bộ ký tự (character set) được sử dụng trong tài liệu.</div>
+                                    
+                                    <div class="en-text">So that is something that goes into the head, because it is a piece of information that describes the document.</div>
+                                    <div class="vi-text">Đó là thứ sẽ nằm bên trong phần head, vì nó là một mẩu thông tin mô tả tài liệu.</div>
+                                    
+                                    <div class="en-text">So here we need another new element. This is simply called meta, which stands for meta data. So meta data means data about the data.</div>
+                                    <div class="vi-text">Vì vậy, ở đây chúng ta cần một phần tử mới khác. Nó được gọi đơn giản là meta, viết tắt của siêu dữ liệu (meta data). Siêu dữ liệu có nghĩa là dữ liệu nói về dữ liệu.</div>
+                                    
+                                    <div class="en-text">And so here we are describing that the character set which we describe by this attribute. So we say that the character set should be UTF 8, which basically is all the simple characters that we use in the English language.</div>
+                                    <div class="vi-text">Và ở đây chúng ta đang mô tả bộ mã ký tự thông qua thuộc tính này. Chúng ta khai báo charset là UTF 8, về cơ bản bao gồm tất cả các ký tự đơn giản mà chúng ta sử dụng trong ngôn ngữ.</div>
+                                    
+                                    <div class="en-text">Now this one here is another of these elements that doesn't have a closing tack. And so we just close it like this. Okay?</div>
+                                    <div class="vi-text">Và đây lại là một trong những phần tử không có thẻ đóng. Vì vậy, chúng ta chỉ cần đóng nó lại như thế này. Được chứ?</div>
+                                    
+                                    <div class="en-text">Now I'm not spending a whole lot of time on these elements and on this kind of stuff, because later when you actually build your own pages then this will all happen automatically.</div>
+                                    <div class="vi-text">Bây giờ tôi không dành quá nhiều thời gian cho các phần tử này và những thứ tương tự, bởi vì sau này khi bạn thực sự xây dựng các trang của riêng mình, tất cả những điều này sẽ diễn ra tự động.</div>
+                                    
+                                    <div class="en-text">So this was just to show you that this is just another way or another place in which we need some attributes where we then need to specify a value for it.</div>
+                                    <div class="vi-text">Vì vậy, điều này chỉ để cho bạn thấy rằng đây là một vị trí khác mà chúng ta cần sử dụng thuộc tính và gán giá trị cho chúng.</div>
+                                    
+                                    <div class="en-text">All right. So UTF 8 here is the value that we specified for this character set attribute. Okay.</div>
+                                    <div class="vi-text">Được rồi. UTF 8 ở đây là giá trị mà chúng ta đã chỉ định cho thuộc tính charset. Ok.</div>
+                                    
+                                    <div class="en-text">And yeah, I think that's it for this lecture. So see you in the next one.</div>
+                                    <div class="vi-text">Và vâng, tôi nghĩ bài giảng này đến đây là kết thúc. Hẹn gặp lại bạn trong bài giảng tiếp theo.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab 4: Takeaways -->
+                        <div id="takeaways-l3-v1" class="video-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #ffffff; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); color: #334155; line-height: 1.7;">
+                                <h3 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;"><i class="fas fa-lightbulb" style="margin-right: 10px; color: #eab308;"></i>Nội dung trọng tâm</h3>
+                                <ul style="list-style-type: none; padding-left: 0; margin-top: 1.5rem;">
+                                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                        <i class="fas fa-check-circle" style="color: #10b981; margin-top: 5px; margin-right: 10px;"></i>
+                                        <span><strong>Thẻ <code>&lt;img&gt;</code>:</strong> Dùng để hiển thị hình ảnh, là thẻ rỗng (empty element), không chứa văn bản hay thẻ con nên <strong>không có thẻ đóng</strong>.</span>
+                                    </li>
+                                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                        <i class="fas fa-check-circle" style="color: #10b981; margin-top: 5px; margin-right: 10px;"></i>
+                                        <span><strong>Thuộc tính <code>src</code>:</strong> (Bắt buộc) Trỏ đến đường dẫn hoặc tên tệp của bức ảnh để trình duyệt có thể hiển thị.</span>
+                                    </li>
+                                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                        <i class="fas fa-check-circle" style="color: #10b981; margin-top: 5px; margin-right: 10px;"></i>
+                                        <span><strong>Thuộc tính <code>alt</code>:</strong> Rất quan trọng. Cung cấp văn bản thay thế để mô tả ảnh, giúp hỗ trợ SEO, trình đọc màn hình cho người khiếm thị, và làm văn bản dự phòng khi link ảnh bị hỏng.</span>
+                                    </li>
+                                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                        <i class="fas fa-check-circle" style="color: #10b981; margin-top: 5px; margin-right: 10px;"></i>
+                                        <span><strong>Thuộc tính <code>width</code> và <code>height</code>:</strong> Dùng để thiết lập kích thước (thường bằng pixel). Trình duyệt sẽ tự động giữ nguyên tỷ lệ gốc nếu chỉ set 1 thông số.</span>
+                                    </li>
+                                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                        <i class="fas fa-check-circle" style="color: #10b981; margin-top: 5px; margin-right: 10px;"></i>
+                                        <span><strong>Thuộc tính của trang web:</strong> Thuộc tính <code>lang="en"</code> khai báo ngôn ngữ trong thẻ <code>&lt;html&gt;</code> và thẻ rỗng <code>&lt;meta charset="UTF-8"&gt;</code> dùng để khai báo bộ ký tự cho trang web.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Tab 5: Quiz -->
+                        <div id="quiz-l3-v1" class="video-tab-content" style="display: none; animation: fadeIn 0.3s ease;">
+                            <div style="background: #ffffff; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); color: #334155;">
+                                <h3 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;"><i class="fas fa-tasks" style="margin-right: 10px; color: #ef4444;"></i>Bài tập đánh giá (Instant Feedback)</h3>
+                                
+                                <!-- Question 1 -->
+                                <div class="quiz-question" style="margin-top: 1.5rem; background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                    <p style="font-weight: 600; font-size: 1.1rem; margin-top: 0;">Câu 1: Thẻ <code>&lt;img&gt;</code> trong HTML khác biệt như thế nào so với thẻ <code>&lt;p&gt;</code> hay <code>&lt;h1&gt;</code>?</p>
+                                    <div class="options" style="display: flex; flex-direction: column; gap: 10px;">
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q1_l3v1" onclick="checkQuiz('q1_l3v1', 'B', 'B. Đúng! Thẻ img là phần tử rỗng (empty element), vì nó không chứa nội dung bên trong nên không cần thẻ đóng (như &lt;/img&gt;).')" value="A"> A. Không cần bất kỳ thuộc tính nào.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q1_l3v1" onclick="checkQuiz('q1_l3v1', 'B', 'B. Đúng! Thẻ img là phần tử rỗng (empty element), vì nó không chứa nội dung bên trong nên không cần thẻ đóng (như &lt;/img&gt;).')" value="B"> B. Là thẻ rỗng (empty element), không có nội dung và không có thẻ đóng.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q1_l3v1" onclick="checkQuiz('q1_l3v1', 'B', 'B. Đúng! Thẻ img là phần tử rỗng (empty element), vì nó không chứa nội dung bên trong nên không cần thẻ đóng (như &lt;/img&gt;).')" value="C"> C. Chỉ có thể dùng một lần duy nhất trong toàn bộ trang web.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q1_l3v1" onclick="checkQuiz('q1_l3v1', 'B', 'B. Đúng! Thẻ img là phần tử rỗng (empty element), vì nó không chứa nội dung bên trong nên không cần thẻ đóng (như &lt;/img&gt;).')" value="D"> D. Phải luôn nằm trong thẻ &lt;head&gt;.</label>
+                                    </div>
+                                    <div id="feedback-q1_l3v1" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 4px;"></div>
+                                </div>
+
+                                <!-- Question 2 -->
+                                <div class="quiz-question" style="margin-top: 1.5rem; background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                    <p style="font-weight: 600; font-size: 1.1rem; margin-top: 0;">Câu 2: Tại sao thuộc tính <code>alt</code> lại rất quan trọng khi sử dụng thẻ <code>&lt;img&gt;</code>?</p>
+                                    <div class="options" style="display: flex; flex-direction: column; gap: 10px;">
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q2_l3v1" onclick="checkQuiz('q2_l3v1', 'C', 'C. Chính xác! Thuộc tính alt cung cấp văn bản thay thế giúp bộ máy tìm kiếm (SEO) hiểu được ảnh, đồng thời rất hữu ích cho người khiếm thị khi dùng trình đọc màn hình hoặc khi đường dẫn ảnh bị lỗi.')" value="A"> A. Để tạo hiệu ứng hoạt hình (animation) cho ảnh.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q2_l3v1" onclick="checkQuiz('q2_l3v1', 'C', 'C. Chính xác! Thuộc tính alt cung cấp văn bản thay thế giúp bộ máy tìm kiếm (SEO) hiểu được ảnh, đồng thời rất hữu ích cho người khiếm thị khi dùng trình đọc màn hình hoặc khi đường dẫn ảnh bị lỗi.')" value="B"> B. Để tự động nén dung lượng hình ảnh.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q2_l3v1" onclick="checkQuiz('q2_l3v1', 'C', 'C. Chính xác! Thuộc tính alt cung cấp văn bản thay thế giúp bộ máy tìm kiếm (SEO) hiểu được ảnh, đồng thời rất hữu ích cho người khiếm thị khi dùng trình đọc màn hình hoặc khi đường dẫn ảnh bị lỗi.')" value="C"> C. Để giúp công cụ tìm kiếm hiểu ảnh và hỗ trợ trình đọc màn hình cho người khiếm thị.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q2_l3v1" onclick="checkQuiz('q2_l3v1', 'C', 'C. Chính xác! Thuộc tính alt cung cấp văn bản thay thế giúp bộ máy tìm kiếm (SEO) hiểu được ảnh, đồng thời rất hữu ích cho người khiếm thị khi dùng trình đọc màn hình hoặc khi đường dẫn ảnh bị lỗi.')" value="D"> D. Để thay đổi kích thước của ảnh thành dạng responsive.</label>
+                                    </div>
+                                    <div id="feedback-q2_l3v1" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 4px;"></div>
+                                </div>
+
+                                <!-- Question 3 -->
+                                <div class="quiz-question" style="margin-top: 1.5rem; background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                    <p style="font-weight: 600; font-size: 1.1rem; margin-top: 0;">Câu 3: Điều gì sẽ xảy ra nếu bạn chỉ thiết lập giá trị cho thuộc tính <code>width</code> của ảnh mà không thiết lập <code>height</code>?</p>
+                                    <div class="options" style="display: flex; flex-direction: column; gap: 10px;">
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q3_l3v1" onclick="checkQuiz('q3_l3v1', 'B', 'B. Đúng! Khi bạn chỉ cấp giá trị cho width, trình duyệt sẽ tự động tính toán giá trị height tương ứng để hình ảnh không bị bóp méo (giữ nguyên aspect ratio).')" value="A"> A. Ảnh sẽ bị kéo dài hoặc làm dẹt (bị méo) một cách ngẫu nhiên.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q3_l3v1" onclick="checkQuiz('q3_l3v1', 'B', 'B. Đúng! Khi bạn chỉ cấp giá trị cho width, trình duyệt sẽ tự động tính toán giá trị height tương ứng để hình ảnh không bị bóp méo (giữ nguyên aspect ratio).')" value="B"> B. Trình duyệt sẽ tự động tính toán height để giữ nguyên tỷ lệ khung hình gốc.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q3_l3v1" onclick="checkQuiz('q3_l3v1', 'B', 'B. Đúng! Khi bạn chỉ cấp giá trị cho width, trình duyệt sẽ tự động tính toán giá trị height tương ứng để hình ảnh không bị bóp méo (giữ nguyên aspect ratio).')" value="C"> C. Ảnh sẽ hoàn toàn không hiển thị trên trang web vì thiếu thông số.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q3_l3v1" onclick="checkQuiz('q3_l3v1', 'B', 'B. Đúng! Khi bạn chỉ cấp giá trị cho width, trình duyệt sẽ tự động tính toán giá trị height tương ứng để hình ảnh không bị bóp méo (giữ nguyên aspect ratio).')" value="D"> D. Chiều cao sẽ tự động thiết lập bằng 0.</label>
+                                    </div>
+                                    <div id="feedback-q3_l3v1" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 4px;"></div>
+                                </div>
+
+                                <!-- Question 4 -->
+                                <div class="quiz-question" style="margin-top: 1.5rem; background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                    <p style="font-weight: 600; font-size: 1.1rem; margin-top: 0;">Câu 4: Thuộc tính <code>charset="UTF-8"</code> trong thẻ <code>&lt;meta&gt;</code> có ý nghĩa gì?</p>
+                                    <div class="options" style="display: flex; flex-direction: column; gap: 10px;">
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q4_l3v1" onclick="checkQuiz('q4_l3v1', 'A', 'A. Chính xác! Bộ mã ký tự UTF-8 giúp trình duyệt dịch và hiển thị chính xác các ký tự đặc biệt, bảng chữ cái của nhiều ngôn ngữ trên toàn cầu (bao gồm cả tiếng Việt có dấu).')" value="A"> A. Xác định bộ mã ký tự cho trang web, đảm bảo hiển thị đúng nhiều ngôn ngữ trên thế giới.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q4_l3v1" onclick="checkQuiz('q4_l3v1', 'A', 'A. Chính xác! Bộ mã ký tự UTF-8 giúp trình duyệt dịch và hiển thị chính xác các ký tự đặc biệt, bảng chữ cái của nhiều ngôn ngữ trên toàn cầu (bao gồm cả tiếng Việt có dấu).')" value="B"> B. Giúp hình ảnh trên toàn bộ trang web tải nhanh hơn.</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q4_l3v1" onclick="checkQuiz('q4_l3v1', 'A', 'A. Chính xác! Bộ mã ký tự UTF-8 giúp trình duyệt dịch và hiển thị chính xác các ký tự đặc biệt, bảng chữ cái của nhiều ngôn ngữ trên toàn cầu (bao gồm cả tiếng Việt có dấu).')" value="C"> C. Khai báo ngôn ngữ chính của trang web (như tiếng Anh hay tiếng Việt).</label>
+                                        <label class="q-option" style="padding: 10px; border-radius: 4px; border: 1px solid #cbd5e1; cursor: pointer; transition: all 0.2s;"><input type="radio" name="q4_l3v1" onclick="checkQuiz('q4_l3v1', 'A', 'A. Chính xác! Bộ mã ký tự UTF-8 giúp trình duyệt dịch và hiển thị chính xác các ký tự đặc biệt, bảng chữ cái của nhiều ngôn ngữ trên toàn cầu (bao gồm cả tiếng Việt có dấu).')" value="D"> D. Tạo ra một bảng màu tùy chỉnh cho giao diện web.</label>
+                                    </div>
+                                    <div id="feedback-q4_l3v1" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 4px;"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div> <!-- End content-l3-v1 -->
+
+
 
 
 
@@ -3751,3 +4232,13 @@
 </html>
 
 
+                        <li id="menu-l3-v1" class="video-menu-item" style="padding: 1rem 1.5rem; cursor: pointer; transition: background 0.2s; border-left: 3px solid transparent;" onclick="switchMainVideo('l3-v1')" onmouseover="this.style.background='#f1f5f9'" onmouseout="if(this.style.backgroundColor !== 'rgb(240, 24df4, 248)' && this.style.backgroundColor !== '#f0f4f8') this.style.background='transparent'">
+                            <div style="display: flex; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span id="icon-l3-v1" style="background: #e0e7ff; color: #4338ca; font-size: 0.75rem; font-weight: bold; padding: 2px 6px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; width: 40px;"><i class="fas fa-play"></i></span>
+                                    <span style="font-weight: 500; color: #334155;">1: Thẻ hình ảnh & Thuộc tính</span>
+                                </div>
+                                <span style="font-size: 0.8rem; color: #64748b;">13 phút</span>
+                            </div>
+                        </li>
+                    
